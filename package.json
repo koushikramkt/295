@@ -1,0 +1,24 @@
+{
+  "name": "NodejsStarterApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "lint": "eslint app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cfenv": "1.0.x",
+    "express": "^4.13.4",
+    "gentelella": "^1.3.0",
+    "react": "^15.1.0",
+    "request": "^2.72.0"
+  },
+  "repository": {},
+  "engines": {
+    "node": "4.x"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.1"
+  }
+}
