@@ -15,7 +15,7 @@ const app = express();
 const ajax = require('./routes/ajax');
 const commentserver = require('./routes/commentserver');
 
-const bodyParser = require('body-parser');
+var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded());
 
 app.use(bodyParser.json({
@@ -27,6 +27,44 @@ app.use(bodyParser.json({
    limit: '10mb',
    strict: false
  }));
+
+ var MongoClient = require('mongodb').MongoClient
+  , assert = require('assert');
+
+// Connection URL
+var url = 'mongodb://koushik41:koushikKT17!@ds161210.mlab.com:61210/logins';
+// Use connect method to connect to the Server
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  console.log("Connected correctly to server");
+  var collection = db.collection('login');
+    // Find some documents
+    collection.find({}).toArray(function(err, docs) {
+      assert.equal(err, null); //Checking if error is equal to null. If not it will throw an exception
+      console.log("Found the following records");
+      console.dir(docs);
+    });
+
+  db.close();
+});
+ /*var mysql      = require('mysql');
+ var connection = mysql.createConnection({
+   host     : 'localhost',
+   user     : 'root',
+   password : 'koushikKT17!',
+   database : 'testdb'
+ });
+
+ connection.connect();
+
+ connection.query('SELECT * from userdetails', function(err, rows, fields) {
+   if (!err)
+     console.log('The solution is: ', rows);
+   else
+     console.log('Error while performing Query.');
+ });
+
+ connection.end();*/
 
 //  Create new request to cloudant
 
@@ -40,7 +78,6 @@ request('http://www.google.com', function (error, response, body) {
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public/gentelella-master/production/'));
 
-//  koushik tuesday INIT
 app.use('/ajax',ajax);
 app.use('/commentserver',commentserver);
 
@@ -51,5 +88,5 @@ const appEnv = cfenv.getAppEnv();
 //  app.listen(appEnv.port, '0.0.0.0', function() {
 app.listen(7000, '0.0.0.0', function() {
   // print a message when the server starts listening
-  console.log('server starting on 7000' + appEnv.url);
+  console.log('server starting on 7000 ' /*appEnv.url*/);
 });
