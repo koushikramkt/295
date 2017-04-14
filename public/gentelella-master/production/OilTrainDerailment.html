@@ -51,6 +51,7 @@
       }
           
            #eqmap {
+               margin-left: 75px;
                  height: 300px;
 			width: 80%
       }
@@ -95,7 +96,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Flood</a></li>
+                      <li><a  href="index.html">Flood</a></li>
                       <li><a href="index.html">Earthquake</a></li>
 					  <li><a href="earthquake2.html">Earthquake2</a></li>
                       <li><a href="index.html">Oil Train Derailment</a></li>
@@ -311,7 +312,7 @@
                 <!--<div class="clearfix"></div>-->
               </div>
             </div>
-
+             
           </div>
           <br />
 
@@ -342,6 +343,7 @@
               <br><br>
              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
             <div id="eqmap"></div> 
+              
           <br><br>
 		  </div>
 		  
@@ -470,10 +472,15 @@
 				  var map,eqmap,demomap1,demomap2,demomap3;
 
 				  function initMap() {
-					map = new google.maps.Map(document.getElementById('map'), {
-					  center: { lat: 20, lng: -160 },
-					  zoom: 2
-					});
+					
+         map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 51.501904, lng: -0.115871}
+        });
+
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+      
 	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
 					  center: { lat: 37.3342, lng: -121.8903},
 					  zoom: 2
@@ -519,9 +526,9 @@
 					document.getElementsByTagName('head')[0].appendChild(script);
 
 					// Add a basic style.
-					map.data.setStyle(function(feature) {
+					/*map.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-					  return /** @type {google.maps.Data.StyleOptions} */({
+					  return * @type {google.maps.Data.StyleOptions} ({
 						icon: {
 						  path: google.maps.SymbolPath.CIRCLE,
 						  scale: mag,
@@ -530,7 +537,7 @@
 						  strokeWeight: 0
 						}
 					  });
-					});
+					});*/
                       
                       	eqmap.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
@@ -548,7 +555,7 @@
 
 				  // Defines the callback function referenced in the jsonp file.
 				  function eqfeed_callback(results) {
-					map.data.addGeoJson(results);
+					/*map.data.addGeoJson(results);*/
 					 eqmap.data.addGeoJson(results); 
 					   var heatmapData = [];
 					for (var i = 0; i < results.features.length; i++) {
