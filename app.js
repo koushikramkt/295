@@ -47,24 +47,34 @@ MongoClient.connect(url, function(err, db) {
 
   db.close();
 });
- /*var mysql      = require('mysql');
- var connection = mysql.createConnection({
-   host     : 'localhost',
-   user     : 'root',
-   password : 'koushikKT17!',
-   database : 'testdb'
- });
+ var mysql = require('mysql');
 
- connection.connect();
+var connection = mysql.createConnection({
+  host     : "rds-mysql-sjcdisbig2.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
+  user     : "sjcdisbigmaster",
+  password : "pass1234",
+  port     : "3306"
+});
 
- connection.query('SELECT * from userdetails', function(err, rows, fields) {
+connection.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);x
+    return;
+  }
+
+  console.log('Connected to database.');
+});
+
+ 
+connection.query
+ connection.query('SELECT * from BigDataDisMmt.Test', function(err, rows, fields) {
    if (!err)
      console.log('The solution is: ', rows);
    else
      console.log('Error while performing Query.');
  });
 
- connection.end();*/
+ connection.end();
 
 //  Create new request to cloudant
 
@@ -90,3 +100,26 @@ app.listen(7000, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log('server starting on 7000 ' /*appEnv.url*/);
 });
+
+
+/*ar mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host     : "rds-mysql-sjcdisbig.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
+  user     : "sjcdisbigmaster",
+  password : "pass1234",
+  port     : "3306"
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('Database connection failed: ' + err.stack);
+    return;
+  }
+
+  console.log('Connected to database.');
+});
+
+
+
+connection.end();*/
