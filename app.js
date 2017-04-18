@@ -47,6 +47,7 @@ MongoClient.connect(url, function(err, db) {
 
   db.close();
 });
+ 
  var mysql = require('mysql');
 
 var connection = mysql.createConnection({
@@ -96,9 +97,9 @@ const appEnv = cfenv.getAppEnv();
 
 // start server on the specified port and binding host
 //  app.listen(appEnv.port, '0.0.0.0', function() {
-app.listen(7000, '0.0.0.0', function() {
+app.listen(4000, '0.0.0.0', function() {
   // print a message when the server starts listening
-  console.log('server starting on 7000 ' /*appEnv.url*/);
+  console.log('server starting on 4000 ' /*appEnv.url*/);
 });
 
 
