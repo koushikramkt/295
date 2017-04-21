@@ -51,10 +51,10 @@ MongoClient.connect(url, function(err, db) {
  var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  host     : "rds-mysql-sjcdisbig2.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
+  host     : "rds-mysql-sjcdisbig4.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
   user     : "sjcdisbigmaster",
   password : "pass1234",
-  port     : "3306"
+  port     : "3307"
 });
 
 connection.connect(function(err) {
