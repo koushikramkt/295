@@ -332,7 +332,7 @@
 		  <div class="container">
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select region: </h4>		
-				<select class="form-control">
+				<select class="form-control" id="area-form">
 					<option value="SanJose">San Jose</option>
 					<option value="Milpitas">Milpitas</option>
 					<option value="Sunnyvale">Sunnyvale</option>
@@ -351,7 +351,7 @@
 			
 			</div> 
               <br><br>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary" onclick="getLatLong()">Impact</button>    <br><br>
             <div id="eqmap"></div> 
           <br><br>
 		  </div>
@@ -515,11 +515,7 @@
                            scrollwheel: true,
   draggable: true
 					});  
-					  /*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain'
-					}); */ 
+					
 					  
 					  
 					// Get the earthquake data (JSONP format)
@@ -603,7 +599,42 @@
 					  
 				  }
 			// [END script-body]
-
+                function getLatLong(){
+                    var locationString= document.getElementById("area-form").value;
+                    var serverlocation = "http://localhost:4000/latlong";
+                    
+                    $.ajax({
+                        url:serverlocation,
+                        type:'get',
+                        data:{location:locationString},
+                        success: function(response){
+                            generate(response);
+                        }
+                    });
+                    /*
+                    var aj = $.get(serverlocation,function(){
+                        alert("success");
+                    }).done(function(){
+                        alert("second success");
+                    })*/
+                    alert("hi0");
+                }
+                function generate(latlongData){
+                    
+                    
+                    for(var i=0;i<latlongData.length;i++){
+                        var obj = latlongData[i];
+                        
+                    /*    console.log(obj);
+                        console.log(obj.latitude+"<>"+obj.longitude);*/
+                        
+                         var marker = new google.maps.Marker({
+					  position: {lat: obj.latitude, lng: obj.longitude},
+					  map: demomap2,
+					  title: 'Hospitals!'
+					});
+                    }
+                }
 				</script>
 				<script async defer
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIH81nTclniiog-BWxdOT8Cd7_czwok14&libraries=visualization&&callback=initMap"></script>

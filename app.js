@@ -66,16 +66,7 @@ connection.connect(function(err) {
   console.log('Connected to database.');
 });
 
- 
-connection.query
- connection.query('SELECT * from BigDataDisMmt.Test', function(err, rows, fields) {
-   if (!err)
-     console.log('The solution is: ', rows);
-   else
-     console.log('Error while performing Query.');
- });
-
- connection.end();
+ //connection.end();
 
 //  Create new request to cloudant
 
@@ -89,8 +80,10 @@ request('http://www.google.com', function (error, response, body) {
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public/gentelella-master/production/'));
 
+/*
 app.use('/ajax',ajax);
 app.use('/commentserver',commentserver);
+*/
 
 // get the app environment from Cloud Foundry
 const appEnv = cfenv.getAppEnv();
@@ -101,26 +94,28 @@ app.listen(4000, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log('server starting on 4000 ' /*appEnv.url*/);
 });
+app.get('/latlong',function(req,res){
+    //console.log("received request");
+    //console.log(req.query.location);
+    var lat="lat13";
+    var long = "long 12";
+    //var query = "select latitude, longitude from BigDataDisMmt.CityLatLong where cityname='"+req.query.location+"'";
+    var query = "select * from BigDataDisMmt.CityLatLong"
+    //console.log(query);
+    
+ 
+ connection.query(query, function(err, rows) {
+   if (!err){
+     console.log("rows count:"+rows.length);  
+     res.json(rows);
+       
+   }
+   else
+     console.log('Error while performing Query.');
+     
+ });
 
+    //res.json({lat:lat,long:long});
+    //req.send("request reply");
+})
 
-/*ar mysql = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : "rds-mysql-sjcdisbig.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
-  user     : "sjcdisbigmaster",
-  password : "pass1234",
-  port     : "3306"
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
-
-  console.log('Connected to database.');
-});
-
-
-
-connection.end();*/
