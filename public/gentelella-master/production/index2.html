@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="MyCoLocations.css">
+    <style>
+      
+      #map {
+         height: 900px;
+        width: 1400px;
+      }
+    </style>
+<title> My Company Locations</title>
+   <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id ="header">  My Company Locations <br><br><br></div>
+<div id = "container">
+<div id="map"></div>
+
+ 
+</div>
+    <script>
+    
+    
+         
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 9,
+          center: {lat: 37.3342, lng: -121.8903},
+          mapTypeId: 'terrain'
+        });
+           var script = document.createElement('script');
+        script.src = '\MyCoLocations.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+          
+ window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.locations.location.length; i++) {
+          var latitude = results.locations.location[i].latitude;
+          var longitude = results.locations.location[i].longitude;
+          var LatandLong = new google.maps.LatLng(latitude,longitude);
+
+          if(results.locations.location[i].type=="RetailLocation"){
+              var RevCircle = new google.maps.Circle({
+								strokeColor: '#32CD32',
+								strokeOpacity: 0.6,
+								strokeWeight: 2,
+								map: map,
+								center: LatandLong,
+								radius: Math.sqrt(results.locations.location[i]["$revenue"])
+							  });
+              
+          	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: map,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png" ,
+							});
+          }
+		   if(results.locations.location[i].type=="Distribution Facility"){
+          	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: map,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/red-dot.png" ,
+							});
+          }
+		   if(results.locations.location[i].type=="Call Center"){
+          	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: map,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png" ,
+							});
+          }
+		   if(results.locations.location[i].type=="HeadQuarters"){
+          	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: map,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/pink.png" ,
+							});
+          }
+         
+
+        
+  }}
+         
+        
+ 
+    
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIH81nTclniiog-BWxdOT8Cd7_czwok14&libraries=visualization&&callback=initMap"></script>
+</body>
+
+<div id ="footer" align="center"> © Jeyanthh </div>
+
+
+</html>

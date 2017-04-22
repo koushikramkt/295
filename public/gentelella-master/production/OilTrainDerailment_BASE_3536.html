@@ -51,6 +51,7 @@
       }
           
            #eqmap {
+               margin-left: 75px;
                  height: 300px;
 			width: 80%
       }
@@ -61,43 +62,6 @@
         padding: 0;
       }*/
     </style>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script src="mapdata.js"></script>
-
-    <script type="text/javascript">
-	  google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart); 
-      function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Alert', '% covered'],
-          ['IPAWS',     30],
-          ['WMEA',      20],
-          ['AlertSCC',  10]
-        ]);
-
-        var options = {
-          title: 'Percentage of Area Covered'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_alert'));
-
-        chart.draw(data, options);
-      }
-	
-	
-	function initialize () {   
-    $("playSimulationButton").click(function() {
-        drawChart();
-    });
-	}
-	function showDiv(){
-	document.getElementById("piechart_alert").style.display="block";
-	}
-	/*google.setOnLoadCallback(initialize);
- google.load("visualization", "1", {packages:["corechart"]});  */ 
-    </script>
-	
   </head>
 
   <body class="nav-md">
@@ -132,7 +96,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Flood</a></li>
+                  <li><a href="index.html">Flood</a></li>
                       <li><a href="earthquake2.html">Earthquake</a></li>
                       <li><a href="OilTrainDerailment.html">Oil Train Derailment</a></li>
                         <li><a href="Biological.html">Biological Disaster</a></li>
@@ -153,7 +117,7 @@
 -->
                     </ul>
                   </li>
-               
+                 
                 </ul>
               </div>
           
@@ -194,9 +158,11 @@
                 </li>
 
                 <li role="presentation" class="dropdown">
-                 
-                </li>
-              </ul>
+                  <!--<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>-->
+                  </li></ul>
             </nav>
           </div>
         </div>
@@ -244,7 +210,10 @@
                     <h3>Sesimic Activities </h3>
                   </div>
                   <div class="col-md-6"> 
-                 
+                  <!--  <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                      <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                      <span>December 30, 2000 - January 28, 2015</span> <b class="caret"></b>
+                    </div>-->
                   </div>
                 </div>
 
@@ -260,7 +229,7 @@
                 <!--<div class="clearfix"></div>-->
               </div>
             </div>
-
+             
           </div>
           <br />
 
@@ -270,7 +239,7 @@
 		  <div class="container">
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select region: </h4>		
-				<select class="form-control" id="area-form">
+				<select class="form-control">
 					<option value="SanJose">San Jose</option>
 					<option value="Milpitas">Milpitas</option>
 					<option value="Sunnyvale">Sunnyvale</option>
@@ -289,8 +258,9 @@
 			
 			</div> 
               <br><br>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary" onclick="getImpact()">Impact</button>    <br><br>
+             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
             <div id="eqmap"></div> 
+              
           <br><br>
 		  </div>
 		  
@@ -309,7 +279,7 @@
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select alerting style: </h4>		
 				<select class="form-control">
-					<option value="IPAWS">IPAWS</option>
+					<option value="IPAWS">IPAWs</option>
 					<option value="WMEA">WMEA</option>
 					<option value="AlertSCC">AlertSCC</option>
 				</select>
@@ -317,13 +287,10 @@
 			</div> 
 			<br><br><br><br><br>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<button type="button" id="playSimulationButton" class="btn btn-primary" >Play Simulation</button>
-			
+			<button type="button" class="btn btn-primary">Play Simulation</button>
+	
 			
 			</div> 
-			
-			<div id="piechart_alert" style="display:none"></div>  
-
 		  
 		  </div>
 		  
@@ -412,48 +379,56 @@
 				<script src="../vendors/moment/min/moment.min.js"></script>
 				<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 				   <!-- Jeyanthh -->
-				<script src="../vendors/jeyanthh/filename.js"></script>
+					<script src="../vendors/jeyanthh/filename.js"></script>
 
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
-
 			<script>
-			
-				// [START script-body]
+
+			// [START script-body]
 				  var map,eqmap,demomap1,demomap2,demomap3;
 
 				  function initMap() {
-					map = new google.maps.Map(document.getElementById('map'), {
-						center: { lat: 20, lng: -160 },
-						zoom: 2
-					});
-					eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-						center: { lat: 37.3342, lng: -121.8903},
-						zoom: 2
+					
+         map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: 51.501904, lng: -0.115871}
+        });
+
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+      
+	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+					  center: { lat: 37.3342, lng: -121.8903},
+					  zoom: 2
        
 					});
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-						zoom: 10,
-						center: {lat: 37.3342, lng: -121.8903},
-						mapTypeId: 'terrain',
-						scrollwheel: true,
-						draggable: true
+					  zoom: 14,
+					  center: {lat: 37.3342, lng: -121.8903},
+					  mapTypeId: 'terrain',
+                          scrollwheel: true,
+  draggable: true
 					});
-					demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-						zoom: 10,
-						center: {lat:  37.368832, lng: -122.036346},
-						mapTypeId: 'terrain',
-						scrollwheel: true,
-						draggable: true
+					   demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
+					  zoom: 14,
+					  center: {lat:  37.368832, lng: -122.036346},
+					  mapTypeId: 'terrain',
+                            scrollwheel: true,
+  draggable: true
 					});
-					demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-						zoom: 10,
-						center: {lat:  37.368832, lng: -122.036346},
-						mapTypeId: 'terrain',
-						scrollwheel: true,
-						draggable: true
+					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
+					  zoom: 14,
+					  center: {lat:  37.368832, lng: -122.036346},
+					  mapTypeId: 'terrain',
+                           scrollwheel: true,
+  draggable: true
 					});  
-					
+					  /*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
+					  zoom: 14,
+					  center: {lat:  37.368832, lng: -122.036346},
+					  mapTypeId: 'terrain'
+					}); */ 
 					  
 					  
 					// Get the earthquake data (JSONP format)
@@ -468,7 +443,20 @@
 					document.getElementsByTagName('head')[0].appendChild(script);
 
 					// Add a basic style.
-					map.data.setStyle(function(feature) {
+					/*map.data.setStyle(function(feature) {
+					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
+					  return * @type {google.maps.Data.StyleOptions} ({
+						icon: {
+						  path: google.maps.SymbolPath.CIRCLE,
+						  scale: mag,
+						  fillColor: '#f00',
+						  fillOpacity: 0.35,
+						  strokeWeight: 0
+						}
+					  });
+					});*/
+                      
+                      	eqmap.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
 					  return /** @type {google.maps.Data.StyleOptions} */({
 						icon: {
@@ -480,27 +468,12 @@
 						}
 					  });
 					});
-                      
-                      	eqmap.data.setStyle(function(feature) {
-					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-					  return ({
-						icon: {
-						  path: google.maps.SymbolPath.CIRCLE,
-						  scale: mag,
-						  fillColor: '#f00',
-						  fillOpacity: 0.35,
-						  strokeWeight: 0
-						}
-					  });
-					});
-					
-					mapfeed_callback();
-				}
+				  }
 
 				  // Defines the callback function referenced in the jsonp file.
 				  function eqfeed_callback(results) {
-					map.data.addGeoJson(results);
-					 /*eqmap.data.addGeoJson(results);  */
+					/*map.data.addGeoJson(results);*/
+					 eqmap.data.addGeoJson(results); 
 					   var heatmapData = [];
 					for (var i = 0; i < results.features.length; i++) {
 					  var coords = results.features[i].geometry.coordinates;
@@ -509,8 +482,8 @@
 					}
 			   
 					  
-						/* var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8903},.
+						 var marker = new google.maps.Marker({
+					  position: {lat: 37.3342, lng: -121.8903},
 					  map: demomap1,
 					  title: 'Hospitals!'
 					});
@@ -534,97 +507,12 @@
 					  position: {lat: 37.3342, lng: -121.8922},
 					  map: demomap1,
 					  title: 'Hospitals!'
-					}); */
+					});
 					  
 					  
 				  }
-				  
-				  // defines the callback function for hospitals
-				 function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
-						
-						if(mapdata.maplocations[i].type=="Hospital"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap1,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/hospital.png" ,
-							});
-						}
-						if(mapdata.maplocations[i].type=="Communities"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap2,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/communities.png" ,
-							});
-						}
-						if(mapdata.maplocations[i].type=="Food"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap3,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/food.png" ,
-							});
-						}
-					} 
-				  				  
-				  
-				  }   
-				  
-				  
-					// [END script-body]
-					function getImpact(){
-						var heatmapData = [];
-						var locationString= document.getElementById("area-form").value;
-						var serverlocation = "http://localhost:4000/latlong";
-						var latLng1 = new google.maps.LatLng(37.3340, -121.8943);
-						 var latLng2 = new google.maps.LatLng(47.3340, -131.8943);
-						heatmapData.push(latLng1);heatmapData.push(latLng2);
-						console.log(heatmapData[0]);
-					  /*  for(var i =0; i < heatmapData.length; i++){*/
-						var heatmap = new google.maps.visualization.HeatmapLayer({
-						  data: heatmapData,
-						  dissipating: false,
-						  map: eqmap
-						});
-								
-                    
-                    
-                    
-						$.ajax({
-							url:serverlocation,
-							type:'get',
-							data:{location:locationString},
-							success: function(response){
-								generate(response);
-							}
-						});
-						/*
-                   
-					}
-					function generate(latlongData){
-						
-						
-						for(var i=0;i<latlongData.length;i++){
-							var obj = latlongData[i];
-							
-						/*    console.log(obj);
-							console.log(obj.latitude+"<>"+obj.longitude);*/
-							
-							 
-							 
-							 var marker = new google.maps.Marker({
-							position: {lat: obj.latitude, lng: obj.longitude},
-							map: demomap2,
-							title: 'Hospitals!'
-							});
-                    }
-                
+			// [END script-body]
+
 				</script>
 				<script async defer
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIH81nTclniiog-BWxdOT8Cd7_czwok14&libraries=visualization&&callback=initMap"></script>
