@@ -383,6 +383,8 @@
 
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
+					<script src="mapdata.js"></script>
+
 			<script>
 
 			// [START script-body]
@@ -404,21 +406,21 @@
        
 					});
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-					  zoom: 14,
+					  zoom: 10,
 					  center: {lat: 37.3342, lng: -121.8903},
 					  mapTypeId: 'terrain',
                           scrollwheel: true,
   draggable: true
 					});
 					   demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-					  zoom: 14,
+					  zoom: 10,
 					  center: {lat:  37.368832, lng: -122.036346},
 					  mapTypeId: 'terrain',
                             scrollwheel: true,
   draggable: true
 					});
 					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
+					  zoom: 10,
 					  center: {lat:  37.368832, lng: -122.036346},
 					  mapTypeId: 'terrain',
                            scrollwheel: true,
@@ -468,6 +470,8 @@
 						}
 					  });
 					});
+					
+					mapfeed_callback();
 				  }
 
 				  // Defines the callback function referenced in the jsonp file.
@@ -482,7 +486,7 @@
 					}
 			   
 					  
-						 var marker = new google.maps.Marker({
+					/*	 var marker = new google.maps.Marker({
 					  position: {lat: 37.3342, lng: -121.8903},
 					  map: demomap1,
 					  title: 'Hospitals!'
@@ -507,10 +511,52 @@
 					  position: {lat: 37.3342, lng: -121.8922},
 					  map: demomap1,
 					  title: 'Hospitals!'
-					});
+					}); */
 					  
 					  
 				  }
+				  
+				  
+				    // defines the callback function for hospitals
+				 function mapfeed_callback(){
+					for(var i=0;i<mapdata.maplocations.length;i++)
+					{					
+						var latitude = mapdata.maplocations[i].latitude;
+						var longitude = mapdata.maplocations[i].longitude;
+						var LatandLong = new google.maps.LatLng(latitude,longitude);
+						console.log(LatandLong);
+						
+						if(mapdata.maplocations[i].type=="Hospital"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap1,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/hospital.png" ,
+							});
+						}
+						
+						if(mapdata.maplocations[i].type=="Communities"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap2,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/communities.png" ,
+							});
+						}
+						if(mapdata.maplocations[i].type=="Food"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap3,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/food.png" ,
+							});
+						}
+					
+				  				  
+					
+					} 
+				}						  
+				  
 			// [END script-body]
 
 				</script>

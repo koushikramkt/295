@@ -62,8 +62,10 @@
       }*/
     </style>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="mapdata.js"></script>
+
     <script type="text/javascript">
-     google.charts.load('current', {'packages':['corechart']});
+	  google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart); 
       function drawChart() {
 
@@ -95,6 +97,7 @@
 	/*google.setOnLoadCallback(initialize);
  google.load("visualization", "1", {packages:["corechart"]});  */ 
     </script>
+	
   </head>
 
   <body class="nav-md">
@@ -317,7 +320,6 @@
 			<button type="button" id="playSimulationButton" class="btn btn-primary" >Play Simulation</button>
 			
 			
-			
 			</div> 
 			
 			<div id="piechart_alert" style="display:none"></div>  
@@ -410,45 +412,46 @@
 				<script src="../vendors/moment/min/moment.min.js"></script>
 				<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 				   <!-- Jeyanthh -->
-					<script src="../vendors/jeyanthh/filename.js"></script>
+				<script src="../vendors/jeyanthh/filename.js"></script>
 
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
-			<script>
 
-			// [START script-body]
+			<script>
+			
+				// [START script-body]
 				  var map,eqmap,demomap1,demomap2,demomap3;
 
 				  function initMap() {
 					map = new google.maps.Map(document.getElementById('map'), {
-					  center: { lat: 20, lng: -160 },
-					  zoom: 2
+						center: { lat: 20, lng: -160 },
+						zoom: 2
 					});
-	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-					  center: { lat: 37.3342, lng: -121.8903},
-					  zoom: 2
+					eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+						center: { lat: 37.3342, lng: -121.8903},
+						zoom: 2
        
 					});
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-					  zoom: 14,
-					  center: {lat: 37.3342, lng: -121.8903},
-					  mapTypeId: 'terrain',
-                          scrollwheel: true,
-  draggable: true
+						zoom: 10,
+						center: {lat: 37.3342, lng: -121.8903},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});
-					   demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                            scrollwheel: true,
-  draggable: true
+					demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
+						zoom: 10,
+						center: {lat:  37.368832, lng: -122.036346},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});
-					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                           scrollwheel: true,
-  draggable: true
+					demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
+						zoom: 10,
+						center: {lat:  37.368832, lng: -122.036346},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});  
 					
 					  
@@ -490,7 +493,9 @@
 						}
 					  });
 					});
-				  }
+					
+					mapfeed_callback();
+				}
 
 				  // Defines the callback function referenced in the jsonp file.
 				  function eqfeed_callback(results) {
@@ -504,8 +509,8 @@
 					}
 			   
 					  
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8903},
+						/* var marker = new google.maps.Marker({
+					  position: {lat: 37.3342, lng: -121.8903},.
 					  map: demomap1,
 					  title: 'Hospitals!'
 					});
@@ -529,54 +534,96 @@
 					  position: {lat: 37.3342, lng: -121.8922},
 					  map: demomap1,
 					  title: 'Hospitals!'
-					});
+					}); */
 					  
 					  
 				  }
-			// [END script-body]
-                function getImpact(){
-                    var heatmapData = [];
-                    var locationString= document.getElementById("area-form").value;
-                    var serverlocation = "http://localhost:4000/latlong";
-                    var latLng1 = new google.maps.LatLng(37.3340, -121.8943);
-                     var latLng2 = new google.maps.LatLng(47.3340, -131.8943);
-				    heatmapData.push(latLng1);heatmapData.push(latLng2);
-                    console.log(heatmapData[0]);
-                  /*  for(var i =0; i < heatmapData.length; i++){*/
-                    var heatmap = new google.maps.visualization.HeatmapLayer({
-          data: heatmapData,
-          dissipating: false,
-          map: eqmap
-        });
+				  
+				  // defines the callback function for hospitals
+				 function mapfeed_callback(){
+					for(var i=0;i<mapdata.maplocations.length;i++)
+					{					
+						var latitude = mapdata.maplocations[i].latitude;
+						var longitude = mapdata.maplocations[i].longitude;
+						var LatandLong = new google.maps.LatLng(latitude,longitude);
+						console.log(LatandLong);
+						
+						if(mapdata.maplocations[i].type=="Hospital"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap1,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/hospital.png" ,
+							});
+						}
+						if(mapdata.maplocations[i].type=="Communities"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap2,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/communities.png" ,
+							});
+						}
+						if(mapdata.maplocations[i].type=="Food"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap3,
+                                label: mapdata.maplocations[i].name,
+								icon:"/295/public/gentelella-master/production/images/food.png" ,
+							});
+						}
+					} 
+				  				  
+				  
+				  }   
+				  
+				  
+					// [END script-body]
+					function getImpact(){
+						var heatmapData = [];
+						var locationString= document.getElementById("area-form").value;
+						var serverlocation = "http://localhost:4000/latlong";
+						var latLng1 = new google.maps.LatLng(37.3340, -121.8943);
+						 var latLng2 = new google.maps.LatLng(47.3340, -131.8943);
+						heatmapData.push(latLng1);heatmapData.push(latLng2);
+						console.log(heatmapData[0]);
+					  /*  for(var i =0; i < heatmapData.length; i++){*/
+						var heatmap = new google.maps.visualization.HeatmapLayer({
+						  data: heatmapData,
+						  dissipating: false,
+						  map: eqmap
+						});
+								
                     
                     
                     
-                    
-                    $.ajax({
-                        url:serverlocation,
-                        type:'get',
-                        data:{location:locationString},
-                        success: function(response){
-                            generate(response);
-                        }
-                    });
-                    /*
+						$.ajax({
+							url:serverlocation,
+							type:'get',
+							data:{location:locationString},
+							success: function(response){
+								generate(response);
+							}
+						});
+						/*
                    
-                }
-                function generate(latlongData){
-                    
-                    
-                    for(var i=0;i<latlongData.length;i++){
-                        var obj = latlongData[i];
-                        
-                    /*    console.log(obj);
-                        console.log(obj.latitude+"<>"+obj.longitude);*/
-                        
-                         var marker = new google.maps.Marker({
-					  position: {lat: obj.latitude, lng: obj.longitude},
-					  map: demomap2,
-					  title: 'Hospitals!'
-					});
+					}
+					function generate(latlongData){
+						
+						
+						for(var i=0;i<latlongData.length;i++){
+							var obj = latlongData[i];
+							
+						/*    console.log(obj);
+							console.log(obj.latitude+"<>"+obj.longitude);*/
+							
+							 
+							 
+							 var marker = new google.maps.Marker({
+							position: {lat: obj.latitude, lng: obj.longitude},
+							map: demomap2,
+							title: 'Hospitals!'
+							});
                     }
                 
 				</script>
