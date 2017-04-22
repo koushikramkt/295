@@ -84,7 +84,8 @@ eqfeed_callback({
         "id": "Gilroy",
         "type": "RailwayStation",
         "latitude": 37.0057,
-        "longitude": -121.5682      }
+        "longitude": -121.5682      
+		}
     ]
   }
 });

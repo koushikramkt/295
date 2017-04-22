@@ -207,7 +207,7 @@
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h3>Sesimic Activities </h3>
+                    <h3>Oil Train Path </h3>
                   </div>
                   <div class="col-md-6"> 
                   <!--  <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
@@ -237,7 +237,9 @@
           <div class="row">
 		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		  <div class="container">
-			<div class="col-md-4 col-sm-4 col-xs-4">
+		  <div>
+				<center><h4> Oil Spilliage Impact </h4>		</center>
+
 				<h4>Select region: </h4>		
 				<select class="form-control">
 					<option value="SanJose">San Jose</option>
@@ -257,8 +259,8 @@
 				</select>
 			
 			</div> 
-              <br><br>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
+              
+            <center> <button type="button" class="btn btn-primary">Impact</button>    <br><br>
             <div id="eqmap"></div> 
               
           <br><br>
@@ -388,45 +390,52 @@
 			<script>
 
 			// [START script-body]
-				  var map,eqmap,demomap1,demomap2,demomap3;
-
-				  function initMap() {
+			var map,eqmap,demomap1,demomap2,demomap3;
+			var heatmapData = [];
+			function initMap() {
 					
-         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 51.501904, lng: -0.115871}
-        });
+			map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 10,
+			center: {lat: 37.77, lng: -122.41}
+			});
 
-        var transitLayer = new google.maps.TransitLayer();
-        transitLayer.setMap(map);
-      
-	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-					  center: { lat: 37.3342, lng: -121.8903},
-					  zoom: 2
-       
-					});
-					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-					  zoom: 10,
-					  center: {lat: 37.3342, lng: -121.8903},
-					  mapTypeId: 'terrain',
-                          scrollwheel: true,
-  draggable: true
-					});
-					   demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-					  zoom: 10,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                            scrollwheel: true,
-  draggable: true
-					});
-					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 10,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                           scrollwheel: true,
-  draggable: true
-					});  
-					  /*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
+			var trafficLayer = new google.maps.TransitLayer();
+			trafficLayer.setMap(map);
+				  
+			eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+			center: { lat: 37.50, lng: -122.26},
+			zoom: 8       
+			});
+					
+			var script = document.createElement('script');
+			script.src = '\MyCoLocations.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
+																	  
+			demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
+			zoom: 10,
+			center: {lat: 37.3342, lng: -121.8903},
+			mapTypeId: 'terrain',
+			scrollwheel: true,
+			draggable: true
+			});
+			
+			demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
+			zoom: 10,
+			center: {lat:  37.368832, lng: -122.036346},
+			mapTypeId: 'terrain',
+			scrollwheel: true,
+			  draggable: true
+			});
+			
+			demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
+			zoom: 10,
+			center: {lat:  37.368832, lng: -122.036346},
+			 mapTypeId: 'terrain',
+			 scrollwheel: true,
+			 draggable: true
+			});  
+			
+			/*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
 					  zoom: 14,
 					  center: {lat:  37.368832, lng: -122.036346},
 					  mapTypeId: 'terrain'
@@ -474,15 +483,25 @@
 					mapfeed_callback();
 				  }
 
-				  // Defines the callback function referenced in the jsonp file.
-				  function eqfeed_callback(results) {
-					/*map.data.addGeoJson(results);*/
-					 eqmap.data.addGeoJson(results); 
-					   var heatmapData = [];
-					for (var i = 0; i < results.features.length; i++) {
-					  var coords = results.features[i].geometry.coordinates;
-					  var latLng = new google.maps.LatLng(coords[1], coords[0]);
-					  heatmapData.push(latLng);
+				 	  // Defines the callback function referenced in the jsonp file.
+				  window.eqfeed_callback = function(results) {
+                      
+                      	/*map.data.addGeoJson(results);*/
+					
+							 
+				for (var i = 0; i < results.locations.location.length; i++) {
+				  var latitude = results.locations.location[i].latitude;
+				  var longitude = results.locations.location[i].longitude;
+				  var LatandLong = new google.maps.LatLng(latitude,longitude);
+					heatmapData.push(LatandLong)
+                
+              
+          /*	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: eqmap,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png" ,
+							});*/
 					}
 			   
 					  
@@ -556,6 +575,18 @@
 					} 
 				}						  
 				  
+                  function displayImpact(){
+                      
+                      for(var i=0; i<heatmapData.length; i++){
+                  var RevCircle = new google.maps.Circle({
+								strokeColor: '#f00',
+								strokeOpacity: 0.7,
+								strokeWeight: 3,
+								map: eqmap,
+								center: heatmapData[i],
+								radius: 3500
+							  });}
+                }			
 			// [END script-body]
 
 				</script>
