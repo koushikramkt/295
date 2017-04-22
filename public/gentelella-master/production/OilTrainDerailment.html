@@ -207,7 +207,7 @@
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h3>Sesimic Activities </h3>
+                    <h3>Oil Train Path </h3>
                   </div>
                   <div class="col-md-6"> 
                   <!--  <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
@@ -237,34 +237,19 @@
           <div class="row">
 		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		  <div class="container">
-			<div class="col-md-4 col-sm-4 col-xs-4">
-				<h4>Select region: </h4>		
-				<select class="form-control">
-					<option value="SanJose">San Jose</option>
-					<option value="Milpitas">Milpitas</option>
-					<option value="Sunnyvale">Sunnyvale</option>
-                    <option value="Santa Clara">Santa Clara</option>
-				</select>
+			<div >
+				<center><h4> Oil Spilliage Impact </h4>		</center>
+				
 			
 			</div> 
-			<div class="col-md-4 col-sm-4 col-xs-4">
-				<h4>Select Ritcher-scale: </h4>		
-				<select class="form-control">
-					<option value="0-3">0-3</option>
-					<option value="3-6">3-6</option>
-					<option value="6-9">6-9</option>
-					<option value="10">10</option>
-				</select>
-			
-			</div> 
-              <br><br>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
+        
+             <center> <button type="button" class="btn btn-primary" onclick="displayImpact()">Impact</button>  </center>  <br><br>
             <div id="eqmap"></div> 
               
           <br><br>
 		  </div>
 		  
-		   <div class="row">
+		   <div class="row" style="margin-left:220px">
 		   	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<div class="container">
 			<div class="col-md-4 col-sm-4 col-xs-4">
@@ -286,8 +271,8 @@
 			
 			</div> 
 			<br><br><br><br><br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<button type="button" class="btn btn-primary">Play Simulation</button>
+		
+			<button type="button" class="btn btn-primary" style="margin-left:220px">Play Simulation</button>
 	
 			
 			</div> 
@@ -387,22 +372,28 @@
 
 			// [START script-body]
 				  var map,eqmap,demomap1,demomap2,demomap3;
-
+ var heatmapData = [];
 				  function initMap() {
 					
          map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 51.501904, lng: -0.115871}
+          zoom: 10,
+          center: {lat: 37.77, lng: -122.41}
         });
 
-        var transitLayer = new google.maps.TransitLayer();
-        transitLayer.setMap(map);
+        var trafficLayer = new google.maps.TransitLayer();
+        trafficLayer.setMap(map);
       
 	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-					  center: { lat: 37.3342, lng: -121.8903},
-					  zoom: 2
+					  center: { lat: 37.50, lng: -122.26},
+					  zoom: 8
        
 					});
+                      
+                      
+        var script = document.createElement('script');
+        script.src = '\MyCoLocations.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+                      
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
 					  zoom: 14,
 					  center: {lat: 37.3342, lng: -121.8903},
@@ -418,29 +409,14 @@
   draggable: true
 					});
 					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
+					  zoom: 10,
 					  center: {lat:  37.368832, lng: -122.036346},
 					  mapTypeId: 'terrain',
                            scrollwheel: true,
   draggable: true
 					});  
-					  /*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain'
-					}); */ 
-					  
-					  
-					// Get the earthquake data (JSONP format)
-					// This feed is a copy from the USGS feed, you can find the originals here:
-					//   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-					var script = document.createElement('script');
-					script.setAttribute(
-						'src',
-						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-							  /*script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';*/
-
-					document.getElementsByTagName('head')[0].appendChild(script);
+					 
+					
 
 					// Add a basic style.
 					/*map.data.setStyle(function(feature) {
@@ -456,32 +432,38 @@
 					  });
 					});*/
                       
-                      	eqmap.data.setStyle(function(feature) {
-					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-					  return /** @type {google.maps.Data.StyleOptions} */({
-						icon: {
-						  path: google.maps.SymbolPath.CIRCLE,
-						  scale: mag,
-						  fillColor: '#f00',
-						  fillOpacity: 0.35,
-						  strokeWeight: 0
-						}
-					  });
-					});
+                      
+         
+                  
+
+             
+                      
+                      
+                      
 				  }
 
 				  // Defines the callback function referenced in the jsonp file.
-				  function eqfeed_callback(results) {
-					/*map.data.addGeoJson(results);*/
-					 eqmap.data.addGeoJson(results); 
-					   var heatmapData = [];
-					for (var i = 0; i < results.features.length; i++) {
-					  var coords = results.features[i].geometry.coordinates;
-					  var latLng = new google.maps.LatLng(coords[1], coords[0]);
-					  heatmapData.push(latLng);
+				  window.eqfeed_callback = function(results) {
+                      
+                      	/*map.data.addGeoJson(results);*/
+					
+        for (var i = 0; i < results.locations.location.length; i++) {
+          var latitude = results.locations.location[i].latitude;
+          var longitude = results.locations.location[i].longitude;
+          var LatandLong = new google.maps.LatLng(latitude,longitude);
+            heatmapData.push(LatandLong)
+                
+              
+          /*	var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: eqmap,
+                                label: results.locations.location[i].id,
+								icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png" ,
+							});*/
 					}
-			   
+                    
 					  
+       
 						 var marker = new google.maps.Marker({
 					  position: {lat: 37.3342, lng: -121.8903},
 					  map: demomap1,
@@ -511,6 +493,18 @@
 					  
 					  
 				  }
+                  function displayImpact(){
+                      
+                      for(var i=0; i<heatmapData.length; i++){
+                  var RevCircle = new google.maps.Circle({
+								strokeColor: '#f00',
+								strokeOpacity: 0.7,
+								strokeWeight: 3,
+								map: eqmap,
+								center: heatmapData[i],
+								radius: 3500
+							  });}
+                }
 			// [END script-body]
 
 				</script>
