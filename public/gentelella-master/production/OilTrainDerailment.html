@@ -260,7 +260,7 @@
 			
 			</div> 
               
-            <center> <button type="button" class="btn btn-primary">Impact</button>    <br><br>
+            <center> <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    <br><br>
             <div id="eqmap"></div> 
               
           <br><br>
@@ -385,7 +385,7 @@
 
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
-					<script src="mapdata.js"></script>
+					
 
 			<script>
 
@@ -410,6 +410,8 @@
 			var script = document.createElement('script');
 			script.src = '\MyCoLocations.js';
 			document.getElementsByTagName('head')[0].appendChild(script);
+                
+                
 																	  
 			demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
 			zoom: 10,
@@ -435,37 +437,8 @@
 			 draggable: true
 			});  
 			
-			/*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain'
-					}); */ 
-					  
-					  
-					// Get the earthquake data (JSONP format)
-					// This feed is a copy from the USGS feed, you can find the originals here:
-					//   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-					var script = document.createElement('script');
-					script.setAttribute(
-						'src',
-						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-							  /*script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';*/
-
-					document.getElementsByTagName('head')[0].appendChild(script);
-
-					// Add a basic style.
-					/*map.data.setStyle(function(feature) {
-					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-					  return * @type {google.maps.Data.StyleOptions} ({
-						icon: {
-						  path: google.maps.SymbolPath.CIRCLE,
-						  scale: mag,
-						  fillColor: '#f00',
-						  fillOpacity: 0.35,
-						  strokeWeight: 0
-						}
-					  });
-					});*/
+			
+					
                       
                       	eqmap.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
@@ -480,11 +453,10 @@
 					  });
 					});
 					
-					mapfeed_callback();
 				  }
 
 				 	  // Defines the callback function referenced in the jsonp file.
-				  window.eqfeed_callback = function(results) {
+				  window.eqfeed1_callback = function(results) {
                       
                       	/*map.data.addGeoJson(results);*/
 					
@@ -493,84 +465,43 @@
 				  var latitude = results.locations.location[i].latitude;
 				  var longitude = results.locations.location[i].longitude;
 				  var LatandLong = new google.maps.LatLng(latitude,longitude);
-					heatmapData.push(LatandLong)
+					
                 
               
-          /*	var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: eqmap,
-                                label: results.locations.location[i].id,
-								icon:"http://maps.google.com/mapfiles/ms/icons/green-dot.png" ,
-							});*/
-					}
-			   
-					  
-					/*	 var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8903},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-					  
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3340, lng: -121.8902},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});   var marker = new google.maps.Marker({
-					  position: {lat: 37.3361, lng: -121.8913},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-					  
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3340, lng: -121.8943},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8922},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					}); */
-					  
-					  
-				  }
+       
 				  
 				  
-				    // defines the callback function for hospitals
-				 function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
+				   
 						
-						if(mapdata.maplocations[i].type=="Hospital"){
+						if(results.locations.location[i].type=="Hospital"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap1,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/hospital.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/hospital.png" ,
 							});
 						}
 						
-						if(mapdata.maplocations[i].type=="Communities"){
+						if(results.locations.location[i].type=="Communities"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap2,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/communities.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/communities.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Food"){
+						if(results.locations.location[i].type=="Food"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/food.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/food.png" ,
 							});
 						}
 					
-				  				  
+				  			if(results.locations.location[i].type=="RailwayStation"){
+					heatmapData.push(LatandLong)
+						}	  
 					
 					} 
 				}						  
@@ -592,6 +523,6 @@
 				</script>
 				<script async defer
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIH81nTclniiog-BWxdOT8Cd7_czwok14&libraries=visualization&&callback=initMap"></script>
-      </div>
+        </div></div>
 			  </body>
 			</html>

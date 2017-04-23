@@ -1,4 +1,4 @@
-eqfeed1_callback({
+{
   "locations":
   {
     "location":
@@ -207,4 +207,4 @@ eqfeed1_callback({
 		}
     ]
   }
-});
+}

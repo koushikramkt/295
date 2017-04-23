@@ -32,7 +32,7 @@
        * element that contains the map. */
       #map {
          height: 400px;
-        width: 780px;
+        width: 1080px;
       }
            #demomap1 {
                margin-left: 20px;
@@ -275,50 +275,7 @@
                    <div id="map" ></div>
                   
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
-                  <div class="x_title">
-                    <h2>San Jose</h2>
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div class="col-md-12 col-sm-12 col-xs-6">
-                    <div>
-                      <p>Santa Clara</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Sunnyvale</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 col-xs-6">
-                    <div>
-                      <p>Milpitas</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Palo Alto</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+             
 
                 <!--<div class="clearfix"></div>-->
               </div>
@@ -488,7 +445,50 @@
               </div>
             </div>
 
+<div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="x_title">
+                    <h2>San Jose</h2>
+                    <div class="clearfix"></div>
+                  </div>
 
+                  <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                      <p>Santa Clara</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 76%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Sunnyvale</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 76%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                      <p>Milpitas</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 76%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Palo Alto</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 76%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
 
           </div>
 
@@ -583,8 +583,10 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-		<script src="mapdata.js"></script>
-
+      <script src="https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json"></script>
+		
+   
+      <script src="require.js"></script>
 <script>
 
 // [START script-body]
@@ -592,8 +594,8 @@
 
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: { lat: 20, lng: -160 },
-          zoom: 2
+          center: { lat: 37.3342, lng: -121.8903 },
+          zoom:5
         });
 
          demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
@@ -618,14 +620,16 @@
         // Get the earthquake data (JSONP format)
         // This feed is a copy from the USGS feed, you can find the originals here:
         //   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-        var script = document.createElement('script');
-        script.setAttribute(
-            'src',
-            'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-                  /*script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';*/
+      var script = document.createElement('script');
+					script.setAttribute(
+						'src',
+						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
+       document.getElementsByTagName('head')[0].appendChild(script);
 
-        document.getElementsByTagName('head')[0].appendChild(script);
-
+        	/*var script = document.createElement('script');
+			script.src = '\MyCoLocations.js';
+			document.getElementsByTagName('head')[0].appendChild(script);*/
+          
         // Add a basic style.
         map.data.setStyle(function(feature) {
           var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
@@ -639,144 +643,76 @@
             }
           });
         });
-		
-		mapfeed_callback();
+	
+          mapPlaces();
+          
+	
       }
 
       // Defines the callback function referenced in the jsonp file.
-      function eqfeed_callback(results) {
-        map.data.addGeoJson(results);
-          
-           var heatmapData = [];
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1], coords[0]);
-          heatmapData.push(latLng);
-        }
-   
-          
-            /* var marker = new google.maps.Marker({
-          position: {lat: 37.3342, lng: -121.8903},
-          map: demomap1,
-          title: 'Hospitals!'
-        });
-          
-             var marker = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8902},
-          map: demomap1,
-          title: 'Hospitals!'
-        });   var marker = new google.maps.Marker({
-          position: {lat: 37.3361, lng: -121.8913},
-          map: demomap1,
-          title: 'Hospitals!'
-        });
-          
-             var marker = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8943},
-          map: demomap1,
-          title: 'Hospitals!'
-        });
-             var marker = new google.maps.Marker({
-          position: {lat: 37.3342, lng: -121.8922},
-          map: demomap1,
-          title: 'Hospitals!'
-        });
-          
-           var marker2 = new google.maps.Marker({
-          position: {lat:  37.368832, lng: -122.036346},
-          map: demomap2,
-          title: 'Community Centers!'
-        }); 
-          var marker2 = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8902},
-          map: demomap2,
-                    title: 'Community Centers!'
+     window.eqfeed_callback = function(results){
+         
+							map.data.addGeoJson(results);
+       
+     }
+    function mapPlaces(){
+          var script = document.createElement('script');
+			script.src = '\MyCoLocations.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
+       
+          }
+    
+    
+    
+    function eqfeed1_callback(results){
+    
 
-        });   var marker2 = new google.maps.Marker({
-          position: {lat: 37.3361, lng: -121.8913},
-          map: demomap2,
-                    title: 'Community Centers!'
 
-        });
-          
-             var marker2 = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8943},
-          map: demomap2,
-                    title: 'Community Centers!'
 
-        });
-             var marker2 = new google.maps.Marker({
-          position: {lat: 37.3342, lng: -121.8922},
-          map: demomap2,
-                    title: 'Community Centers!'
-
-        });
-          var marker3 = new google.maps.Marker({
-          position: {lat:  37.368832, lng: -122.036346},
-          map: demomap3,
-          title: 'Food Storage!'
-        }); 
-           var marker3 = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8902},
-          map: demomap3,
-          title: 'Food Storage!'
-        });   var marker3 = new google.maps.Marker({
-          position: {lat: 37.3361, lng: -121.8913},
-          map: demomap3,
-           title: 'Food Storage!'
-        });
-          
-             var marker3 = new google.maps.Marker({
-          position: {lat: 37.3340, lng: -121.8943},
-          map: demomap3,
-          title: 'Food Storage!'
-        });
-             var marker3 = new google.maps.Marker({
-          position: {lat: 37.3342, lng: -121.8922},
-          map: demomap3,
-          title: 'Food Storage!'
-        });
-		*/
-      }
-	  
-	  
-	    // defines the callback function for hospitals
-				 function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
+   			 
+				for (var i = 0; i < results.locations.location.length; i++) {
+				  var latitude = results.locations.location[i].latitude;
+				  var longitude = results.locations.location[i].longitude;
+				  var LatandLong = new google.maps.LatLng(latitude,longitude);
+					
+                
+              
+       
+				  
+				  
+				   
 						
-						if(mapdata.maplocations[i].type=="Hospital"){
+						if(results.locations.location[i].type=="Hospital"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap1,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/hospital.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/hospital.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Communities"){
+						
+						if(results.locations.location[i].type=="Communities"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap2,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/communities.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/communities.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Food"){
+						if(results.locations.location[i].type=="Food"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
-                                label: mapdata.maplocations[i].name,
-								icon:"/295/public/gentelella-master/production/images/food.png" ,
+                                /*label: results.locations.location[i].name*/
+								icon:"/images/food.png" ,
 							});
 						}
-					} 
-				  				  
-				  
-				  }   
-				  
+         
+    }
+					
+	
+			
+    }
 // [END script-body]
 
     </script>

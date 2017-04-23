@@ -23,7 +23,6 @@
   </head>
 
   <body class="login">
-      <center> <h1>San Jose City Disaster Management Dashboard</h1></center>
     <div>
       <a class="hiddenanchor" id="signup"></a>
       <a class="hiddenanchor" id="signin"></a>
@@ -31,7 +30,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form nane = "login">
+            <form>
               <h1>Login </h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
@@ -40,24 +39,24 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" onclick="check(this.form)">Log in</a>
+                <a class="btn btn-default submit" href="index.html">Log in</a>
                 <a class="reset_pass" href="#">Forgot Password?</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">
+                <p class="change_link">New to site?
                   <a href="#signup" class="to_register"> Create Account </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
-               <!-- <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>-->
+                <div>
+                  <!--<h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>-->
+                </div>
               </div>
             </form>
           </section>
@@ -70,7 +69,9 @@
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
-              
+              <div>
+                <input type="email" class="form-control" placeholder="Email" required="" />
+              </div>
               <div>
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
@@ -88,73 +89,15 @@
                 <div class="clearfix"></div>
                 <br />
 
-                
+                <div>
+                  <!--<h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>-->
+                </div>
               </div>
             </form>
           </section>
         </div>
       </div>
     </div>
-      
-      <script >
-
-          
-          
-          
-function check(form)/*function to check userid & password*/
-{
-    
-    
-              var mysql = require('mysql');
-
-var connection = mysql.createConnection({
-  host     : "rds-mysql-sjcdisbig2.coixlfrjdyvl.us-west-1.rds.amazonaws.com",
-  user     : "sjcdisbigmaster",
-  password : "pass1234",
-  port     : "3306"
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.error('Database connection failed: ' + err.stack);
-    return;
-  }
-
-  console.log('Connected to database.');
-});
-
-/* 
-connection.query
- connection.query('SELECT * from BigDataDisMmt.Test', function(err, rows, fields) {
-   if (!err)
-     console.log('The solution is: ', rows);
-   else
-     console.log('Error while performing Query.');
- });*/
-          
-          
-          
-          
-          var scoreQuery = connection.query("SELECT password FROM BigDataDisMmt.user_details WHERE username = "+form.userid.value,
-    function(err, result, fields) {
-        if (err) {
-            throw err;
-        } else if(form.userid.value == result){
-    window.open('target.html')/*opens the target page while Id & password matches*/
-  } 
-else {
-   alert("Error Password or Username")/*displays error message*/
-  }
-        
-    });
-
- connection.end();
-    
-    
- /*the following code checkes whether the entered userid and password are matching*/
-
-
-}
-</script>
   </body>
 </html>
