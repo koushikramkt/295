@@ -243,7 +243,7 @@
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h3>Sesimic Activities </h3>
+                    <h3>Bilogical Hazard Zones </h3>
                   </div>
                   <div class="col-md-6"> 
                  
@@ -267,17 +267,20 @@
           <br />
 
 		  <!-- Middle div by Sindhuja -->
-          <div class="row">
+       <div class="row" style="margin-left:250px">
 		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  <div class="container">
+		  <div>
+				
+             
 			<div class="col-md-4 col-sm-4 col-xs-4">
+
 				<h4>Select region: </h4>		
 				<select class="form-control">
 					<option value="SanJose">San Jose</option>
 					<option value="Milpitas">Milpitas</option>
 					<option value="Sunnyvale">Sunnyvale</option>
                     <option value="Santa Clara">Santa Clara</option>
-				</select>
+                </select></div>
 			
 			</div> 
 			<div class="col-md-4 col-sm-4 col-xs-4">
@@ -289,12 +292,12 @@
 					<option value="10">10</option>
 				</select>
 			
-			</div> 
+              </div> </div>
               <br><br>
-             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <button type="button" class="btn btn-primary">Impact</button>    <br><br>
+            <center> <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    <br><br>
             <div id="eqmap"></div> 
+               
           <br><br>
-		  </div>
 		  
 		   <div class="row">
 		   	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -415,8 +418,9 @@
 				<script src="../vendors/moment/min/moment.min.js"></script>
 				<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 				   <!-- Jeyanthh -->
-					<script src="../vendors/jeyanthh/filename.js"></script>
+					<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
 
+        </script>
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
 			<script>
@@ -426,7 +430,7 @@
 
 				  function initMap() {
 					map = new google.maps.Map(document.getElementById('map'), {
-					  center: { lat: 20, lng: -160 },
+					  center: { lat: 37.3342, lng: -121.8903 },
 					  zoom: 2
 					});
 	eqmap = new google.maps.Map(document.getElementById('eqmap'), {
@@ -455,11 +459,7 @@
                            scrollwheel: true,
   draggable: true
 					});  
-					  /*eqmap = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 14,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain'
-					}); */ 
+					  
 					  
 					  
 					// Get the earthquake data (JSONP format)
@@ -500,53 +500,52 @@
 					  });
 					});
 					
-					mapfeed_callback();
-				  }
+                   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+           
+                        var markers = locations.map(function(location, i) {
+          return new google.maps.Marker({
+            position: location,
+            label: labels[i % labels.length]
+          });
+        });
 
-				  // Defines the callback function referenced in the jsonp file.
-				  function eqfeed_callback(results) {
-					map.data.addGeoJson(results);
-					 eqmap.data.addGeoJson(results); 
-					   var heatmapData = [];
-					for (var i = 0; i < results.features.length; i++) {
-					  var coords = results.features[i].geometry.coordinates;
-					  var latLng = new google.maps.LatLng(coords[1], coords[0]);
-					  heatmapData.push(latLng);
-					}
-			   
-					  
-						/* var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8903},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-					  
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3340, lng: -121.8902},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});   var marker = new google.maps.Marker({
-					  position: {lat: 37.3361, lng: -121.8913},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-					  
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3340, lng: -121.8943},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-						 var marker = new google.maps.Marker({
-					  position: {lat: 37.3342, lng: -121.8922},
-					  map: demomap1,
-					  title: 'Hospitals!'
-					});
-					  */
-					  
-				  }
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers,
+            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      }
+                      
+             var locations = [
+                  {lat : 37.3342, lng: -121.8903},
+                {lat : 37.3342, lng: -121.8903},
+                {lat : 37.3342, lng: -121.8903},
+                {lat : 37.3342, lng: -121.8903},
+                {lat : 37.3342, lng: -121.8903},
+                {lat : 37.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 38.3342, lng: -121.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -122.8903},
+                 {lat : 37.3342, lng: -121.8903}
+                 
+      ]         
+             
 				  
 				   // defines the callback function for hospitals
-				 function mapfeed_callback(){
+				 function eqfeed_callback(){
 					for(var i=0;i<mapdata.maplocations.length;i++)
 					{					
 						var latitude = mapdata.maplocations[i].latitude;
@@ -558,7 +557,7 @@
 								position: LatandLong,
 								map: demomap1,
                                 label: mapdata.maplocations[i].name,
-								icon:"/images/hospital.png" ,
+								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/hospital.png" ,
 							});
 						}
 						if(mapdata.maplocations[i].type=="Communities"){
@@ -566,7 +565,7 @@
 								position: LatandLong,
 								map: demomap2,
                                 label: mapdata.maplocations[i].name,
-								icon:"/images/communities.png" ,
+								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/communities.png" ,
 							});
 						}
 						if(mapdata.maplocations[i].type=="Food"){
@@ -574,7 +573,7 @@
 								position: LatandLong,
 								map: demomap3,
                                 label: mapdata.maplocations[i].name,
-								icon:"/images/food.png" ,
+								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/food.png" ,
 							});
 						}
 					} 
