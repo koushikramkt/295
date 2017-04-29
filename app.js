@@ -102,20 +102,36 @@ app.get('/latlong',function(req,res){
     //var query = "select latitude, longitude from BigDataDisMmt.CityLatLong where cityname='"+req.query.location+"'";
     var query = "select * from BigDataDisMmt.CityLatLong"
     //console.log(query);
-    
- 
+  
  connection.query(query, function(err, rows) {
    if (!err){
      console.log("rows count:"+rows.length);  
      res.json(rows);
-       
    }
    else
-     console.log('Error while performing Query.');
-     
+     console.log('Error while performing Query.');  
  });
-
     //res.json({lat:lat,long:long});
     //req.send("request reply");
-})
+});
+
+app.get('/pieChart',function(req,res){
+	
+	var query="select * from BigDataDisMmt.City_Language where City='San Jose';";
+	var value;
+	var sum;
+	connection.query(query, function(err, rows) {
+		if(!err){
+			console.log("rows count is: "+rows.length)
+			
+			res.json(rows);
+		}
+		else{
+			console.log("Error while performing the query !");
+		}
+		
+	});
+	
+});
+
 
