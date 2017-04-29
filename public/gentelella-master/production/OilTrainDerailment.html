@@ -450,6 +450,15 @@
 						}
 					  });
 					});
+                
+                
+                
+                
+               
+
+        /*animateCircle(line);  */
+                
+                
 					
 				  }
 
@@ -515,6 +524,32 @@
 								center: heatmapData[i],
 								radius: 3500
 							  });}
+                       var lineSymbol = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+                
+                
+              var line = new google.maps.Polyline({
+          path: [{lat: 37.77397, lng: -122.431297}, {lat: 37.0057, lng: -121.5682}],
+          icons: [{
+            icon: lineSymbol,
+            offset: '100%'
+          }],
+          map: eqmap
+        });
+                      var count = 0;
+          window.setInterval(function() {
+            count = (count + 1) % 200;
+
+            var icons = line.get('icons');
+            icons[0].offset = (count / 2) + '%';
+            line.set('icons', icons);
+        }, 20);
+                      
+                      
+                      
                 }			
 			// [END script-body]
 
