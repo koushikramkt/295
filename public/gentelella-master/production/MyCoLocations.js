@@ -168,26 +168,26 @@ eqfeed1_callback({
       {
         "name": "San Antonio",
         "type": "RailwayStation",
-        "latitude": 37.4419,
-        "longitude": -122.1930
+        "latitude": 37.4008,
+        "longitude": -122.1097
       },
       {
         "name": "Santa CLara",
         "type": "RailwayStation",
-        "latitude": 37.354,
-        "longitude": -121.9552
+        "latitude": 37.3470,
+        "longitude": -122.0362
       }, {
       "name": "San Jose Diridon",
       "type": "RailwayStation",
-      "latitude": 37.329,
-      "longitude":  -121.9025
+      "latitude": 37.2820,
+      "longitude":  -121.9458
       },{
       "name": "Carson",
       "type": "RailwayStation",
-      "latitude": 37.279518,
+      "latitude": 37.2195,
       "longitude": -121.867905
       },
-      {
+     /* {
         "name": "blosson hill",
         "type": "RailwayStation",
         "latitude": 37.2524,
@@ -198,7 +198,7 @@ eqfeed1_callback({
         "type": "RailwayStation",
         "latitude": 37.1305012,
         "longitude": -121.6543901
-      },
+      },*/
       {
         "name": "Gilroy",
         "type": "RailwayStation",

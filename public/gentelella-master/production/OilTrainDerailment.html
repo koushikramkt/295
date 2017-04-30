@@ -55,6 +55,38 @@
                  height: 300px;
 			width: 80%
       }
+          
+          
+            #container {
+                 display: none;
+      }
+     
+          #chartoptions {
+                 display: none;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      /*html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }*/
+          
+	.demo {
+		border:1px solid #2FF30C;
+		border-collapse:collapse;
+		padding:5px;
+        color: white;
+	}
+	.demo th {
+		border:1px solid #2FF30C;
+		padding:5px;
+		background:#0080C0;
+	}
+	.demo td {
+		border:1px solid #2FF30C;
+		padding:5px;
+		background:#0080FF;
+	}
       /* Optional: Makes the sample page fill the window. */
       /*html, body {
         height: 100%;
@@ -140,6 +172,303 @@
 	//google.setOnLoadCallback(initialize);
 
     </script>
+      
+       <script type="text/javascript">
+    
+                        
+                         $(document).ready(function() {  
+   var chart = {
+      type: 'bar'
+   };
+   var title = {
+      text: 'Demographic Information - Age'   
+   };
+  var subtitle = {
+      text: 'Info'  
+   };
+   var xAxis = {
+      categories: ['< 3', '3-7', '7-12', '12-16', '>16', '>25', '>65'],
+      title: {
+         text: null
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: 'Population (Thousands)',
+         align: 'high'
+      },
+      labels: {
+         overflow: 'justify'
+      }
+   };
+   var tooltip = {
+      valueSuffix: ' Thousands'
+   };
+   var plotOptions = {
+      bar: {
+         dataLabels: {
+            enabled: true
+         }
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+   };
+   var credits = {
+      enabled: false
+   };
+   
+   var series= [{
+         name: 'Year 2017',
+            data: [8, 12, 13, 16, 22, 12, 15]
+        },
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;   
+   json.subtitle = subtitle; 
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.legend = legend;
+   json.credits = credits;
+   $('#agetablegraph').highcharts(json);
+});
+          
+          
+    $(document).ready(function() {  
+   var chart = {
+      type: 'bar'
+   };
+   var title = {
+      text: 'Demographic Information - Language'   
+   };
+  var subtitle = {
+      text: 'Info'  
+   };
+   var xAxis = {
+      categories: ['English', 'Spanish', 'Chineese', 'Others'],
+      title: {
+         text: null
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: 'Population (Thousands)',
+         align: 'high'
+      },
+      labels: {
+         overflow: 'justify'
+      }
+   };
+   var tooltip = {
+      valueSuffix: ' Thousands'
+   };
+   var plotOptions = {
+      bar: {
+         dataLabels: {
+            enabled: true
+         }
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+   };
+   var credits = {
+      enabled: false
+   };
+   
+   var series= [{
+         name: 'Year 2017',
+            data: [28000, 32000, 43000, 16000]
+        },
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;   
+   json.subtitle = subtitle; 
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.legend = legend;
+   json.credits = credits;
+   $('#languagetablegraph').highcharts(json);
+});        
+          
+ 
+                        
+                         $(document).ready(function() {  
+   var chart = {
+      type: 'bar'
+   };
+   var title = {
+      text: 'Demographic Information - Age'   
+   };
+  var subtitle = {
+      text: 'Info'  
+   };
+   var xAxis = {
+      categories: ['< 3', '3-7', '7-12', '12-16', '>16', '>25', '>65'],
+      title: {
+         text: null
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: 'Population (Thousands)',
+         align: 'high'
+      },
+      labels: {
+         overflow: 'justify'
+      }
+   };
+   var tooltip = {
+      valueSuffix: ' Thousands'
+   };
+   var plotOptions = {
+      bar: {
+         dataLabels: {
+            enabled: true
+         }
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+   };
+   var credits = {
+      enabled: false
+   };
+   
+   var series= [{
+         name: 'Year 2017',
+            data: [8, 12, 13, 16, 22, 12, 15]
+        },
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;   
+   json.subtitle = subtitle; 
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.legend = legend;
+   json.credits = credits;
+   $('#agetablegraph').highcharts(json);
+});
+          
+          
+    $(document).ready(function() {  
+   var chart = {
+      type: 'bar'
+   };
+   var title = {
+      text: 'Demographic Information - Gender'   
+   };
+  var subtitle = {
+      text: 'Info'  
+   };
+   var xAxis = {
+      categories: ['Male', 'Female'],
+      title: {
+         text: null
+      }
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: 'Population (Thousands)',
+         align: 'high'
+      },
+      labels: {
+         overflow: 'justify'
+      }
+   };
+   var tooltip = {
+      valueSuffix: ' Thousands'
+   };
+   var plotOptions = {
+      bar: {
+         dataLabels: {
+            enabled: true
+         }
+      }
+   };
+   var legend = {
+      layout: 'vertical',
+      align: 'right',
+      verticalAlign: 'top',
+      x: -40,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+      shadow: true
+   };
+   var credits = {
+      enabled: false
+   };
+   
+   var series= [{
+         name: 'Year 2017',
+            data: [48350, 62020]
+        },
+   ];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;   
+   json.subtitle = subtitle; 
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   json.legend = legend;
+   json.credits = credits;
+   $('#gendertablegraph').highcharts(json);
+});        
+                 
+                
+          
+</script>  
+      
+      
   </head>
 
   <body class="nav-md">
@@ -285,7 +614,7 @@
 
                 <div class="row x_title">
                   <div class="col-md-6">
-                    <h3>Oil Train Path </h3>
+                    <h3>Oil Train Derailment </h3>
                   </div>
                   <div class="col-md-6"> 
                   
@@ -294,10 +623,96 @@
 
                <div class="col-md-12 col-sm-12 col-xs-12">
                   <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
-                  <!--change done by jeyanthh-->
+                  <!--change done by jeyanthh--><center><h4> Oil Spilliage Impact </h4>		<br>
+                   <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    
+                 <button type="button" class="btn btn-primary" onclick=displayPath()>Oil Train Path</button></center>   
                    <div id="map" ></div>
                   
-          
+            <div id="chartoptions" style="margin-left:260px; font-size:20px">
+		<h3 style="margin-left:50px">Demographic Information</h3><br><br>
+
+           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;     <select id="ChartType">
+    <option value="agetable">Age</option>
+    <option value="languagetable">Language</option>
+    <option value="gendertable">Gender</option>
+  </select>
+              
+              </div>
+              <div id="agetable" class="charttable" style="display:none; margin-left:80px";>
+                  
+              <table class="demo">
+	<caption>Population Info - Age</caption>
+	<thead>
+	<tr>
+		<th>Age : < 3 Years</th>
+		<th>Age :3-7 Years</th>
+		<th>Age :7-12 Years</th>
+		<th>Age :12-16 Years</th>
+		<th>Age :>16 Years</th>
+		<th>Age :>25 Years</th>
+		<th>Age :>65 Years</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>8000</td>
+		<td>12000</td>
+		<td>13000</td>
+		<td>16000</td>
+		<td>22000</td>
+		<td>12000</td>
+		<td>15000</td>
+	</tr>
+	
+	</tbody>
+</table></div>
+              <div id="languagetable" class="charttable" style="display:none ;margin-left:80px";>
+                  
+              <table class="demo" >
+	<caption>Population Info - Language</caption>
+	<thead>
+	<tr>
+		<th>English</th>
+		<th>Spanish</th>
+		<th>Chineese</th>
+		<th>Others</th>
+
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>28000</td>
+		<td>32000</td>
+		<td>43000</td>
+		<td>16000</td>
+		
+	</tr>
+	
+	</tbody>
+</table></div>
+              <div id="gendertable" class="charttable" style="display:none; margin-left:80px";>
+                  
+              <table class="demo">
+	<caption>Population Info - Gender</caption>
+	<thead>
+	<tr>
+		<th>Male</th>
+		<th>Female</th>
+		
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>48350</td>
+		<td>62020</td>
+		
+	</tr>
+	
+	</tbody>
+</table></div>
+             <div id="agetablegraph" class="charttable" style="width: 550px; height: 400px; margin-left: 175px; display:none;"></div>
+                           <div id="languagetablegraph" class="charttable" style="width: 550px; height: 400px; margin-left: 175px; display:none"></div>
+               <div id="gendertablegraph" class="charttable" style="width: 550px; height: 400px; margin-left: 175px; display:none"></div>
                 
                 </div>
 
@@ -307,47 +722,20 @@
              
           </div>
           <br />
-<center><h4> Oil Spilliage Impact </h4>		</center>
+<center><h4> Alerting System Impact </h4>		</center>
 		  <!-- Middle div by Sindhuja -->
-          <div class="row" style="margin-left:250px">
+          <div class="row" style="margin-left:50px">
 		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  <div>
-				
-             
-			<div class="col-md-4 col-sm-4 col-xs-4">
-
-				<h4>Select region: </h4>		
-				<select class="form-control" id="area-form">
-					<option value="SanJose">San Jose</option>
-					<option value="Milpitas">Milpitas</option>
-					<option value="Sunnyvale">Sunnyvale</option>
-                    <option value="Santa Clara">Santa Clara</option>
-                </select></div>
-			
-			</div> 
-			<div class="col-md-4 col-sm-4 col-xs-4">
-				<h4>Radius of Impact(in Sq. miles) </h4>		
-				<select id="scaleDD" class="form-control">
-					<option value="0-3">0-3</option>
-					<option value="3-6">3-6</option>
-					<option value="6-9">6-9</option>
-					<option value="10">10</option>
-				</select>
-			
-              </div> </div>
-              <br><br>
-            <center> <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    <br><br>
-            <div id="eqmap"></div> 
-               
+		
           <br><br>
               
 		  
 		   <div class="row" >
-		   	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			<div class="container" style="margin-left:180px">
-			<div class="col-md-4 col-sm-4 col-xs-4">
+
+			<div class="container">
+			<div class="col-md-4 col-sm-4 col-xs-4" style="margin-left:130px">
 				<h4>Select time-range: </h4>		
-				<select id="timeDD" class="form-control">
+				<select id="area-form" class="form-control">
 					<option value="8am - 6pm">8am - 6pm</option>
 					<option value="6pm - 11pm">6pm - 11pm</option>
 					<option value="11pm - 8am">11pm - 8am </option>
@@ -366,11 +754,11 @@
 			</div> 
 			<br><br><br><br><br>
 			&nbsp;&nbsp;&nbsp;
-			<button type="button" id="chartButton" class="btn btn-primary" onclick="getLangChart()" >Submit </button>
+			<button type="button" id="chartButton" class="btn btn-primary" onclick="getLangChart()" style="margin-left:420px" >Submit </button>
 			<br>
 			
 			<div class="container">
-			<div class="row">
+			<div class="row" >
 			
 				<div class="col-sm-4 col-md-4 col-lg-4" id="piechart_alert"></div>
 				<div class="col-sm-8 col-md-8 col-lg-8" id="barChart_lang"></div>
@@ -469,12 +857,14 @@
 
 				<!-- Custom Theme Scripts -->
 				<script src="../build/js/custom.min.js"></script>
-					
+				<script src="../build/js/custom.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>	
 
 			<script>
 
 			// [START script-body]
 			var map,eqmap,demomap1,demomap2,demomap3;
+                 var LatandLong;
 			var heatmapData = [];
 			function initMap() {
 					
@@ -483,13 +873,11 @@
 			center: {lat: 37.77, lng: -122.41}
 			});
 
-			var trafficLayer = new google.maps.TransitLayer();
-			trafficLayer.setMap(map);
-				  
-			eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+		
+			/*eqmap = new google.maps.Map(document.getElementById('eqmap'), {
 			center: { lat: 37.50, lng: -122.26},
 			zoom: 10       
-			});
+			});*/
 					
 			var script = document.createElement('script');
 			script.src = '\MyCoLocations.js';
@@ -524,7 +912,7 @@
 			
 					
                       
-                      	eqmap.data.setStyle(function(feature) {
+                      	map.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
 					  return /** @type {google.maps.Data.StyleOptions} */({
 						icon: {
@@ -546,45 +934,7 @@
                 
 					
 				  }
-				  // defines the callback function for hospitals
-				/* function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
-						
-						if(mapdata.maplocations[i].type=="Hospital"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap1,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/hospital.png" ,
-							});
-						}
-						if(mapdata.maplocations[i].type=="Communities"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap2,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/communities.png" ,
-							});
-						}
-						if(mapdata.maplocations[i].type=="Food"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap3,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/food.png" ,
-							});
-						}
-						if(results.locations.location[i].type=="RailwayStation"){
-					heatmapData.push(LatandLong)
-					} 
-				  				  
 				  
-				  }   */
-
 				 	  // Defines the callback function referenced in the jsonp file.
 				 window.eqfeed1_callback = function(results) {
                       
@@ -594,7 +944,7 @@
 				for (var i = 0; i < results.locations.location.length; i++) {
 				  var latitude = results.locations.location[i].latitude;
 				  var longitude = results.locations.location[i].longitude;
-				  var LatandLong = new google.maps.LatLng(latitude,longitude);
+				   LatandLong = new google.maps.LatLng(latitude,longitude);
 					
                   
 						
@@ -603,7 +953,7 @@
 								position: LatandLong,
 								map: demomap1,
                               //  label: results.locations.location[i].name
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/hospital.png" ,
+								icon:"/images/hospital.png" ,
 							});
 						}
 						
@@ -625,12 +975,18 @@
 						}
 					
 				  			if(results.locations.location[i].type=="RailwayStation"){
-					heatmapData.push(LatandLong)
+					heatmapData.push(LatandLong);
 						}	  
 					
 					} 
 				}						  
+				  function displayPath(){
+                      
+            var trafficLayer = new google.maps.TransitLayer();
+			trafficLayer.setMap(map);
 				  
+                      
+                  }
                   function displayImpact(){
                       
                       for(var i=0; i<heatmapData.length; i++){
@@ -638,9 +994,9 @@
 								strokeColor: '#f00',
 								strokeOpacity: 0.7,
 								strokeWeight: 3,
-								map: eqmap,
+								map: map,
 								center: heatmapData[i],
-								radius: 3500
+								radius: 1500
 							  });}
                        var lineSymbol = {
           path: google.maps.SymbolPath.CIRCLE,
@@ -650,12 +1006,12 @@
                 
                 
               var line = new google.maps.Polyline({
-          path: [{lat: 37.77397, lng: -122.431297}, {lat: 37.0057, lng: -121.5682}],
+          path: [{lat: 	37.6643785, lng: -122.4716401}, {lat: 37.0057, lng: -121.5682}],
           icons: [{
             icon: lineSymbol,
             offset: '100%'
           }],
-          map: eqmap
+          map: map
         });
                       var count = 0;
           window.setInterval(function() {
@@ -666,6 +1022,32 @@
             line.set('icons', icons);
         }, 20);
                       
+                
+                 
+						 $('#chartoptions').show();
+						 $('#agetable').show();
+						 $('#agetablegraph').show();
+						 
+						 $(function() {
+			$('#ChartType').change(function(){
+				$('.charttable').hide();
+				$('#' + $(this).val()).show();
+				 $('#' + $(this).val() +"graph").show();
+			});
+		});     
+                      
+                      
+            			 $('#chartoptions').show();
+						     $('#agetable').show();
+							 $('#agetablegraph').show();
+							
+							 $(function() {
+			$('#ChartType').change(function(){
+				$('.charttable').hide();
+				$('#' + $(this).val()).show();
+				 $('#' + $(this).val() +"graph").show();
+			});
+		});          
                       
                       
                 }			
