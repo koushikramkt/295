@@ -62,6 +62,84 @@
         padding: 0;
       }*/
     </style>
+	
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="mapdata.js"></script>
+
+    <script type="text/javascript">
+	 google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart); 
+	  google.load('visualization', '1.0', {'packages':['corechart']}); 
+      function drawChart(responseObj) {
+		var e1 = document.getElementById("area-form");
+		var cityStr = e1.options[e1.selectedIndex].text;
+					
+		var e2 = document.getElementById("alertDD");
+		var alertStr = e2.options[e2.selectedIndex].text;
+							
+			value1=responseObj[0].English;
+			value2=responseObj[0].Spanish;
+			value3=responseObj[0].Vietnameese;
+			value4=responseObj[0].Chineese;
+			
+			sum=value1+value2+value3+value4;
+			
+			//areaValue = (value1/sum)*100;
+			
+			areaValue1= Math.floor((Math.random()*50)+1);
+			
+			
+			noValue=Math.floor(Math.random()*(40-25+1)+25);
+			
+		console.log(sum);
+		var data = google.visualization.arrayToDataTable([
+          ['Region', '% covered'],
+          [alertStr,     areaValue1],
+          ['Others',    100-areaValue1-noValue ],
+		  ['Not Available',noValue]
+        ]); 
+		
+        var options = {
+          'title': 'Percentage of Area Covered in '+ cityStr,
+		  'width': 500,
+		  'height': 500
+		};
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_alert'));
+		
+		var data1 = google.visualization.arrayToDataTable([
+			['Language', 'Percentage'],
+			['English',(value1/sum)*100],
+			['Spanish',(value2/sum)*100],
+			['Vietnameese',(value3/sum)*100],
+			['Chineese',(value4/sum)*100]
+		]);
+		var options1 ={
+			'title': ' ',
+			'width':800,
+			'height': 500
+		};
+		var chart1 = new google.visualization.BarChart(document.getElementById('barChart_lang'));
+
+        chart.draw(data, options);
+		chart1.draw(data1,options1);
+      }
+	  
+	  
+	
+	
+	function initialize () {   
+    $("chartButton").click(function() {
+        drawChart();
+    });
+	}
+	function showDiv(){
+	 document.getElementById("piechart_alert").style.display="block";
+	}
+	//google.setOnLoadCallback(initialize);
+
+    </script>
   </head>
 
   <body class="nav-md">
@@ -239,7 +317,7 @@
 			<div class="col-md-4 col-sm-4 col-xs-4">
 
 				<h4>Select region: </h4>		
-				<select class="form-control">
+				<select class="form-control" id="area-form">
 					<option value="SanJose">San Jose</option>
 					<option value="Milpitas">Milpitas</option>
 					<option value="Sunnyvale">Sunnyvale</option>
@@ -249,7 +327,7 @@
 			</div> 
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Radius of Impact(in Sq. miles) </h4>		
-				<select class="form-control">
+				<select id="scaleDD" class="form-control">
 					<option value="0-3">0-3</option>
 					<option value="3-6">3-6</option>
 					<option value="6-9">6-9</option>
@@ -269,7 +347,7 @@
 			<div class="container" style="margin-left:180px">
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select time-range: </h4>		
-				<select class="form-control">
+				<select id="timeDD" class="form-control">
 					<option value="8am - 6pm">8am - 6pm</option>
 					<option value="6pm - 11pm">6pm - 11pm</option>
 					<option value="11pm - 8am">11pm - 8am </option>
@@ -278,19 +356,27 @@
 			</div> 
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select alerting style: </h4>		
-				<select class="form-control">
+				<select id="alertDD" class="form-control">
+					<option value="AlertSCC">AlertSCC</option>
 					<option value="IPAWS">IPAWs</option>
 					<option value="WMEA">WMEA</option>
-					<option value="AlertSCC">AlertSCC</option>
+					<option value="Loudspeakers">Loudspeakers</option>
 				</select>
 			
 			</div> 
 			<br><br><br><br><br>
 			&nbsp;&nbsp;&nbsp;
+			<button type="button" id="chartButton" class="btn btn-primary" onclick="getLangChart()" >Submit </button>
+			<br>
 			
-	
+			<div class="container">
+			<div class="row">
 			
-			</div> <button type="button" class="btn btn-primary">Play Simulation</button>
+				<div class="col-sm-4 col-md-4 col-lg-4" id="piechart_alert"></div>
+				<div class="col-sm-8 col-md-8 col-lg-8" id="barChart_lang"></div>
+			
+			</div>
+			</div>
 		  
 		  </div>
 		  
@@ -450,8 +536,7 @@
 						}
 					  });
 					});
-                
-                
+                       
                 
                 
                
@@ -461,9 +546,47 @@
                 
 					
 				  }
+				  // defines the callback function for hospitals
+				/* function mapfeed_callback(){
+					for(var i=0;i<mapdata.maplocations.length;i++)
+					{					
+						var latitude = mapdata.maplocations[i].latitude;
+						var longitude = mapdata.maplocations[i].longitude;
+						var LatandLong = new google.maps.LatLng(latitude,longitude);
+						
+						if(mapdata.maplocations[i].type=="Hospital"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap1,
+                                //label: mapdata.maplocations[i].name,
+								icon:"images/hospital.png" ,
+							});
+						}
+						if(mapdata.maplocations[i].type=="Communities"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap2,
+                                //label: mapdata.maplocations[i].name,
+								icon:"images/communities.png" ,
+							});
+						}
+						if(mapdata.maplocations[i].type=="Food"){
+						var MarkerPin = new google.maps.Marker({
+								position: LatandLong,
+								map: demomap3,
+                                //label: mapdata.maplocations[i].name,
+								icon:"images/food.png" ,
+							});
+						}
+						if(results.locations.location[i].type=="RailwayStation"){
+					heatmapData.push(LatandLong)
+					} 
+				  				  
+				  
+				  }   */
 
 				 	  // Defines the callback function referenced in the jsonp file.
-				  window.eqfeed1_callback = function(results) {
+				 window.eqfeed1_callback = function(results) {
                       
                       	/*map.data.addGeoJson(results);*/
 					
@@ -473,18 +596,13 @@
 				  var longitude = results.locations.location[i].longitude;
 				  var LatandLong = new google.maps.LatLng(latitude,longitude);
 					
-                
-              
-       
-				  
-				  
-				   
+                  
 						
 						if(results.locations.location[i].type=="Hospital"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap1,
-                                /*label: results.locations.location[i].name*/
+                              //  label: results.locations.location[i].name
 								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/hospital.png" ,
 							});
 						}
@@ -493,7 +611,7 @@
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap2,
-                                /*label: results.locations.location[i].name*/
+                              //  label: results.locations.location[i].name
 								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/communities.png" ,
 							});
 						}
@@ -501,7 +619,7 @@
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
-                                /*label: results.locations.location[i].name*/
+                               // label: results.locations.location[i].name
 								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/food.png" ,
 							});
 						}
@@ -552,6 +670,31 @@
                       
                 }			
 			// [END script-body]
+			function getLangChart(){
+					console.log("hi");
+					var tempUrl="http://localhost:4000/pieChart";
+					var e1 = document.getElementById("area-form");
+					var cityStr = e1.options[e1.selectedIndex].text;
+					
+					var e2 = document.getElementById("alertDD");
+					var alertStr = e2.options[e2.selectedIndex].text;
+						
+					var arr;
+					
+					$.ajax({
+							url:tempUrl,
+							type: 'get',
+							cors:true,
+							data:{city: cityStr},
+							success: function(response){
+														
+								console.log(response);
+								drawChart(response);
+								
+							}
+						});
+					}
+
 
 				</script>
 				<script async defer
