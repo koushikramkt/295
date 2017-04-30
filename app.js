@@ -117,5 +117,23 @@ app.get('/latlong',function(req,res){
 
     //res.json({lat:lat,long:long});
     //req.send("request reply");
-})
+});
+app.get('/pieChart',function(req,res){
+	
+	var query="select * from BigDataDisMmt.City_Language where City='San Jose';";
+	var value;
+	var sum;
+	connection.query(query, function(err, rows) {
+		if(!err){
+			console.log("rows count is: "+rows.length)
+			
+			res.json(rows);
+		}
+		else{
+			console.log("Error while performing the query !");
+		}
+		
+	});
+	
+});
 
