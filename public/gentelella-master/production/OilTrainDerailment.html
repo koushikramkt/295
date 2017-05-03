@@ -31,8 +31,9 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-         height: 400px;
-			width: 100%
+         height: 600px;
+			width:780px;
+         
       }
            #demomap1 {
                margin-left: 20px;
@@ -609,21 +610,37 @@
           <!-- /top tiles -->
 
           <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
+           
               <div class="dashboard_graph">
 
                 <div class="row x_title">
-                  <div class="col-md-6">
+                  <div >
                     <h3>Oil Train Derailment </h3>
                   </div>
-                  <div class="col-md-6"> 
-                  
-                  </div>
+               
                 </div>
+  <div class ="col-md-2"id="demodetails" style="color : grey; margin-top:100px; font-size:18px;">
+                 <h4><b> Demographic Information</b></h4>	
+                   <input type="checkbox" name="dem" value="demo" onclick="displaydemogprahics()">  Demographics<br>
+ 
+ <input type="checkbox" name="dem" value="demo" onclick="displayenterprise()">  Enterprise
+<br>
+ <input type="checkbox" name="dem" value="demo" onclick="displayschools()">  Schools <br><br><br>
 
-               <div class="col-md-12 col-sm-12 col-xs-12">
+                   <h4><b> Alerting System Information</b></h4>	
+                   <input type="checkbox" name="dem" value="demo" onclick="displayipaws()">  IPAWS<br>
+ 
+ <input type="checkbox" name="dem" value="demo" onclick="displaywea()">  WEA
+<br>
+ <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers 
+                   
+                   
+                   </div>
+               <div class="col-md-8">
                   <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
+                 
                   <!--change done by jeyanthh--><center><h4> Oil Spilliage Impact </h4>		<br>
+                 
                    <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    
                  <button type="button" class="btn btn-primary" onclick=displayPath()>Oil Train Path</button></center>   
                    <div id="map" ></div>
@@ -718,7 +735,7 @@
 
                 <!--<div class="clearfix"></div>-->
               </div>
-            </div>
+           
              
           </div>
           <br />
@@ -864,8 +881,9 @@
 
 			// [START script-body]
 			var map,eqmap,demomap1,demomap2,demomap3;
-                 var LatandLong;
-			var heatmapData = [];
+                 var LatandLong;var infowindow =null;
+			var heatmapData = [];var heatmapDatacontents = [];
+                var enterprisecontents = [];  var enterprisecontentsdata = []; var schoolzone = [];var schoolzonedata = [];
 			function initMap() {
 					
 			map = new google.maps.Map(document.getElementById('map'), {
@@ -886,7 +904,7 @@
                 
 																	  
 			demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-			zoom: 10,
+			zoom: 8,
 			center: {lat: 37.3342, lng: -121.8903},
 			mapTypeId: 'terrain',
 			scrollwheel: true,
@@ -894,16 +912,16 @@
 			});
 			
 			demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-			zoom: 10,
-			center: {lat:  37.368832, lng: -122.036346},
+			zoom: 8,
+			center: {lat: 37.3342, lng: -121.8903},
 			mapTypeId: 'terrain',
 			scrollwheel: true,
 			  draggable: true
 			});
 			
 			demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-			zoom: 10,
-			center: {lat:  37.368832, lng: -122.036346},
+			zoom: 8,
+			center: {lat: 37.3342, lng: -121.8903},
 			 mapTypeId: 'terrain',
 			 scrollwheel: true,
 			 draggable: true
@@ -962,7 +980,7 @@
 								position: LatandLong,
 								map: demomap2,
                               //  label: results.locations.location[i].name
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/communities.png" ,
+								icon:"/images/communities.png" ,
 							});
 						}
 						if(results.locations.location[i].type=="Food"){
@@ -970,16 +988,99 @@
 								position: LatandLong,
 								map: demomap3,
                                // label: results.locations.location[i].name
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/food.png" ,
+								icon:"/images/food.png" ,
 							});
 						}
 					
 				  			if(results.locations.location[i].type=="RailwayStation"){
+                             var contents = results.locations.location[i].content;
+                                                  
 					heatmapData.push(LatandLong);
+                                heatmapDatacontents.push(contents);
 						}	  
-					
+                    
+                    if(results.locations.location[i].type=="enterprise"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					enterprisecontents.push(LatandLong);
+                        enterprisecontentsdata.push(contents);
+                                
+						}	  
+					 
+                    if(results.locations.location[i].type=="schoolzone"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					schoolzone.push(LatandLong);
+                        schoolzonedata.push(contents);
+                                
+						}	
 					} 
-				}						  
+				}	
+                 
+                 
+                 function displaydemogprahics(){
+                     infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<heatmapData.length; i++){
+         	var marker = new google.maps.Marker({
+								position: heatmapData[i],
+								map: map,
+								icon:"/images/home.png" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(heatmapDatacontents[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+}
+                
+                
+                function displayenterprise(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<enterprisecontents.length; i++){
+         	var marker = new google.maps.Marker({
+								position: enterprisecontents[i],
+								map: map,
+								icon:"/images/factory.png" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(enterprisecontentsdata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+                    
+                }
+       function displayschools(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<schoolzone.length; i++){
+         	var marker = new google.maps.Marker({
+								position: schoolzone[i],
+								map: map,
+								icon:"/images/school.jpg" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(schoolzonedata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+                    
+                }         
+                
 				  function displayPath(){
                       
             var trafficLayer = new google.maps.TransitLayer();
@@ -996,7 +1097,7 @@
 								strokeWeight: 3,
 								map: map,
 								center: heatmapData[i],
-								radius: 1500
+								radius: 3500
 							  });}
                        var lineSymbol = {
           path: google.maps.SymbolPath.CIRCLE,
@@ -1006,7 +1107,7 @@
                 
                 
               var line = new google.maps.Polyline({
-          path: [{lat: 	37.6643785, lng: -122.4716401}, {lat: 37.0057, lng: -121.5682}],
+          path: [{lat: 	37.6643785, lng: -122.4716401}, {lat: 37.2195, lng: -121.867905}],
           icons: [{
             icon: lineSymbol,
             offset: '100%'
