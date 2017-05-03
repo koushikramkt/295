@@ -151,15 +151,17 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 31,436 '+
+            'Female: 32,921 '+
+            'Total:130,788<br>' +
+            '<b>Zipcode: </b>'+
+            '94015, 94080, 94083, 94128 <br>' +
+			'<b>Land Area: </b> 19.6 '+
+            '<b>Water Area: </b> 0.1 '+  
+           '<b>Houses:</b> 43,047 '+
             '</div>'+
             '</div>'
       },
@@ -168,197 +170,196 @@ eqfeed1_callback({
       "type": "RailwayStation",
       "latitude": 37.6002,
       "longitude":-122.3869,
-          "content": '<div id="content">'+
+           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 10943 '+
+            'Female: 11760 '+
+            'Total:22703<br>' +
+            '<b>Zipcode: </b>'+
+            '94030 <br>' +
+			'<b>Land Area: </b> 15.6 '+
+            '<b>Water Area: </b> 0.1 '+  
+           '<b>Houses:</b> 33,047 '+
             '</div>'+
             '</div>'
       },
       {
-        "name": "Burlingame",
+        "name": "San Mateo",
         "type": "RailwayStation",
         "latitude": 37.577,
         "longitude": -122.3481,
-          "content": '<div id="content">'+
+            "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 50453 '+
+            'Female: 46589 '+
+            'Total:97,207<br>' +
+            '<b>Zipcode: </b>'+
+            '94010, 94401, 94402, 94403, 94404, 94497 <br>' +
+			'<b>Land Area: </b> 29.7 '+
+            '<b>Water Area: </b> 2 '+  
+           '<b>Houses:</b> 71,692'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "Hillsdale",
+        "name": "Belmont",
         "type": "RailwayStation",
         "latitude": 37.537,
         "longitude": -122.3004,
-          "content": '<div id="content">'+
+             "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 50453 '+
+            'Female: 46589 '+
+            'Total:65,139<br>' +
+            '<b>Zipcode: </b>'+
+            '94402, 94403 <br>' +
+			'<b>Land Area: </b>10.5 '+
+            '<b>Water Area: </b> 0.2 '+  
+           '<b>Houses:</b> 25,893'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "San Carlos",
+        "name": "Palo Alto",
         "type": "RailwayStation",
         "latitude": 37.5072,
         "longitude":  -122.2605,
-          "content": '<div id="content">'+
+             "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 69404 '+
+            'Female: 106715 '+
+            'Total:211426<br>' +
+            '<b>Zipcode: </b>'+
+            '94020, 94024, 94301, 94303, 94306, 95051,94022,94028,94302,94304,95033 <br>' +
+			'<b>Land Area: </b>159.5 '+
+            '<b>Water Area: </b> 1.5 '+  
+           '<b>Houses:</b> 79,764'+
             '</div>'+
             '</div>'
       },
       {
         "name": "Menlo Park",
-        "type": "RetailLocation",
+        "type": "RailwayStation",
         "latitude": 37.4530,
         "longitude": -122.1817,
-          "content": '<div id="content">'+
+             "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 17598 '+
+            'Female: 14428 '+
+            'Total:32026<br>' +
+            '<b>Zipcode: </b>'+
+            '94022, 94025, 94026 <br>' +
+			'<b>Land Area: </b>29.2 '+
+            '<b>Water Area: </b> 0 '+  
+           '<b>Houses:</b>23,489'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "San Antonio",
+        "name": "Mountain View",
         "type": "RailwayStation",
         "latitude": 37.4008,
         "longitude": -122.1097,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 37585 '+
+            'Female: 40261 '+
+            'Total:77846<br>' +
+            '<b>Zipcode: </b>'+
+            '94039, 94040, 94041, 94042, 94043, 94085, 94303<br>' +
+			'<b>Land Area: </b>9.77 '+
+            '<b>Water Area: </b> 0 '+  
+           '<b>Houses:</b>42963'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "Santa CLara",
+        "name": "Sunnyvale",
         "type": "RailwayStation",
         "latitude": 37.3470,
         "longitude": -122.0362,
-          "content": '<div id="content">'+
+           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 80562 '+
+            'Female: 69418 '+
+            'Total:149980<br>' +
+            '<b>Zipcode: </b>'+
+            '94043, 94085, 94086, 94087, 94089<br>' +
+			'<b>Land Area: </b>20.6+ '+
+            '<b>Water Area: </b> 0 '+  
+           '<b>Houses:</b>42963'+
             '</div>'+
             '</div>'
       }, {
-      "name": "San Jose Diridon",
+      "name": "Cupertino",
       "type": "RailwayStation",
       "latitude": 37.2820,
       "longitude":  -121.9458,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },{
-      "name": "Carson",
-      "type": "RailwayStation",
-      "latitude": 37.2195,
-      "longitude": -121.867905,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 32550 '+
+            'Female: 28118 '+
+            'Total:60668<br>' +
+            '<b>Zipcode: </b>'+
+            '94024, 94087, 95014, 95015<br>' +
+			'<b>Land Area: </b>20.6+ '+
+            '<b>Water Area: </b> 0 '+  
+           '<b>Houses:</b>42963'+
             '</div>'+
             '</div>'
       },
         
       {
-        "name": "blosson hill",
+        "name": "campbell",
         "type": "RailwayStation",
         "latitude": 37.4758,
         "longitude": -122.2171,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 22545 '+
+            'Female: 15874 '+
+            'Total:41119<br>' +
+            '<b>Zipcode: </b>'+
+            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
+			'<b>Land Area: </b>28.6+ '+
+            '<b>Water Area: </b> 0.2 '+  
+           '<b>Houses:</b>66667'+
             '</div>'+
             '</div>'
       },
@@ -370,15 +371,17 @@ eqfeed1_callback({
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 22545 '+
+            'Female: 15874 '+
+            'Total:41119<br>' +
+            '<b>Zipcode: </b>'+
+            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
+			'<b>Land Area: </b>28.6+ '+
+            '<b>Water Area: </b> 0.2 '+  
+           '<b>Houses:</b>66667'+
             '</div>'+
             '</div>'
       },
@@ -391,43 +394,26 @@ eqfeed1_callback({
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95114'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },
-      {
-        "name": "Hillsdale2",
-        "type": "RailwayStation",
-        "latitude": 37.2542,
-        "longitude": -121.8998,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
             '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: 13500'+
-            'Female":12000 '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95116'+
-			'</p>'+
+            '<p><b>Population</b><br>' +
+            'male: 22545 '+
+            'Female: 15874 '+
+            'Total:41119<br>' +
+            '<b>Zipcode: </b>'+
+            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
+			'<b>Land Area: </b>28.6+ '+
+            '<b>Water Area: </b> 0.2 '+  
+           '<b>Houses:</b>66667'+
             '</div>'+
             '</div>'
       },
+    
          {
         "name": " south san francisco",
         "type": "enterprise",
-        "latitude": 37.5547,
-        "longitude":-122.4077,
+        "latitude": 37.638754,
+        "longitude":-122.400317,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -446,8 +432,8 @@ eqfeed1_callback({
       {
       "name": "Milbrae",
       "type": "enterprise",
-      "latitude": 37.6002,
-      "longitude":-122.2869,
+      "latitude": 37.602757,
+      "longitude":-122.387013,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -464,10 +450,10 @@ eqfeed1_callback({
             '</div>'
       },
       {
-        "name": "Burlingame",
+        "name": "San Mateo",
         "type": "enterprise",
-        "latitude": 37.527,
-        "longitude": -122.3481,
+        "latitude": 37.5745186,
+        "longitude":-122.3447417,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -484,10 +470,10 @@ eqfeed1_callback({
             '</div>'
       },
       {
-        "name": "Hillsdale",
+        "name": "SanMateo1",
         "type": "enterprise",
-        "latitude": 37.537,
-        "longitude": -122.2804,
+        "latitude": 37.535644,
+        "longitude": -122.29162,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -563,7 +549,7 @@ eqfeed1_callback({
             '</div>'+
             '</div>'
       },
-      {
+     {
         "name": "Santa CLara",
         "type": "enterprise",
         "latitude": 37.3570,
@@ -621,30 +607,10 @@ eqfeed1_callback({
             '</div>'+
             '</div>'
       },
-        
-      {
-        "name": "blosson hill",
-        "type": "enterprise",
-        "latitude": 37.4758,
-        "longitude": -122.3171,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },
+    
       {
         "name": "Hillsdale",
-        "type": "RailwayStation",
+        "type": "enterprise",
         "latitude": 37.4431,
         "longitude": -122.1816,
          "content": '<div id="content">'+
@@ -662,14 +628,6 @@ eqfeed1_callback({
             '</div>'+
             '</div>'
       },
-           
-      {
-        "name": "blosson hill1",
-        "type": "enterprise",
-        "latitude": 37.4106,
-        "longitude": -121.9900,
-         "content": "steel factory"
-      },
       {
         "name": "Hillsdale2",
         "type": "enterprise",
@@ -677,10 +635,10 @@ eqfeed1_callback({
         "longitude": -121.8998,
           "content": "leather factory"
       }, {
-      "name": "San Jose Diridon",
+      "name": "San Jose Diridon-schoool",
       "type": "schoolzone",
-      "latitude": 37.2920,
-      "longitude":  -121.9458,
+      "latitude": 37.295205,
+      "longitude": -121.938169,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
@@ -698,14 +656,14 @@ eqfeed1_callback({
       },{
       "name": "Carson",
       "type": "schoolzone",
-      "latitude": 37.3395,
-      "longitude": -121.867905,
+      "latitude": 37.303774,
+      "longitude": -122.023306,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
+            '<p><b>meherolz High SChool - Santa Clara</b>' +
             'male: '+
             'Female": '+
             'Total: '+
@@ -719,14 +677,14 @@ eqfeed1_callback({
       {
         "name": "blosson hill",
         "type": "schoolzone",
-        "latitude": 37.4758,
-        "longitude": -122.4171,
+        "latitude": 37.3866624,
+        "longitude": -122.0859195,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
+            '<p><b>Sunnyvale - los Altos schol District</b>' +
             'male: '+
             'Female": '+
             'Total: '+
@@ -737,16 +695,16 @@ eqfeed1_callback({
             '</div>'
       },
       {
-        "name": "Hillsdale",
+        "name": "PaloAlto",
         "type": "schoolzone",
-        "latitude": 37.4131,
-        "longitude": -122.1816,
+        "latitude": 37.4174131,
+        "longitude":-122.133298,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
             '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
+            '<p><b>PaloAllo - Stanford University</b>' +
             'male: '+
             'Female": '+
             'Total: '+
@@ -760,16 +718,44 @@ eqfeed1_callback({
       {
         "name": "blosson hill1",
         "type": "schoolzone",
-        "latitude": 37.4206,
-        "longitude": -121.9900,
-         "content": "steel factory"
+        "latitude": 37.4698595,
+        "longitude": -122.2049502,
+         "content": "Garfield Community Center"
       },
       {
         "name": "Hillsdale2",
         "type": "schoolzone",
-        "latitude": 37.3642,
-        "longitude": -121.8998,
-          "content": "leather factory"
+        "latitude": 37.5055798,
+        "longitude":-122.2514626,
+          "content": "Central Middle School San Carlos"
+      },
+        {
+        "name": "Hillsdale2",
+        "type": "schoolzone",
+        "latitude": 37.5511174,
+        "longitude":-122.323732,
+          "content": "Borel Middle School - San Mateo"
+      },
+        {
+        "name": "Hillsdale2",
+        "type": "schoolzone",
+        "latitude": 37.5961512,
+        "longitude":-122.3810669,
+          "content": "Burlingame intermediate School - Burligame"
+      },
+        {
+        "name": "Hillsdale2",
+        "type": "schoolzone",
+        "latitude": 37.6321858,
+        "longitude":-122.4184891,
+          "content": "parkside intermediate School - San Bruno"
+      },
+        {
+        "name": "Hillsdale2",
+        "type": "schoolzone",
+        "latitude": 37.6417694,
+        "longitude":-122.3951431,
+          "content": "South San Francisco High School - Burligame"
       },
          {
         "name": "Hillsdale_ipaws",
@@ -779,7 +765,7 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Phones</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
             '<div id="bodyContent">'+
             'Landline: 23000 <br>'+
             'Cellular: 45320 <br>'+
@@ -787,6 +773,126 @@ eqfeed1_callback({
             '<b>Zipcode Covered</b>'+
             '95112,95113,95114,95115,95112<br>'+
              '<b>Population Covered<b><br> 54%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+         {
+        "name": "Hillsdale_ipaws2",
+        "type": "ipaws",
+        "latitude": 37.360521,
+        "longitude":-122.100919,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Hillsdale_ipaws3",
+        "type": "ipaws",
+        "latitude": 37.446839,
+        "longitude":-122.259863,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Hillsdale_ipaws4",
+        "type": "ipaws",
+        "latitude": 37.533398,
+        "longitude":-122.354012,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Hillsdale_ipaws5",
+        "type": "ipaws",
+        "latitude": 37.517129,
+        "longitude":-122.279648,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Hillsdale_ipaws5",
+        "type": "ipaws",
+        "latitude":37.581096,
+        "longitude":-122.380413,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Hillsdale_ipaws5",
+        "type": "ipaws",
+        "latitude":37.512296,
+        "longitude":-122.3512306,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<div id="bodyContent">'+
+            'Landline: 20000 <br>'+
+            'Cellular: 41320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 60%'+
 			'</p>'+
             '</div>'+
             '</div>'
