@@ -630,7 +630,7 @@
                    <h4><b> Alerting System Information</b></h4>	
                    <input type="checkbox" name="dem" value="demo" onclick="displayipaws()">  IPAWS<br>
  
- <input type="checkbox" name="dem" value="demo" onclick="displaywea()">  WEA
+ <input type="checkbox" name="dem" value="demo" onclick="displayalertscc()">  Alert SCC
 <br>
  <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers <br><br>
       
@@ -886,21 +886,21 @@
                  var LatandLong;var infowindow =null;
 			var heatmapData = [];var heatmapDatacontents = [];
                 var enterprisecontents = [];  var enterprisecontentsdata = []; var schoolzone = [];var schoolzonedata = [];
-                var wea =[];   var displayweadata =[];
+                var alertscc =[];   var displayalertsccdata =[];
                     var ipaws =[];   var displayipawsdata =[];
                       var speakers =[];   var displayspeakersdata =[];
                 function resetImpact(){
                     
                     map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 10,
-			center: {lat: 37.5351, lng: -122.3351}
+			center:{lat: 37.484445, lng: -122.238319}
 			});
                 }
 			function initMap() {
 					
 			map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 10,
-		center: {lat: 37.5351, lng: -122.3351}
+		center: {lat: 37.484445, lng: -122.238319}
 			});
 
 		
@@ -1023,12 +1023,12 @@
                         displayipawsdata.push(contents);
                                 
 						}	
-                    if(results.locations.location[i].type=="wea"){
+                    if(results.locations.location[i].type=="alertscc"){
                              var contents = results.locations.location[i].content;
             	
                            
-					wea.push(LatandLong);
-                        displayweadata.push(contents);
+					alertscc.push(LatandLong);
+                        displayalertsccdata.push(contents);
                                 
 						}	
                     if(results.locations.location[i].type=="speakers"){
@@ -1109,20 +1109,20 @@
      for(var i=0; i<ipaws.length; i++){
          
          
-           var RevCircle = new google.maps.Circle({
+          /* var RevCircle = new google.maps.Circle({
 								strokeColor: 'green',
 								strokeOpacity: 0.4,
 								strokeWeight: 5,
 								map: map,
 								center: schoolzone[i],
 								radius: 5000
-							  });
+							  });*/
          
          
          	var marker = new google.maps.Marker({
 								position: schoolzone[i],
 								map: map,
-								icon:"/images/mobile.jpg" 
+								icon:"/images/call.jpg" 
 							});
     
                      
@@ -1137,20 +1137,20 @@
                 }    
                 
                 
-                 function displaywea(){
+                 function displayalertscc(){
                     
                     infowindow = new google.maps.InfoWindow();
-     for(var i=0; i<wea.length; i++){
+     for(var i=0; i<alertscc.length; i++){
          	var marker = new google.maps.Marker({
-								position: schoolzone[i],
+								position: alertscc[i],
 								map: map,
-								icon:"/images/school.jpg" 
+								icon:"/images/phone.png" 
 							});
     
                      
                      google.maps.event.addListener(marker, 'click', (function (marker, i) {
                 return function () {
-                    infowindow.setContent(displayweadata[i]);
+                    infowindow.setContent(displayalertsccdata[i]);
                     infowindow.open(map, this);
                 }
             })(marker, i));

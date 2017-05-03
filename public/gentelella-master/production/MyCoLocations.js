@@ -408,28 +408,7 @@ eqfeed1_callback({
             '</div>'+
             '</div>'
       },
-    
-         {
-        "name": " south san francisco",
-        "type": "enterprise",
-        "latitude": 37.638754,
-        "longitude":-122.400317,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },
-      {
+    {
       "name": "Milbrae",
       "type": "enterprise",
       "latitude": 37.602757,
@@ -437,14 +416,11 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Millbrae</b>' +
+            'Total office going population: 12,565'+
+            'Total population : 21,532'+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -457,54 +433,45 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>San Mateo</b>' +
+            'Total office going population: 56,359'+
+            'Total population : 97,207'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "SanMateo1",
+        "name": "Belmont",
         "type": "enterprise",
-        "latitude": 37.535644,
-        "longitude": -122.29162,
+        "latitude": 37.5161672,
+        "longitude": -122.3127646,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Belmont</b>' +
+            'Total office going population: 25,835'+
+            'Total population : 16,585'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "San Carlos",
+        "name": "Palo Alto",
         "type": "enterprise",
-        "latitude": 37.5272,
-        "longitude":  -122.2605,
+        "latitude": 37.425713,
+        "longitude":  -122.1703695,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Palo alto</b>' +
+            'Total office going population:40,563'+
+            'Total population : 66,955'+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -517,92 +484,77 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Menlo park</b>' +
+            'Total population: 32,026'+
+            'Total office going population : 24,569'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "San Antonio",
+        "name": "Mountain View",
         "type": "enterprise",
-        "latitude": 37.4008,
-        "longitude": -122.1197,
+        "latitude": 37.4038824,
+        "longitude": -122.1162865,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
             '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            'Total office going population: 52,365'+
+            'Total population : 77,846'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
      {
-        "name": "Santa CLara",
+        "name": "Sunnyvale",
         "type": "enterprise",
-        "latitude": 37.3570,
-        "longitude": -122.0362,
+        "latitude": 37.3897202,
+        "longitude": -122.0941612,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
             '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            'Total office going population: 100568'+
+            'Total population : 149980'+
 			'</p>'+
             '</div>'+
             '</div>'
       }, {
-      "name": "San Jose Diridon",
+      "name": "Dasher Technologies - Campbell",
       "type": "enterprise",
       "latitude": 37.2720,
       "longitude":  -121.9458,
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Campbell</b>' +
+            'Total office going population: 30568'+
+            'Total population : 41119'+
 			'</p>'+
             '</div>'+
             '</div>'
       },{
-      "name": "Carson",
+      "name": "Layton Constructions Cupertino",
       "type": "enterprise",
-      "latitude": 37.3195,
-      "longitude": -121.867905,
+      "latitude": 37.3093131,
+      "longitude": -122.078664,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Cupertino</b>' +
+            'Total office going population: 45352'+
+            'Total population : 60668'+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -616,24 +568,31 @@ eqfeed1_callback({
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Menlo Park</b>' +
+            'Total office going population: 24569'+
+            'Total population : 32026'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "Hillsdale2",
+        "name": "Corner Stone",
         "type": "enterprise",
         "latitude": 37.3542,
         "longitude": -121.8998,
-          "content": "leather factory"
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>San Jose - Campbell</b>' +
+            'Total office going population: 30568'+
+            'Total population : 41119'+
+			'</p>'+
+            '</div>'+
+            '</div>'
       }, {
       "name": "San Jose Diridon-schoool",
       "type": "schoolzone",
@@ -642,15 +601,12 @@ eqfeed1_callback({
           "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
-			'</p>'+
+            '<p><b>Campbell</b>' +
+            'Total school going population: 3562 '+
+            'Total number of schools: 15 '+
+            '</p>'+
             '</div>'+
             '</div>'
       },{
@@ -661,248 +617,502 @@ eqfeed1_callback({
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>meherolz High SChool - Santa Clara</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>Meherolz High School - Cupertino</b>' +
+            'Total school going population: 8563'+
+            'Total number of schools: 12'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
         
       {
-        "name": "blosson hill",
+        "name": "blossom hill",
         "type": "schoolzone",
         "latitude": 37.3866624,
         "longitude": -122.0859195,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
             '<div id="bodyContent">'+
             '<p><b>Sunnyvale - los Altos schol District</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            'Total school going population: 25625'+
+            'Total number of schools: 25'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
       {
-        "name": "PaloAlto",
+        "name": "Palo Alto",
         "type": "schoolzone",
         "latitude": 37.4174131,
         "longitude":-122.133298,
          "content": '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Demographics</h1>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
             '<div id="bodyContent">'+
-            '<p><b>PaloAllo - Stanford University</b>' +
-            'male: '+
-            'Female": '+
-            'Total: '+
-            '<b>Zipcode</b>'+
-            '95112,95113,95114,95115,95112'+
+            '<p><b>PaloAlto - Stanford University</b>' +
+            'Total school going population: 15575'+
+            'Total number of schools: 26'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
            
       {
-        "name": "blosson hill1",
+        "name": "Fair oaks elementary school",
         "type": "schoolzone",
         "latitude": 37.4698595,
         "longitude": -122.2049502,
-         "content": "Garfield Community Center"
+         "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>Menlo park</b>' +
+            'Total school going population: 4352'+
+            'Total number of schools: 15'+
+			'</p>'+
+            '</div>'+
+            '</div>'
       },
       {
-        "name": "Hillsdale2",
+        "name": "Notre Dame High School",
         "type": "schoolzone",
         "latitude": 37.5055798,
         "longitude":-122.2514626,
-          "content": "Central Middle School San Carlos"
-      },
+		"content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>Belmont</b>' +
+            'Total school going population: 3520'+
+            'Total number of schools: 18'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			},
         {
-        "name": "Hillsdale2",
+        "name": "San mateo high school",
         "type": "schoolzone",
         "latitude": 37.5511174,
         "longitude":-122.323732,
-          "content": "Borel Middle School - San Mateo"
+		  "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>Belmont</b>' +
+            'Total school going population: 13365'+
+            'Total number of schools: 33'+
+			'</p>'+
+            '</div>'+
+            '</div>'
       },
         {
-        "name": "Hillsdale2",
+        "name": "Burlingame intermediate School - Burligame",
         "type": "schoolzone",
         "latitude": 37.5961512,
         "longitude":-122.3810669,
-          "content": "Burlingame intermediate School - Burligame"
+		  "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>Millbrae</b>' +
+            'Total school going population: 2528'+
+            'Total number of schools: 4'+
+			'</p>'+
+            '</div>'+
+            '</div>'
       },
         {
-        "name": "Hillsdale2",
+        "name": "parkside intermediate School - San Bruno",
         "type": "schoolzone",
         "latitude": 37.6321858,
         "longitude":-122.4184891,
-          "content": "parkside intermediate School - San Bruno"
-      },
+		"content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>San bruno - South SF</b>' +
+            'Total school going population: 9312'+
+            'Total number of schools: 15'+
+			'</p>'+
+            '</div>'+
+            '</div>'     
+		},
         {
-        "name": "Hillsdale2",
+        "name": "Mountain view high school",
         "type": "schoolzone",
-        "latitude": 37.6417694,
-        "longitude":-122.3951431,
-          "content": "South San Francisco High School - Burligame"
+        "latitude": 37.388527,
+        "longitude":-122.120079,
+		"content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+            '<div id="bodyContent">'+
+            '<p><b>Mountain View</b>' +
+            'Total school going population: 18532'+
+            'Total number of schools: 40'+
+			'</p>'+
+            '</div>'+
+            '</div>' 
       },
          {
-        "name": "Hillsdale_ipaws",
-        "type": "ipaws",
-        "latitude": 37.3642,
-        "longitude": -121.8998,
+        "name": "Campbell *",
+        "type": "alertscc",
+        "latitude": 37.278441,
+        "longitude": -121.942661,
           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Campbell</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 23000 <br>'+
-            'Cellular: 45320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 54%'+
+            'Total Population: 165,816 <br>'+
+            'Population using Landlines: 40,000 <br>'+
+            'Time Taken to Cover Population (minutes): 106.10<br>'+
+             '<b>Percentage of Population Covered: 74.54%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 7.02%<b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
       },
          {
-        "name": "Hillsdale_ipaws2",
-        "type": "ipaws",
-        "latitude": 37.360521,
-        "longitude":-122.100919,
+        "name": "Cupertino *",
+        "type": "alertscc",
+        "latitude": 37.336555,
+        "longitude":-122.036955,
           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Cupertino</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
+            'Total Population: 60,660 <br>'+
+            'Population using Landlines: 11,741 <br>'+
+            'Time Taken to Cover Population (minutes): 31.14 <br>'+
+              '<b>Percentage of Population Covered:59.80 %<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 19.20%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+     {
+        "name": "Mountain View*",
+        "type": "alertscc",
+        "latitude": 37.395586,
+        "longitude":-122.090024,
+         "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Mountain View</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 101,849 <br>'+
+            'Population using Landlines: 25,778 <br>'+
+            'Time Taken to Cover Population(minutes): 68.37<br>'+
+             '<b>Percentage of Population Covered: 78.2<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:11.43% <b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
       },
         {
-        "name": "Hillsdale_ipaws3",
-        "type": "ipaws",
-        "latitude": 37.446839,
-        "longitude":-122.259863,
-          "content": '<div id="content">'+
+        "name": "Palo Alto*",
+        "type": "alertscc",
+        "latitude": 37.425048,
+        "longitude":-122.150101,
+         "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Palo Alto</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
+            'Total Population:211,426 <br>'+
+            'Population using Landlines:47,858<br>'+
+            'Time Taken to Cover Population(minutes):127  <br>'+
+             '<b>Percentage of Population Covered: 69.94%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:5.5%<b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
       },
         {
-        "name": "Hillsdale_ipaws4",
-        "type": "ipaws",
-        "latitude": 37.533398,
-        "longitude":-122.354012,
-          "content": '<div id="content">'+
-            '<div id="siteNotice" style="background-color:black">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
-            '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },
-        {
-        "name": "Hillsdale_ipaws5",
-        "type": "ipaws",
+        "name": "Belmont*",
+        "type": "alertscc",
         "latitude": 37.517129,
         "longitude":-122.279648,
-          "content": '<div id="content">'+
+           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Belmont</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
+            'Total Population:65139<br>'+
+            'Population using Landlines:15536  <br>'+
+            'Time Taken to Cover Population(minutes):41.20 <br>'+
+            '<b>Percentage of Population Covered: 73.69%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 17.88% <b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
       },
         {
-        "name": "Hillsdale_ipaws5",
-        "type": "ipaws",
-        "latitude":37.581096,
-        "longitude":-122.380413,
-          "content": '<div id="content">'+
+        "name": "Menlo Park*",
+        "type": "alertscc",
+        "latitude":37.486575,
+        "longitude":-122.232104,
+           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Menlo Park</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
+            'Total Population:60812  <br>'+
+            'Population using Landlines:14903  <br>'+
+            'Time Taken to Cover Population(minutes): 37.38 <br>'+
+             '<b>Percentage of Population Covered: 71.61%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:  19.15%<b><br>'+
 			'</p>'+
             '</div>'+
             '</div>'
       },
         {
-        "name": "Hillsdale_ipaws5",
-        "type": "ipaws",
-        "latitude":37.512296,
-        "longitude":-122.3512306,
-          "content": '<div id="content">'+
+        "name": "San Mateo *",
+        "type": "alertscc",
+        "latitude":37.561847,
+        "longitude":-122.328306,
+           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Ipaws-Communication modes : Phones</h3>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - San Mateo</h3>'+
             '<div id="bodyContent">'+
-            'Landline: 20000 <br>'+
-            'Cellular: 41320 <br>'+
-            'Enterprise: 8560 <br>'+
-            '<b>Zipcode Covered</b>'+
-            '95112,95113,95114,95115,95112<br>'+
-             '<b>Population Covered<b><br> 60%'+
+            'Total Population: 180381  <br>'+
+            'Population using Landlines: 43015 <br>'+
+            'Time Taken to Cover Population(minutes): 114.09 <br>'+
+             '<b>Percentage of Population Covered: 73.68%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 6.45% <b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
-      }
+      },
+         {
+        "name": "Milbrae *",
+        "type": "alertscc",
+        "latitude":37.5846691,
+        "longitude":-122.3941539,
+           "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - Milbrae</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 22,703<br>'+
+            'Population using Landlines:4394  <br>'+
+            'Time Taken to Cover Population(minutes):11.65  <br>'+
+             '<b>Percentage of Population Covered: 59.80% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:  51.31%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "South San Francisco *",
+        "type": "alertscc",
+        "latitude":37.619537,
+        "longitude":-122.401877,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">Alert SCC - South San Francisco</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 130788 <br>'+
+            'Population using Landlines:25828  <br>'+
+            'Time Taken to Cover Population (minutes): 98.5 <br>'+
+              '<b>Percentage of Population Covered: 61.02 <b><br>'+
+              '<b>Percentage of Population Covered in 10 minutes: 8.90% <b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+      /*{
       /*{
         "name": "Gilroy",
         "type": "RailwayStation",
         "latitude": 37.0057,
         "longitude": -121.5682      
 		}*/
+         {
+        "name": "Campbell *",
+        "type": "ipaws",
+        "latitude": 37.278441,
+        "longitude": -121.942661,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Campbell</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 165,816 <br>'+
+            'Population using Landlines: 154208 <br>'+
+            'Time Taken to Cover Population (minutes): 86<br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 10.81%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+         {
+        "name": "Cupertino *",
+        "type": "ipaws",
+        "latitude": 37.336555,
+        "longitude":-122.036955,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Cupertino</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 60,660 <br>'+
+            'Population using cellphone: 56,413 <br>'+
+            'Time Taken to Cover Population (minutes): 31.46 <br>'+
+              '<b>Percentage of Population Covered:93 %<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 29.55%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+     {
+        "name": "Mountain View*",
+        "type": "ipaws",
+        "latitude": 37.395586,
+        "longitude":-122.090024,
+         "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Mountain View</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 101,849 <br>'+
+            'Population using callphoness: 94719 <br>'+
+            'Time Taken to Cover Population(minutes): 52.82<br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:17.60% <b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Palo Alto*",
+        "type": "ipaws",
+        "latitude": 37.425048,
+        "longitude":-122.150101,
+         "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Palo Alto</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population:211,426 <br>'+
+            'Population using cellphones : 196626<br>'+
+            'Time Taken to Cover Population(minutes):109  <br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:8.48%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Belmont*",
+        "type": "ipaws",
+        "latitude": 37.517129,
+        "longitude":-122.279648,
+           "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Belmont</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population:65139<br>'+
+            'Population using Cellphones:60579  <br>'+
+            'Time Taken to Cover Population(minutes):33.78 <br>'+
+            '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 27.52% <b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "Menlo Park*",
+        "type": "ipaws",
+        "latitude":37.486575,
+        "longitude":-122.232104,
+           "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Menlo Park</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population:60812  <br>'+
+            'Population using Cellphones:56555  <br>'+
+            'Time Taken to Cover Population(minutes): 31.54 <br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:  29.48 %<b><br>'+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "San Mateo *",
+        "type": "ipaws",
+        "latitude":37.561847,
+        "longitude":-122.328306,
+           "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS- San Mateo</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 180381  <br>'+
+            'Population using cellphones: 167754 <br>'+
+            'Time Taken to Cover Population(minutes): 93.56 <br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 9.94% <b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+         {
+        "name": "Milbrae *",
+        "type": "ipaws",
+        "latitude":37.5846691,
+        "longitude":-122.3941539,
+           "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Milbrae</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 22,703<br>'+
+            'Population using cellphones:21113  <br>'+
+            'Time Taken to Cover Population(minutes):11.77 <br>'+
+             '<b>Percentage of Population Covered: 93% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: 78.97%<b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+        "name": "South San Francisco *",
+        "type": "ipaws",
+        "latitude":37.619537,
+        "longitude":-122.401877,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - South San Francisco</h3>'+
+            '<div id="bodyContent">'+
+            'Total Population: 130788 <br>'+
+            'Population using cellphone: 121632  <br>'+
+            'Time Taken to Cover Population (minutes): 67.83 <br>'+
+              '<b>Percentage of Population Covered: 93% <b><br>'+
+              '<b>Percentage of Population Covered in 10 minutes: 13.70% <b><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+      }
     ]
   }
 });
