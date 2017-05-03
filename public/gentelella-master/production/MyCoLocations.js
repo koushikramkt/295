@@ -770,6 +770,26 @@ eqfeed1_callback({
         "latitude": 37.3642,
         "longitude": -121.8998,
           "content": "leather factory"
+      },
+         {
+        "name": "Hillsdale_ipaws",
+        "type": "ipaws",
+        "latitude": 37.3642,
+        "longitude": -121.8998,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Phones</h1>'+
+            '<div id="bodyContent">'+
+            'Landline: 23000 <br>'+
+            'Cellular: 45320 <br>'+
+            'Enterprise: 8560 <br>'+
+            '<b>Zipcode Covered</b>'+
+            '95112,95113,95114,95115,95112<br>'+
+             '<b>Population Covered<b><br> 54%'+
+			'</p>'+
+            '</div>'+
+            '</div>'
       }
       /*{
         "name": "Gilroy",

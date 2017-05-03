@@ -632,7 +632,9 @@
  
  <input type="checkbox" name="dem" value="demo" onclick="displaywea()">  WEA
 <br>
- <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers 
+ <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers <br><br>
+      
+       <button type="button" class="btn btn-primary" onclick=resetImpact()>Reset Map</button>    
                    
                    
                    </div>
@@ -884,18 +886,24 @@
                  var LatandLong;var infowindow =null;
 			var heatmapData = [];var heatmapDatacontents = [];
                 var enterprisecontents = [];  var enterprisecontentsdata = []; var schoolzone = [];var schoolzonedata = [];
+                var wea =[];   var displayweadata =[];
+                    var ipaws =[];   var displayipawsdata =[];
+                      var speakers =[];   var displayspeakersdata =[];
+                function resetImpact(){
+                    
+                    map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 10,
+			center: {lat: 37.5351, lng: -122.3351}
+			});
+                }
 			function initMap() {
 					
 			map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 10,
-			center: {lat: 37.77, lng: -122.41}
+		center: {lat: 37.5351, lng: -122.3351}
 			});
 
 		
-			/*eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-			center: { lat: 37.50, lng: -122.26},
-			zoom: 10       
-			});*/
 					
 			var script = document.createElement('script');
 			script.src = '\MyCoLocations.js';
@@ -927,10 +935,7 @@
 			 draggable: true
 			});  
 			
-			
-					
-                      
-                      	map.data.setStyle(function(feature) {
+                map.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
 					  return /** @type {google.maps.Data.StyleOptions} */({
 						icon: {
@@ -943,12 +948,6 @@
 					  });
 					});
                        
-                
-                
-               
-
-        /*animateCircle(line);  */
-                
                 
 					
 				  }
@@ -1016,6 +1015,30 @@
                         schoolzonedata.push(contents);
                                 
 						}	
+                    if(results.locations.location[i].type=="ipaws"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					ipaws.push(LatandLong);
+                        displayipawsdata.push(contents);
+                                
+						}	
+                    if(results.locations.location[i].type=="wea"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					wea.push(LatandLong);
+                        displayweadata.push(contents);
+                                
+						}	
+                    if(results.locations.location[i].type=="speakers"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					speakers.push(LatandLong);
+                        displayspeakersdata.push(contents);
+                                
+						}	
 					} 
 				}	
                  
@@ -1080,6 +1103,85 @@
      }
                     
                 }         
+                function displayipaws(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<ipaws.length; i++){
+         
+         
+           var RevCircle = new google.maps.Circle({
+								strokeColor: 'green',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: map,
+								center: schoolzone[i],
+								radius: 5000
+							  });
+         
+         
+         	var marker = new google.maps.Marker({
+								position: schoolzone[i],
+								map: map,
+								icon:"/images/mobile.jpg" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(displayipawsdata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+                    
+                }    
+                
+                
+                 function displaywea(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<wea.length; i++){
+         	var marker = new google.maps.Marker({
+								position: schoolzone[i],
+								map: map,
+								icon:"/images/school.jpg" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(displayweadata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+                    
+                }  
+                
+             /* ************************ */   
+                
+                
+                     function displayspeakers(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<speakers.length; i++){
+         	var marker = new google.maps.Marker({
+								position: schoolzone[i],
+								map: map,
+								icon:"/images/school.jpg" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(displayspeakersdata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+                    
+                }
+                
                 
 				  function displayPath(){
                       
