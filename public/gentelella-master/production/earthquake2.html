@@ -52,7 +52,7 @@
           
            #eqmap {
               /* margin-left: 120px;*/
-                 height: 300px;
+                 height: 500px;
 			width: 80%
       }
           
@@ -615,14 +615,13 @@
                   </div>
                 </div>
 
-               <div class="col-md-12 col-sm-12 col-xs-12">
-                  <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
-                  <!--change done by jeyanthh-->
+               <!--<div class="col-md-12 col-sm-12 col-xs-12">
+                 
                    <div id="map" ></div>
                   
           
                 
-                </div>
+                </div>-->
 
                 <!--<div class="clearfix"></div>-->
               </div>
@@ -633,25 +632,46 @@
 
 		  <!-- Middle div by Sindhuja -->
           <div class="row"><center><h3>Earthquake Impact</h3></center>
+             
 		  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  <div class="container" style="margin-left:120px">
+		  <div class="container">
+              <div class ="col-md-2"id="demodetails" style="color : grey; margin-top:100px; font-size:18px;">
+                 <h4><b> Demographic Information</b></h4>	
+                   <input type="checkbox" name="dem" value="demo" onclick="displaydemogprahics()">  Demographics<br>
+ 
+ <input type="checkbox" name="dem" value="demo" onclick="displayenterprise()">  Enterprise
+<br>
+ <input type="checkbox" name="dem" value="demo" onclick="displayschools()">  Schools <br><br><br>
+
+                   <h4><b> Alerting System Information</b></h4>	
+                   <input type="checkbox" name="dem" value="demo" onclick="displayipaws()">  IPAWS<br>
+ 
+ <input type="checkbox" name="dem" value="demo" onclick="displayalertscc()">  Alert SCC
+<br>
+ <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers <br><br>
+      
+       <button type="button" class="btn btn-primary" onclick=resetImpact()>Reset Map</button>    
+                   
+                   
+                   </div>
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select region: </h4>		
 				<select class="form-control" id="area-form">
-					<option value="SanJose">San Jose</option>
-					<option value="Milpitas">Milpitas</option>
-					<option value="Sunnyvale">Sunnyvale</option>
-                    <option value="Santa Clara">Santa Clara</option>
+					<option value="central">Central San Jose</option>
+					<option value="south">South San Jose</option>
+					<option value="north">North San Jose</option>
+                    <option value="east">East San Jose</option>
+                    <option value="west">West San Jose</option>
 				</select>
 			
 			</div> 
 			<div class="col-md-4 col-sm-4 col-xs-4">
 				<h4>Select Ritcher-scale: </h4>		
 				<select id="scaleDD" class="form-control">
-					<option value="0-3">0-3</option>
-					<option value="3-6">3-6</option>
-					<option value="6-9">6-9</option>
-					<option value="10">10</option>
+					<option value="low">0-4</option>
+					<option value="med">3-7</option>
+					<option value="high">6-12</option>
+					
 				</select>
 			
 			</div> 
@@ -889,15 +909,21 @@
 			
 				// [START script-body]
 				  var map,eqmap,demomap1,demomap2,demomap3;
+                var demographics =[]; var demographicscontentsdata =[]; 
+                var enterprisecontents = [];  var enterprisecontentsdata = []; 
+                var schoolzone = [];var schoolzonedata = [];
+                var alertscc =[];   var displayalertsccdata =[];
+                    var ipaws =[];   var displayipawsdata =[];
+                      var speakers =[];   var displayspeakersdata =[];
 
 				  function initMap() {
-					map = new google.maps.Map(document.getElementById('map'), {
+					/*map = new google.maps.Map(document.getElementById('map'), {
 						center: { lat: 20, lng: -160 },
 						zoom: 2
-					});
+					});*/
 					eqmap = new google.maps.Map(document.getElementById('eqmap'), {
-						center: { lat: 37.3342, lng: -121.8903},
-						zoom: 2
+						center: { lat: 37.323342, lng: -121.879185},
+						zoom: 11
        
 					});
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
@@ -927,27 +953,12 @@
 					// Get the earthquake data (JSONP format)
 					// This feed is a copy from the USGS feed, you can find the originals here:
 					//   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-					var script = document.createElement('script');
-					script.setAttribute(
-						'src',
-						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-							  /*script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';*/
+					   var script = document.createElement('script');
+			script.src = '\MyCoLocations.js';
+			document.getElementsByTagName('head')[0].appendChild(script);
 
-					document.getElementsByTagName('head')[0].appendChild(script);
-
-					// Add a basic style.
-					map.data.setStyle(function(feature) {
-					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-					  return /** @type {google.maps.Data.StyleOptions} */({
-						icon: {
-						  path: google.maps.SymbolPath.CIRCLE,
-						  scale: mag,
-						  fillColor: '#f00',
-						  fillOpacity: 0.35,
-						  strokeWeight: 0
-						}
-					  });
-					});
+					
+                      
                       
                       	eqmap.data.setStyle(function(feature) {
 					  var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
@@ -962,13 +973,12 @@
 					  });
 					});
 					
-					mapfeed_callback();
 				}
 
 				  // Defines the callback function referenced in the jsonp file.
-				  function eqfeed_callback(results) {
+		/*		  function eqfeed_callback(results) {
 					map.data.addGeoJson(results);
-					 /*eqmap.data.addGeoJson(results);  */
+					 eqmap.data.addGeoJson(results);  
 					   var heatmapData = [];
 					for (var i = 0; i < results.features.length; i++) {
 					  var coords = results.features[i].geometry.coordinates;
@@ -979,49 +989,89 @@
 					  
 						
 					  
-				  }
+				  }*/
+               
+          
 				  
 				  // defines the callback function for hospitals
-				 function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
+				 window.eqfeed1_callback = function(results) {
+                      
+                      	/*map.data.addGeoJson(results);*/
+					
+							 
+				for (var i = 0; i < results.locations.location.length; i++) {
+				  var latitude = results.locations.location[i].latitude;
+				  var longitude = results.locations.location[i].longitude;
+				   LatandLong = new google.maps.LatLng(latitude,longitude);
+					
+                  
 						
-						if(mapdata.maplocations[i].type=="Hospital"){
+						if(results.locations.location[i].type=="Hospital"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap1,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/hospital.png" ,
+                              //  label: results.locations.location[i].name
+								icon:"/images/hospital.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Communities"){
+						
+						if(results.locations.location[i].type=="Communities"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap2,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/communities.png" ,
+                              //  label: results.locations.location[i].name
+								icon:"/images/communities.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Food"){
+						if(results.locations.location[i].type=="Food"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/food.png" ,
+                               // label: results.locations.location[i].name
+								icon:"/images/food.png" ,
 							});
 						}
-					} 
-				  				  
-				  
-				  }   
-				  
+                    
+                      if(results.locations.location[i].type=="sanjoseschoolzone"){
+                             var contents = results.locations.location[i].content;
+            	
+                           
+					schoolzone.push(LatandLong);
+                        schoolzonedata.push(contents);
+                         
+                                
+						}
+                }}
+                 
+                 
+                  function displayschools(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<schoolzone.length; i++){
+         	var marker = new google.maps.Marker({
+								position: schoolzone[i],
+								map: eqmap,
+								icon:"/images/school.jpg" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(schoolzonedata[i]);
+                    infowindow.open(eqmap, this);
+                }
+            })(marker, i));
+     }
+                    
+                }    
 				  
 					// [END script-body]
 					function getImpact(){
-					
+					eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+						center: { lat: 37.323342, lng: -121.879185},
+						zoom: 11
+       
+					});
 						 $('#chartoptions').show();
 						 $('#agetable').show();
 						 $('#agetablegraph').show();
@@ -1034,24 +1084,113 @@
 			});
 		});
 							
+				var area = document.getElementById("area-form").value;	
+                        var scale = document.getElementById("scaleDD").value;var impactradius;
+                        if(scale=="low"){
+                            impactradius=3000;}
+                        else if(scale=="med"){
+                            impactradius=5000;
+                        }else{
+                            impactradius=7000;
+                        }
+                        var heatmapData= [];
+                     if(area=="central"){
+                         
+                         var latLng = new google.maps.LatLng(37.327059,-121.903866);
+					
+					
+						 var RevCircle = new google.maps.Circle({
+								strokeColor: 'red',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: eqmap,
+								center: latLng,
+								radius: impactradius
+							  });
 						
-						var heatmapData = [];
+                    
+                     }
+                         else if(area=="north"){
+                         
+                         var latLng = new google.maps.LatLng(37.404414,-121.891451);
+					
+					
+						 var RevCircle = new google.maps.Circle({
+								strokeColor: 'red',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: eqmap,
+								center: latLng,
+								radius: impactradius
+							  });
+                         
+                         
+                     }else if(area=="south"){
+                         var latLng = new google.maps.LatLng(37.26593,-121.895879);
+					
+					
+						 var RevCircle = new google.maps.Circle({
+								strokeColor: 'red',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: eqmap,
+								center: latLng,
+								radius: impactradius
+							  });
+                         
+                         
+                         
+                     }
+                        else if(area=="east"){
+                         
+                         var latLng = new google.maps.LatLng(37.311954,-122.004897);
+					
+					
+						 var RevCircle = new google.maps.Circle({
+								strokeColor: 'red',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: eqmap,
+								center: latLng,
+								radius: impactradius
+							  });
+                         
+                         
+                     }else{
+                         
+                           var latLng = new google.maps.LatLng(37.309497,-121.789291);
+					
+					
+						 var RevCircle = new google.maps.Circle({
+								strokeColor: 'red',
+								strokeOpacity: 0.4,
+								strokeWeight: 5,
+								map: eqmap,
+								center: latLng,
+								radius: impactradius
+							  });
+                         
+                         
+                     }
+                        /* Code to display Heat Map*/
+                        
+					/*	var heatmapData = [];
 						var locationString= document.getElementById("area-form").value;
 						var serverlocation = "http://localhost:4000/latlong";
 						var latLng1 = new google.maps.LatLng(37.3340, -121.8943);
 						 var latLng2 = new google.maps.LatLng(47.3340, -131.8943);
 						heatmapData.push(latLng1);heatmapData.push(latLng2);
 						console.log(heatmapData[0]);
-					  /*  for(var i =0; i < heatmapData.length; i++){*/
+					    for(var i =0; i < heatmapData.length; i++){
 						var heatmap = new google.maps.visualization.HeatmapLayer({
 						  data: heatmapData,
 						  dissipating: false,
 						  map: eqmap
 						});
-								
+								*/
                     
                     
-                    
+                    /*
 						$.ajax({
 							url:serverlocation,
 							type:'get',
@@ -1059,14 +1198,14 @@
 							success: function(response){
 								generate(response);
 							}
-						});
+						});*/
 						
-							 
+							/* 
 							 var marker = new google.maps.Marker({
 							position: {lat: obj.latitude, lng: obj.longitude},
 							map: demomap2,
 							title: 'Hospitals!'
-							});
+							});*/
                         
 							 $('#chartoptions').show();
 						     $('#agetable').show();
@@ -1087,8 +1226,8 @@
 					var tempUrl="http://localhost:4000/pieChart";
 					var e1 = document.getElementById("area-form");
 					var cityStr = e1.options[e1.selectedIndex].text;
-					
-					var e2 = document.getElementById("alertDD");
+						var e2 = document.getElementById("alertDD");
+					var e1 = document.getElementById("area-form");
 					var alertStr = e2.options[e2.selectedIndex].text;
 						
 					var arr;

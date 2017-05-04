@@ -148,197 +148,310 @@ eqfeed1_callback({
         "type": "RailwayStation",
         "latitude": 37.6547,
         "longitude":-122.4077,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 31,436 '+
-            'Female: 32,921 '+
-            'Total:130,788<br>' +
-            '<b>Zipcode: </b>'+
-            '94015, 94080, 94083, 94128 <br>' +
-			'<b>Land Area: </b> 19.6 '+
-            '<b>Water Area: </b> 0.1 '+  
-           '<b>Houses:</b> 43,047 '+
-            '</div>'+
-            '</div>'
+          
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>South SF</b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">130,788</th>'+
+				'<th style="border:1px solid black">31,436</th>'+
+				'<th style="border:1px solid black">32,921</th>'+
+				'<th style="border:1px solid black">94015, 94080, 94083, 94128</th>'+
+				'<th style="border:1px solid black">19.6 </th>'+
+				'<th style="border:1px solid black"> 0.1</th>'+
+				'<th style="border:1px solid black"> 43,047</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+			
       },
       {
       "name": "Milbrae",
       "type": "RailwayStation",
       "latitude": 37.6002,
       "longitude":-122.3869,
-           "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 10943 '+
-            'Female: 11760 '+
-            'Total:22703<br>' +
-            '<b>Zipcode: </b>'+
-            '94030 <br>' +
-			'<b>Land Area: </b> 15.6 '+
-            '<b>Water Area: </b> 0.1 '+  
-           '<b>Houses:</b> 33,047 '+
-            '</div>'+
-            '</div>'
+          
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Millbrae</b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">22,703</th>'+
+				'<th style="border:1px solid black">10,943</th>'+
+				'<th style="border:1px solid black">11,760</th>'+
+				'<th style="border:1px solid black">94030</th>'+
+				'<th style="border:1px solid black">15.6 </th>'+
+				'<th style="border:1px solid black"> 0.1</th>'+
+				'<th style="border:1px solid black"> 33,047</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "San Mateo",
         "type": "RailwayStation",
         "latitude": 37.577,
         "longitude": -122.3481,
-            "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 50453 '+
-            'Female: 46589 '+
-            'Total:97,207<br>' +
-            '<b>Zipcode: </b>'+
-            '94010, 94401, 94402, 94403, 94404, 94497 <br>' +
-			'<b>Land Area: </b> 29.7 '+
-            '<b>Water Area: </b> 2 '+  
-           '<b>Houses:</b> 71,692'+
-            '</div>'+
-            '</div>'
+            
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>San Mateo</b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">97,207</th>'+
+				'<th style="border:1px solid black">50,453</th>'+
+				'<th style="border:1px solid black">46,589 </th>'+
+				'<th style="border:1px solid black">94010, 94401, 94402, 94403, 94404, 94497</th>'+
+				'<th style="border:1px solid black">29.7 </th>'+
+				'<th style="border:1px solid black"> 2</th>'+
+				'<th style="border:1px solid black"> 71,692</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Belmont",
         "type": "RailwayStation",
         "latitude": 37.537,
         "longitude": -122.3004,
-             "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 50453 '+
-            'Female: 46589 '+
-            'Total:65,139<br>' +
-            '<b>Zipcode: </b>'+
-            '94402, 94403 <br>' +
-			'<b>Land Area: </b>10.5 '+
-            '<b>Water Area: </b> 0.2 '+  
-           '<b>Houses:</b> 25,893'+
-            '</div>'+
-            '</div>'
+            
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Belmont </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">65,139</th>'+
+				'<th style="border:1px solid black">50,453</th>'+
+				'<th style="border:1px solid black">46,589 </th>'+
+				'<th style="border:1px solid black">94402, 94403</th>'+
+				'<th style="border:1px solid black"> 10.5 </th>'+
+				'<th style="border:1px solid black"> 2</th>'+
+				'<th style="border:1px solid black"> 25,893</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Palo Alto",
         "type": "RailwayStation",
         "latitude": 37.5072,
         "longitude":  -122.2605,
-             "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 69404 '+
-            'Female: 106715 '+
-            'Total:211426<br>' +
-            '<b>Zipcode: </b>'+
-            '94020, 94024, 94301, 94303, 94306, 95051,94022,94028,94302,94304,95033 <br>' +
-			'<b>Land Area: </b>159.5 '+
-            '<b>Water Area: </b> 1.5 '+  
-           '<b>Houses:</b> 79,764'+
-            '</div>'+
-            '</div>'
+            			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Palo Alto </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">211,426</th>'+
+				'<th style="border:1px solid black">69,404</th>'+
+				'<th style="border:1px solid black">106,715 </th>'+
+				'<th style="border:1px solid black">94020, 94024, 94301, 94303, 94306, 95051,94022,94028,94302,94304,95033 </th>'+
+				'<th style="border:1px solid black"> 159.5 </th>'+
+				'<th style="border:1px solid black"> 1.5</th>'+
+				'<th style="border:1px solid black"> 79,764</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Menlo Park",
         "type": "RailwayStation",
         "latitude": 37.4530,
         "longitude": -122.1817,
-             "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 17598 '+
-            'Female: 14428 '+
-            'Total:32026<br>' +
-            '<b>Zipcode: </b>'+
-            '94022, 94025, 94026 <br>' +
-			'<b>Land Area: </b>29.2 '+
-            '<b>Water Area: </b> 0 '+  
-           '<b>Houses:</b>23,489'+
-            '</div>'+
-            '</div>'
+             			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Menlo Park </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">32,026</th>'+
+				'<th style="border:1px solid black">17,598</th>'+
+				'<th style="border:1px solid black">14,428</th>'+
+				'<th style="border:1px solid black">94022, 94025, 94026 </th>'+
+				'<th style="border:1px solid black"> 29.2 </th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 23,489</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Mountain View",
         "type": "RailwayStation",
         "latitude": 37.4008,
         "longitude": -122.1097,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 37585 '+
-            'Female: 40261 '+
-            'Total:77846<br>' +
-            '<b>Zipcode: </b>'+
-            '94039, 94040, 94041, 94042, 94043, 94085, 94303<br>' +
-			'<b>Land Area: </b>9.77 '+
-            '<b>Water Area: </b> 0 '+  
-           '<b>Houses:</b>42963'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Mountain view </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">77,846</th>'+
+				'<th style="border:1px solid black">37,585</th>'+
+				'<th style="border:1px solid black">40,261 </th>'+
+				'<th style="border:1px solid black">94402, 94403</th>'+
+				'<th style="border:1px solid black"> 9.77 </th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 42,963</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Sunnyvale",
         "type": "RailwayStation",
         "latitude": 37.3470,
         "longitude": -122.0362,
-           "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 80562 '+
-            'Female: 69418 '+
-            'Total:149980<br>' +
-            '<b>Zipcode: </b>'+
-            '94043, 94085, 94086, 94087, 94089<br>' +
-			'<b>Land Area: </b>20.6+ '+
-            '<b>Water Area: </b> 0 '+  
-           '<b>Houses:</b>42963'+
-            '</div>'+
-            '</div>'
-      }, {
+           			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Sunnyvale </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">149,980</th>'+
+				'<th style="border:1px solid black">80,562</th>'+
+				'<th style="border:1px solid black">69,418 </th>'+
+				'<th style="border:1px solid black">94043, 94085, 94086, 94087, 94089</th>'+
+				'<th style="border:1px solid black"> 20.6 </th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 42,963</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      }, 
+	  {
       "name": "Cupertino",
       "type": "RailwayStation",
       "latitude": 37.2820,
       "longitude":  -121.9458,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 32550 '+
-            'Female: 28118 '+
-            'Total:60668<br>' +
-            '<b>Zipcode: </b>'+
-            '94024, 94087, 95014, 95015<br>' +
-			'<b>Land Area: </b>20.6+ '+
-            '<b>Water Area: </b> 0 '+  
-           '<b>Houses:</b>42963'+
-            '</div>'+
-            '</div>'
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Cupertino </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">60,668</th>'+
+				'<th style="border:1px solid black">32,550</th>'+
+				'<th style="border:1px solid black">28,118 </th>'+
+				'<th style="border:1px solid black">94024, 94087, 95014, 95015</th>'+
+				'<th style="border:1px solid black"> 20.6</th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 42,963</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         
       {
@@ -346,44 +459,68 @@ eqfeed1_callback({
         "type": "RailwayStation",
         "latitude": 37.4758,
         "longitude": -122.2171,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 22545 '+
-            'Female: 15874 '+
-            'Total:41119<br>' +
-            '<b>Zipcode: </b>'+
-            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
-			'<b>Land Area: </b>28.6+ '+
-            '<b>Water Area: </b> 0.2 '+  
-           '<b>Houses:</b>66667'+
-            '</div>'+
-            '</div>'
+        			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Campbell </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">41,119</th>'+
+				'<th style="border:1px solid black">22,545</th>'+
+				'<th style="border:1px solid black">15,874 </th>'+
+				'<th style="border:1px solid black">95008, 95009, 95011, 95032, 95128, 95130</th>'+
+				'<th style="border:1px solid black"> 28.6 </th>'+
+				'<th style="border:1px solid black"> 0.2</th>'+
+				'<th style="border:1px solid black"> 66667</th>'+
+				
+				'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Hillsdale",
         "type": "RailwayStation",
         "latitude": 37.4431,
         "longitude": -122.1716,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 22545 '+
-            'Female: 15874 '+
-            'Total:41119<br>' +
-            '<b>Zipcode: </b>'+
-            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
-			'<b>Land Area: </b>28.6+ '+
-            '<b>Water Area: </b> 0.2 '+  
-           '<b>Houses:</b>66667'+
-            '</div>'+
-            '</div>'
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">41,119</th>'+
+				'<th style="border:1px solid black">22,545</th>'+
+				'<th style="border:1px solid black">15,874 </th>'+
+				'<th style="border:1px solid black">95008, 95009, 95011, 95032, 95128, 95130</th>'+
+				'<th style="border:1px solid black"> 28.6 </th>'+
+				'<th style="border:1px solid black"> 0.2</th>'+
+				'<th style="border:1px solid black"> 66667</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
            
       {
@@ -391,173 +528,250 @@ eqfeed1_callback({
         "type": "RailwayStation",
         "latitude": 37.3106,
         "longitude": -121.9900,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b><br>' +
-            'male: 22545 '+
-            'Female: 15874 '+
-            'Total:41119<br>' +
-            '<b>Zipcode: </b>'+
-            '95008, 95009, 95011, 95032, 95128, 95130<br>' +
-			'<b>Land Area: </b>28.6+ '+
-            '<b>Water Area: </b> 0.2 '+  
-           '<b>Houses:</b>66667'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b> </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">41,119</th>'+
+				'<th style="border:1px solid black">22,545</th>'+
+				'<th style="border:1px solid black">15,874</th>'+
+				'<th style="border:1px solid black">995008, 95009, 95011, 95032, 95128, 95130</th>'+
+				'<th style="border:1px solid black"> 28.6 </th>'+
+				'<th style="border:1px solid black"> 0.2</th>'+
+				'<th style="border:1px solid black"> 66,667</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
     {
-      "name": "Milbrae",
+      "name": "Millbrae",
       "type": "enterprise",
       "latitude": 37.602757,
       "longitude":-122.387013,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Millbrae</b>' +
-            'Total office going population: 12,565'+
-            'Total population : 21,532'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Millbrae</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">12,565</th>'+
+				'<th style="border:1px solid black">21,532</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "San Mateo",
         "type": "enterprise",
         "latitude": 37.5745186,
         "longitude":-122.3447417,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>San Mateo</b>' +
-            'Total office going population: 56,359'+
-            'Total population : 97,207'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+          
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>San Mateo</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">56,359</th>'+
+				'<th style="border:1px solid black">97,207</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+				
+				
+			
       },
       {
         "name": "Belmont",
         "type": "enterprise",
         "latitude": 37.5161672,
         "longitude": -122.3127646,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Belmont</b>' +
-            'Total office going population: 25,835'+
-            'Total population : 16,585'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Belmont</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">16,585</th>'+
+				'<th style="border:1px solid black">25,835</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Palo Alto",
         "type": "enterprise",
         "latitude": 37.425713,
         "longitude":  -122.1703695,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Palo alto</b>' +
-            'Total office going population:40,563'+
-            'Total population : 66,955'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+        
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Palo Alto</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">40,563</th>'+
+				'<th style="border:1px solid black">66,955</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
       },
       {
         "name": "Menlo Park",
         "type": "enterprise",
         "latitude": 37.4630,
         "longitude": -122.1917,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Menlo park</b>' +
-            'Total population: 32,026'+
-            'Total office going population : 24,569'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+          
+				"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Menlo Park</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">24,569</th>'+
+				'<th style="border:1px solid black">32,026</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
       },
       {
         "name": "Mountain View",
         "type": "enterprise",
         "latitude": 37.4038824,
         "longitude": -122.1162865,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'Total office going population: 52,365'+
-            'Total population : 77,846'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Mountain View</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">52,365</th>'+
+				'<th style="border:1px solid black">77,846</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
       },
      {
         "name": "Sunnyvale",
         "type": "enterprise",
         "latitude": 37.3897202,
         "longitude": -122.0941612,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Population</b>' +
-            'Total office going population: 100568'+
-            'Total population : 149980'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      }, {
+         		
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Sunnyvale</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">1,00,568</th>'+
+				'<th style="border:1px solid black">1,49,980</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+	  {
       "name": "Dasher Technologies - Campbell",
       "type": "enterprise",
       "latitude": 37.2720,
       "longitude":  -121.9458,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Campbell</b>' +
-            'Total office going population: 30568'+
-            'Total population : 41119'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      },{
+          
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Campbell</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">30,568</th>'+
+				'<th style="border:1px solid black">41,119</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+      },
+	  {
       "name": "Layton Constructions Cupertino",
       "type": "enterprise",
       "latitude": 37.3093131,
       "longitude": -122.078664,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Cupertino</b>' +
-            'Total office going population: 45352'+
-            'Total population : 60668'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Cupertino</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">45,352</th>'+
+				'<th style="border:1px solid black">60,668</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
     
       {
@@ -565,66 +779,94 @@ eqfeed1_callback({
         "type": "enterprise",
         "latitude": 37.4431,
         "longitude": -122.1816,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Menlo Park</b>' +
-            'Total office going population: 24569'+
-            'Total population : 32026'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Menlo Park</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<trstyle="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">24,569</th>'+
+				'<th style="border:1px solid black">32,026</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Corner Stone",
         "type": "enterprise",
         "latitude": 37.3542,
         "longitude": -121.8998,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>San Jose - Campbell</b>' +
-            'Total office going population: 30568'+
-            'Total population : 41119'+
-			'</p>'+
-            '</div>'+
-            '</div>'
-      }, {
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Campbell</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">30,568</th>'+
+				'<th style="border:1px solid black">41,119</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+	  {
       "name": "San Jose Diridon-schoool",
       "type": "schoolzone",
       "latitude": 37.295205,
       "longitude": -121.938169,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Campbell</b>' +
-            'Total school going population: 3562 '+
-            'Total number of schools: 15 '+
-            '</p>'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Campbell</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">15</th>'+
+				'<th style="border:1px solid black">3,562</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+			
       },{
       "name": "Carson",
       "type": "schoolzone",
       "latitude": 37.303774,
       "longitude": -122.023306,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Meherolz High School - Cupertino</b>' +
-            'Total school going population: 8563'+
-            'Total number of schools: 12'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+        			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Cupertino</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">12</th>'+
+				'<th style="border:1px solid black">8,563</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         
       {
@@ -632,34 +874,47 @@ eqfeed1_callback({
         "type": "schoolzone",
         "latitude": 37.3866624,
         "longitude": -122.0859195,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Sunnyvale - los Altos schol District</b>' +
-            'Total school going population: 25625'+
-            'Total number of schools: 25'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Sunnyvale</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">25</th>'+
+				'<th style="border:1px solid black">25,625</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
       },
       {
         "name": "Palo Alto",
         "type": "schoolzone",
         "latitude": 37.4174131,
         "longitude":-122.133298,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>PaloAlto - Stanford University</b>' +
-            'Total school going population: 15575'+
-            'Total number of schools: 26'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+        			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Palo Alto</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">26</th>'+
+				'<th style="border:1px solid black">15,575</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
            
       {
@@ -667,102 +922,140 @@ eqfeed1_callback({
         "type": "schoolzone",
         "latitude": 37.4698595,
         "longitude": -122.2049502,
-         "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Menlo park</b>' +
-            'Total school going population: 4352'+
-            'Total number of schools: 15'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+         
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Menlo Park</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">15</th>'+
+				'<th style="border:1px solid black">4,352</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
       {
         "name": "Notre Dame High School",
         "type": "schoolzone",
         "latitude": 37.5055798,
         "longitude":-122.2514626,
-		"content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Belmont</b>' +
-            'Total school going population: 3520'+
-            'Total number of schools: 18'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+					
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Belmont</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">18</th>'+
+				'<th style="border:1px solid black">3,520</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
 			},
         {
         "name": "San mateo high school",
         "type": "schoolzone",
         "latitude": 37.5511174,
         "longitude":-122.323732,
-		  "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Belmont</b>' +
-            'Total school going population: 13365'+
-            'Total number of schools: 33'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+		  
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>San Mateo</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">33</th>'+
+				'<th style="border:1px solid black">13,365</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
         "name": "Burlingame intermediate School - Burligame",
         "type": "schoolzone",
         "latitude": 37.5961512,
         "longitude":-122.3810669,
-		  "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Millbrae</b>' +
-            'Total school going population: 2528'+
-            'Total number of schools: 4'+
-			'</p>'+
-            '</div>'+
-            '</div>'
+		 			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Millbrae</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">4</th>'+
+				'<th style="border:1px solid black">2,528</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
         "name": "parkside intermediate School - San Bruno",
         "type": "schoolzone",
         "latitude": 37.6321858,
         "longitude":-122.4184891,
-		"content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>San bruno - South SF</b>' +
-            'Total school going population: 9312'+
-            'Total number of schools: 15'+
-			'</p>'+
-            '</div>'+
-            '</div>'     
+		   
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>San bruno - South SF</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">15</th>'+
+				'<th style="border:1px solid black">9,312</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
 		},
         {
         "name": "Mountain view high school",
         "type": "schoolzone",
         "latitude": 37.388527,
         "longitude":-122.120079,
-		"content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
-            '<div id="bodyContent">'+
-            '<p><b>Mountain View</b>' +
-            'Total school going population: 18532'+
-            'Total number of schools: 40'+
-			'</p>'+
-            '</div>'+
-            '</div>' 
+					
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Mountain View</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">40</th>'+
+				'<th style="border:1px solid black">18,532</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
          {
         "name": "Campbell *",
@@ -782,6 +1075,8 @@ eqfeed1_callback({
 			'</p>'+
             '</div>'+
             '</div>'
+			
+			
       },
          {
         "name": "Cupertino *",
