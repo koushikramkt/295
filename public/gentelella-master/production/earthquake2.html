@@ -1024,6 +1024,7 @@
 							});
 						}
 						if(results.locations.location[i].type=="Food"){
+                            console.log("inside3");
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
@@ -1035,10 +1036,19 @@
                       if(results.locations.location[i].type=="sanjoseschoolzone"){
                              var contents = results.locations.location[i].content;
             	
-                           
+                           	console.log("inside1");
 					schoolzone.push(LatandLong);
                         schoolzonedata.push(contents);
                          
+                                
+						}
+                      if(results.locations.location[i].type=="demographics"){
+                             var contents = results.locations.location[i].content;
+            	console.log("inside2");
+                           
+					demographics.push(LatandLong);
+                        demographicscontentsdata.push(contents);
+                        
                                 
 						}
                 }}
@@ -1100,8 +1110,8 @@
 					
 					
 						 var RevCircle = new google.maps.Circle({
-								strokeColor: 'red',
-								strokeOpacity: 0.4,
+								strokeColor: 'orange',
+								strokeOpacity: 0.6,
 								strokeWeight: 5,
 								map: eqmap,
 								center: latLng,
@@ -1116,8 +1126,8 @@
 					
 					
 						 var RevCircle = new google.maps.Circle({
-								strokeColor: 'red',
-								strokeOpacity: 0.4,
+								strokeColor: 'orange',
+								strokeOpacity: 0.6,
 								strokeWeight: 5,
 								map: eqmap,
 								center: latLng,
@@ -1130,8 +1140,8 @@
 					
 					
 						 var RevCircle = new google.maps.Circle({
-								strokeColor: 'red',
-								strokeOpacity: 0.4,
+								strokeColor: 'orange',
+								strokeOpacity: 0.6,
 								strokeWeight: 5,
 								map: eqmap,
 								center: latLng,
@@ -1147,8 +1157,8 @@
 					
 					
 						 var RevCircle = new google.maps.Circle({
-								strokeColor: 'red',
-								strokeOpacity: 0.4,
+								strokeColor: 'orange',
+								strokeOpacity: 0.6,
 								strokeWeight: 5,
 								map: eqmap,
 								center: latLng,
@@ -1162,8 +1172,8 @@
 					
 					
 						 var RevCircle = new google.maps.Circle({
-								strokeColor: 'red',
-								strokeOpacity: 0.4,
+								strokeColor: 'orange',
+								strokeOpacity: 0.6,
 								strokeWeight: 5,
 								map: eqmap,
 								center: latLng,
@@ -1246,6 +1256,25 @@
 						});
 					}
                 
+                 function displaydemogprahics(){
+                   
+                     infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<demographics.length; i++){
+         	var marker = new google.maps.Marker({
+								position: demographics[i],
+								map: eqmap,
+								icon:"/images/home.png" 
+							});
+    
+                     
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(demographicscontentsdata[i]);
+                    infowindow.open(eqmap, this);
+                }
+            })(marker, i));
+     }
+}
 				</script>
 				<script async defer
 					src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIH81nTclniiog-BWxdOT8Cd7_czwok14&libraries=visualization&&callback=initMap"></script>

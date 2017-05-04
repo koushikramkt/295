@@ -152,7 +152,7 @@ eqfeed1_callback({
 			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>South SF</b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -188,7 +188,7 @@ eqfeed1_callback({
           
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Millbrae</b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -223,7 +223,7 @@ eqfeed1_callback({
 			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>San Mateo</b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -257,7 +257,7 @@ eqfeed1_callback({
             
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Belmont </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -291,7 +291,7 @@ eqfeed1_callback({
             			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Palo Alto </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -325,7 +325,7 @@ eqfeed1_callback({
              			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Menlo Park </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -359,7 +359,7 @@ eqfeed1_callback({
           			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Mountain view </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -393,7 +393,7 @@ eqfeed1_callback({
            			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Sunnyvale </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -427,7 +427,7 @@ eqfeed1_callback({
          
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Cupertino </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -462,7 +462,7 @@ eqfeed1_callback({
         			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>Campbell </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -496,7 +496,7 @@ eqfeed1_callback({
          
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b>population </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -531,7 +531,7 @@ eqfeed1_callback({
          			
 			"content":'<div id="content">'+
 			'<div id="siteNotice" >'+
-			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics</h3>'+
 			'<p><b> </b><br>'+
 			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
 			'<tr style="border:1px solid black">'+
@@ -1407,6 +1407,438 @@ eqfeed1_callback({
 			'</p>'+
             '</div>'+
             '</div>'
+      }
+        /* San Jose School Zone*/
+        , {
+      "name": "San Jose State University",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3352,
+      "longitude": -121.8811,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- San Jose </h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+           '<b>Total number of Students:</b> 32773' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "San Jose City College",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3158,
+      "longitude": -121.9274,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- San Jose City College </h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 14,385' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Evergeen Valley College",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3010,
+      "longitude": -121.7640,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- Evergeen Valley College </h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 10,564' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Silicon Valley University",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.4003,
+      "longitude": -121.8941,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- Silicon Valley University </h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 6,225' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+         {
+      "name": "National Hispanic University",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3590,
+      "longitude": -121.8161,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- National Hispanic University</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 660' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+         {
+      "name": "De Anza University",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3195396,
+      "longitude": -122.0450548,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone- De Anza University</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 24,187' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Willow Glen School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.2898,
+      "longitude": -121.8959,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Willow Glen School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 3611' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Pioneer High School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.2470,
+      "longitude": -121.8824,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Pioneer High School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 1,559' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Notre Dame High School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3283,
+      "longitude": -121.8826,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Notre Dame High School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 1230' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Paul Mitchell The School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3321211,
+      "longitude": -121.8919321,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Paul Mitchell The School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 344' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "San Jose High School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3477096,
+      "longitude": -121.8741104,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-San Jose High School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 1119' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Presentation High School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.3677096,
+      "longitude": -121.8741104,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Presentation High School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 800' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Reed Elementary School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.263628,
+      "longitude": -121.8965149,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Reed Elementary School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 513' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        {
+      "name": "Herbert Hoover Middle School",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.332074,
+      "longitude": -121.9260331,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Herbert Hoover Middle School</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 1093' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      },
+        
+        {
+      "name": "Northwest Polytechnic University",
+      "type": "sanjoseschoolzone",
+      "latitude": 37.4776832,
+      "longitude": -121.9280326	,
+          "content": '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">School Zone-Northwest Polytechnic University</h3>'+
+            '<div id="bodyContent">'+
+            '<b>Total number of schools:</b> 42 ' +
+             '<b>Total number of schools going students:</b> ' +
+           '<b>Total number of Students:</b> 1293' +
+            '</p>'+
+            '</div>'+
+            '</div>'
+      }
+        ,
+      {
+        "name": "demo-eastsanjose*",
+        "type": "demographics",
+        "latitude": 37.309497,
+        "longitude": -121.789291,
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics - East San Jose</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">409,337</th>'+
+				'<th style="border:1px solid black">207341</th>'+
+				'<th style="border:1px solid black">202100</th>'+
+				'<th style="border:1px solid black">95116, 95148, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121</th>'+
+				'<th style="border:1px solid black"> 152 </th>'+
+				'<th style="border:1px solid black"> 2</th>'+
+				'<th style="border:1px solid black"> 113433</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+        
+      {
+        "name": "demo-westsanjose",
+        "type": "demographics",
+        "latitude": 37.325117,
+        "longitude": -121.964495,
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics - West San Jose</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">192534</th>'+
+				'<th style="border:1px solid black">98315</th>'+
+				'<th style="border:1px solid black">93228 </th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128 , 95129, 95130, 95131, 95134</th>'+
+				'<th style="border:1px solid black"> 29.6 </th>'+
+				'<th style="border:1px solid black">0.3</th>'+
+				'<th style="border:1px solid black"> 73797</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+      
+      {
+        "name": "demo-northtsanjose*",
+        "type": "demographics",
+        "latitude": 37.404414,
+        "longitude": -121.871451,
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics - North San Jose</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">192082</th>'+
+				'<th style="border:1px solid black">103542</th>'+
+				'<th style="border:1px solid black">85727 </th>'+
+				'<th style="border:1px solid black">95002, 95035, 95132, 95133, 95110</th>'+
+				'<th style="border:1px solid black"> 99.9 </th>'+
+				'<th style="border:1px solid black"> 4.4</th>'+
+				'<th style="border:1px solid black"> 58489</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+       
+      {
+        "name": "demo-southsanjose*",
+        "type": "demographics",
+        "latitude": 37.26893,
+        "longitude":-121.895879,
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics - South San Jose</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">555,475</th>'+
+				'<th style="border:1px solid black">320288</th>'+
+				'<th style="border:1px solid black">205432 </th>'+
+				'<th style="border:1px solid black">95035, 95037, 95121, 95123, 95124, 95125, 95127, 95128, 95129, 95135, 95138, 95148</th>'+
+				'<th style="border:1px solid black"> 161.2 </th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 185900</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+        
+    
+      {
+        "name": "demo-centralsanjose*",
+        "type": "demographics",
+        "latitude": 37.329059,
+        "longitude": -121.903866,
+         
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Demographics - Central San Jose</h3>'+
+			'<p><b>population </b><br>'+
+			'<table style="border:1px solid black; background-color: #76D7C4    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Males</th>'+
+				'<th style="border:1px solid black">Females</th>'+
+				'<th style="border:1px solid black">Zipcode</th>'+
+				'<th style="border:1px solid black">Land Area</th>'+
+				'<th style="border:1px solid black">Water Area</th>'+
+				'<th style="border:1px solid black">Houses</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">80981</th>'+
+				'<th style="border:1px solid black">43005</th>'+
+				'<th style="border:1px solid black">37976 </th>'+
+				'<th style="border:1px solid black">95110, 95113, 95112, 95192</th>'+
+				'<th style="border:1px solid black"> 12.1 </th>'+
+				'<th style="border:1px solid black"> 0</th>'+
+				'<th style="border:1px solid black"> 28670</th>'+
+				
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       }
     ]
   }
