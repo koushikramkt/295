@@ -630,7 +630,7 @@
                    <h4><b> Alerting System Information</b></h4>	
                    <input type="checkbox" name="dem" value="demo" onclick="displayipaws()">  IPAWS<br>
  
- <input type="checkbox" name="dem" value="demo" onclick="displayalertscc()">  Alert SCC
+ <input type="checkbox" name="dem" value="demo" onclick="displayalertscc()">  AlertSCC
 <br>
  <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers <br><br>
       
@@ -641,7 +641,7 @@
                <div class="col-md-8">
                   <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
                  
-                  <!--change done by jeyanthh--><center><h4> Oil Spilliage Impact </h4>		<br>
+                  <!--change done by jeyanthh--><center><h4> Oil Spillage Impact </h4>		<br>
                  
                    <button type="button" class="btn btn-primary" onclick=displayImpact()>Impact</button>    
                  <button type="button" class="btn btn-primary" onclick=displayPath()>Oil Train Path</button></center>   
@@ -891,11 +891,12 @@
                       var speakers =[];   var displayspeakersdata =[];
                 function resetImpact(){
                     
-                    map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 10,
-			center:{lat: 37.484445, lng: -122.238319}
-			});
-                }
+						map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 10,
+				center:{lat: 37.484445, lng: -122.238319}
+				});
+            }
+			
 			function initMap() {
 					
 			map = new google.maps.Map(document.getElementById('map'), {

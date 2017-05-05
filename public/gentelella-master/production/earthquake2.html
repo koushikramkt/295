@@ -915,6 +915,14 @@
                 var alertscc =[];   var displayalertsccdata =[];
                     var ipaws =[];   var displayipawsdata =[];
                       var speakers =[];   var displayspeakersdata =[];
+					  
+					  function resetImpact(){                    
+							eqmap = new google.maps.Map(document.getElementById('eqmap'), {
+						center: { lat: 37.323342, lng: -121.879185},
+						zoom: 11
+       
+					});
+                }
 
 				  function initMap() {
 					/*map = new google.maps.Map(document.getElementById('map'), {
@@ -1042,6 +1050,16 @@
                          
                                 
 						}
+						if(results.locations.location[i].type=="sanjoseEnterprise"){
+                             var contents = results.locations.location[i].content;
+            	
+                           	console.log("inside1");
+					enterprisecontents.push(LatandLong);
+                        enterprisecontentsdata.push(contents);
+                         
+                                
+						}
+
                       if(results.locations.location[i].type=="demographics"){
                              var contents = results.locations.location[i].content;
             	console.log("inside2");
@@ -1051,29 +1069,137 @@
                         
                                 
 						}
-                }}
+						if(results.locations.location[i].type=="sanjoseIpaws"){
+                             var contents = results.locations.location[i].content;
+            	console.log("inside2");
+                           
+					ipaws.push(LatandLong);
+                        displayipawsdata.push(contents);
+                        
+                                
+						}
+						if(results.locations.location[i].type=="sanjoseAlertSCC"){
+                             var contents = results.locations.location[i].content;
+            	console.log("inside2");
+                           
+						alertscc.push(LatandLong);
+                        displayalertsccdata.push(contents);
+                        
+                                
+						}
+						if(results.locations.location[i].type=="sanjoseSpeakers"){
+                             var contents = results.locations.location[i].content;
+            	console.log("inside2");
+                           
+					speakers.push(LatandLong);
+                        displayspeakersdata.push(contents);
+                        
+                                
+						}
+                }
+			}
                  
                  
                   function displayschools(){
                     
                     infowindow = new google.maps.InfoWindow();
-     for(var i=0; i<schoolzone.length; i++){
-         	var marker = new google.maps.Marker({
-								position: schoolzone[i],
-								map: eqmap,
-								icon:"/images/school.jpg" 
-							});
-    
-                     
-                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                return function () {
-                    infowindow.setContent(schoolzonedata[i]);
-                    infowindow.open(eqmap, this);
-                }
-            })(marker, i));
-     }
+					 for(var i=0; i<schoolzone.length; i++){
+							var marker = new google.maps.Marker({
+												position: schoolzone[i],
+												map: eqmap,
+												icon:"/images/school.jpg" 
+											});
+					
+									 
+									 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+								return function () {
+									infowindow.setContent(schoolzonedata[i]);
+									infowindow.open(eqmap, this);
+								}
+							})(marker, i));
+					 }
                     
                 }    
+				 function displayenterprise(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+					 for(var i=0; i<enterprisecontents.length; i++){
+							var marker = new google.maps.Marker({
+												position: enterprisecontents[i],
+												map: eqmap,
+												icon:"/images/enterprise.jpg" 
+											});
+					
+									 
+									 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+								return function () {
+									infowindow.setContent(enterprisecontentsdata[i]);
+									infowindow.open(eqmap, this);
+								}
+							})(marker, i));
+					 }
+                    
+                } 
+				function displayipaws(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+					 for(var i=0; i<ipaws.length; i++){
+							var marker = new google.maps.Marker({
+												position: ipaws[i],
+												map: eqmap,
+												icon:"/images/call.jpg" 
+											});
+					
+									 
+									 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+								return function () {
+									infowindow.setContent(displayipawsdata[i]);
+									infowindow.open(eqmap, this);
+								}
+							})(marker, i));
+					 }
+                    
+                }
+				function displayalertscc(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+					 for(var i=0; i<alertscc.length; i++){
+							var marker = new google.maps.Marker({
+												position: alertscc[i],
+												map: eqmap,
+												icon:"/images/phone.png" 
+											});
+					
+									 
+									 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+								return function () {
+									infowindow.setContent(displayalertsccdata[i]);
+									infowindow.open(eqmap, this);
+								}
+							})(marker, i));
+					 }
+                    
+                }
+				function displayspeakers(){
+                    
+                    infowindow = new google.maps.InfoWindow();
+					 for(var i=0; i<speakers.length; i++){
+							var marker = new google.maps.Marker({
+												position: speakers[i],
+												map: eqmap,
+												icon:"/images/loudspeakers.jpg" 
+											});
+					
+									 
+									 google.maps.event.addListener(marker, 'click', (function (marker, i) {
+								return function () {
+									infowindow.setContent(displayspeakersdata[i]);
+									infowindow.open(eqmap, this);
+								}
+							})(marker, i));
+					 }
+                    
+                }
 				  
 					// [END script-body]
 					function getImpact(){
