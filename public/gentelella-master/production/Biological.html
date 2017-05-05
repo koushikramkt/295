@@ -891,39 +891,37 @@
        
 					});*/
 					 demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-					  zoom: 10,
-					  center: {lat: 37.3342, lng: -121.8903},
-					  mapTypeId: 'terrain',
-                          scrollwheel: true,
-  draggable: true
+						zoom: 10,
+						center: {lat: 37.3342, lng: -121.8903},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});
-					   demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-					  zoom: 10,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                            scrollwheel: true,
-  draggable: true
+					demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
+						zoom: 10,
+						center: {lat:  37.368832, lng: -122.036346},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});
-					  demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-					  zoom: 10,
-					  center: {lat:  37.368832, lng: -122.036346},
-					  mapTypeId: 'terrain',
-                           scrollwheel: true,
-  draggable: true
+					demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
+						zoom: 10,
+						center: {lat:  37.368832, lng: -122.036346},
+						mapTypeId: 'terrain',
+						scrollwheel: true,
+						draggable: true
 					});  
+					
 					  
 					  
 					  
 					// Get the earthquake data (JSONP format)
 					// This feed is a copy from the USGS feed, you can find the originals here:
-					//   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-					var script = document.createElement('script');
-					script.setAttribute(
-						'src',
-						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-							  /*script.src = 'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';*/
-
+										
+					 var script = document.createElement('script');
+					script.src = '\MyCoLocations.js';
 					document.getElementsByTagName('head')[0].appendChild(script);
+
 
 					// Add a basic style.
 					map.data.setStyle(function(feature) {
@@ -996,42 +994,48 @@
       ]         
              
 				  
-				   // defines the callback function for hospitals
-				 function mapfeed_callback(){
-					for(var i=0;i<mapdata.maplocations.length;i++)
-					{					
-						var latitude = mapdata.maplocations[i].latitude;
-						var longitude = mapdata.maplocations[i].longitude;
-						var LatandLong = new google.maps.LatLng(latitude,longitude);
+				// defines the callback function for hospitals
+				 window.eqfeed1_callback = function(results) {
+                      
+                      	/*map.data.addGeoJson(results);*/
+					
+							 
+				for (var i = 0; i < results.locations.location.length; i++) {
+				  var latitude = results.locations.location[i].latitude;
+				  var longitude = results.locations.location[i].longitude;
+				   LatandLong = new google.maps.LatLng(latitude,longitude);
+					
+                  
 						
-						if(mapdata.maplocations[i].type=="Hospital"){
+						if(results.locations.location[i].type=="Hospital"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap1,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/hospital.png" ,
+                              //  label: results.locations.location[i].name
+								icon:"/images/hospital.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Communities"){
+						
+						if(results.locations.location[i].type=="Communities"){
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap2,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/communities.png" ,
+                              //  label: results.locations.location[i].name
+								icon:"/images/communities.png" ,
 							});
 						}
-						if(mapdata.maplocations[i].type=="Food"){
+						if(results.locations.location[i].type=="Food"){
+                            console.log("inside3");
 						var MarkerPin = new google.maps.Marker({
 								position: LatandLong,
 								map: demomap3,
-                                //label: mapdata.maplocations[i].name,
-								icon:"images/food.png" ,
+                               // label: results.locations.location[i].name
+								icon:"/images/food.png" ,
 							});
 						}
-					} 
-				  				  
-				  
-				  }   
+					}
+							
+				}
 				  
 			// [END script-body]
 				function getLangChart(){

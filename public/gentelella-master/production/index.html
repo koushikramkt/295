@@ -620,17 +620,12 @@
     function eqfeed1_callback(results){
     
 
-
-
    			 
 				for (var i = 0; i < results.locations.location.length; i++) {
 				  var latitude = results.locations.location[i].latitude;
 				  var longitude = results.locations.location[i].longitude;
 				  var LatandLong = new google.maps.LatLng(latitude,longitude);
-					
-                
-              
-       
+					           
 				  
 				  
 				   
@@ -640,7 +635,8 @@
 								position: LatandLong,
 								map: demomap1,
                                 /*label: results.locations.location[i].name*/
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/hospital.png" ,
+								icon:"/images/hospital.png",
+								
 							});
 						}
 						
@@ -649,7 +645,7 @@
 								position: LatandLong,
 								map: demomap2,
                                 /*label: results.locations.location[i].name*/
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/communities.png" ,
+						icon:"/images/communities.png",
 							});
 						}
 						if(results.locations.location[i].type=="Food"){
@@ -657,7 +653,7 @@
 								position: LatandLong,
 								map: demomap3,
                                 /*label: results.locations.location[i].name*/
-								icon:"G:\SAN JOSE/Sem 4/295B/ProjectGit/295/public/gentelella-master/production/images/food.png" ,
+							icon:"/images/food.png",
 							});
 						}
          

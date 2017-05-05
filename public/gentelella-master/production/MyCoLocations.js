@@ -70,8 +70,8 @@ eqfeed1_callback({
 			},
 			{
 				"name":"Arteaga's Food Center",
-				"latitude":37.2968505,
-				"longitude":-121.8174135,
+				"latitude": 37.3740272,
+				"longitude": -122.0506417,
 				"type":"Food"
 			},
 			{
@@ -82,8 +82,8 @@ eqfeed1_callback({
 			},
 			{
 				"name":"La Hacienda Food Center",
-				"latitude":37.4447334,
-				"longitude":-122.1195375,
+				"latitude": 37.3434742,
+				"longitude": -122.0105197,
 				"type":"Food"
 			},
 			{
@@ -94,26 +94,26 @@ eqfeed1_callback({
 			},
 			{
 				"name": "Merrill Gardens at Gilroy",
-				"latitude": 37.5184128,
-				"longitude": -121.9346928,
+				"latitude": 37.2647182,
+				"longitude": -121.9041597,
 				"type": "Communities"
 			},
 			{
 				"name": "Crosswalk Community Church",
-				"latitude": 37.5184128,
-				"longitude": -121.9346928,
+				"latitude": 37.3740272,
+				"longitude": -122.0506417,
 				"type": "Communities"
 			},
 			{
 				"name": "Sacred Heart Community Service",
-				"latitude": 37.5157647,
-				"longitude": -121.934702,
+				"latitude": 37.3163927,
+				"longitude": -121.8768401,
 				"type": "Communities"
 			},
 			{
 				"name": "Sunnyvale Community Resources",
-				"latitude": 37.5157647,
-				"longitude": -121.934702,
+				"latitude": 37.3434742,
+				"longitude": -122.0105197,
 				"type": "Communities"
 			},
 			{
@@ -2032,8 +2032,9 @@ eqfeed1_callback({
 	  {
         "name": "Campbell- West",
         "type": "sanjoseAlertSCC",
-        "latitude": 37.329059,
-        "longitude": -121.903866,
+		  "latitude": 37.278441,
+        "longitude": -121.942661,
+       
           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
@@ -2054,8 +2055,9 @@ eqfeed1_callback({
 	  {
         "name": "central San jose *",
         "type": "sanjoseAlertSCC",
-        "latitude": 37.278441,
-        "longitude": -121.942661,
+		 "latitude": 37.329059,
+        "longitude": -121.903866,
+      
           "content": '<div id="content">'+
             '<div id="siteNotice" style="background-color:black">'+
             '</div>'+
@@ -2139,6 +2141,7 @@ eqfeed1_callback({
             
 				
       },
+	  
 	  {
         "name": "Campbell- West",
         "type": "sanjoseIpaws",
