@@ -70,8 +70,8 @@ eqfeed1_callback({
 			},
 			{
 				"name":"Arteaga's Food Center",
-				"latitude":37.2968505,
-				"longitude":-121.8174135,
+				"latitude": 37.3740272,
+				"longitude": -122.0506417,
 				"type":"Food"
 			},
 			{
@@ -82,8 +82,8 @@ eqfeed1_callback({
 			},
 			{
 				"name":"La Hacienda Food Center",
-				"latitude":37.4447334,
-				"longitude":-122.1195375,
+				"latitude": 37.3434742,
+				"longitude": -122.0105197,
 				"type":"Food"
 			},
 			{
@@ -94,26 +94,26 @@ eqfeed1_callback({
 			},
 			{
 				"name": "Merrill Gardens at Gilroy",
-				"latitude": 37.5184128,
-				"longitude": -121.9346928,
+				"latitude": 37.2647182,
+				"longitude": -121.9041597,
 				"type": "Communities"
 			},
 			{
 				"name": "Crosswalk Community Church",
-				"latitude": 37.5184128,
-				"longitude": -121.9346928,
+				"latitude": 37.3740272,
+				"longitude": -122.0506417,
 				"type": "Communities"
 			},
 			{
 				"name": "Sacred Heart Community Service",
-				"latitude": 37.5157647,
-				"longitude": -121.934702,
+				"latitude": 37.3163927,
+				"longitude": -121.8768401,
 				"type": "Communities"
 			},
 			{
 				"name": "Sunnyvale Community Resources",
-				"latitude": 37.5157647,
-				"longitude": -121.934702,
+				"latitude": 37.3434742,
+				"longitude": -122.0105197,
 				"type": "Communities"
 			},
 			{
@@ -1069,9 +1069,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 165,816 <br>'+
             'Population using Landlines: 40,000 <br>'+
-            'Time Taken to Cover Population (minutes): 106.10<br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>106.10</b></font><br>'+
              '<b>Percentage of Population Covered: 74.54%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 7.02%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 7.02%</b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1090,9 +1090,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 60,660 <br>'+
             'Population using Landlines: 11,741 <br>'+
-            'Time Taken to Cover Population (minutes): 31.14 <br>'+
+            'Time Taken to Cover Population (minutes):<font color="#C0392B"><b> 31.14 </b></font> <br>'+
               '<b>Percentage of Population Covered:59.80 %<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 19.20%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 19.20%</b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1109,9 +1109,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 101,849 <br>'+
             'Population using Landlines: 25,778 <br>'+
-            'Time Taken to Cover Population(minutes): 68.37<br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b> 68.37 </b></font><br>'+
              '<b>Percentage of Population Covered: 78.2<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:11.43% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b>11.43% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1128,9 +1128,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:211,426 <br>'+
             'Population using Landlines:47,858<br>'+
-            'Time Taken to Cover Population(minutes):127  <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>127 </b></font> <br>'+
              '<b>Percentage of Population Covered: 69.94%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:5.5%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b>5.5%</b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1147,9 +1147,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:65139<br>'+
             'Population using Landlines:15536  <br>'+
-            'Time Taken to Cover Population(minutes):41.20 <br>'+
+            'Time Taken to Cover Population(minutes):<font color="#C0392B"><b>41.20</b></font><br>'+
             '<b>Percentage of Population Covered: 73.69%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 17.88% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b>17.88% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1166,9 +1166,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:60812  <br>'+
             'Population using Landlines:14903  <br>'+
-            'Time Taken to Cover Population(minutes): 37.38 <br>'+
+            'Time Taken to Cover Population(minutes):<font color="#C0392B"><b> 37.38 </b></font><br>'+
              '<b>Percentage of Population Covered: 71.61%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:  19.15%<b><br>'+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 19.15%</b></font><br>'+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1185,9 +1185,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 180381  <br>'+
             'Population using Landlines: 43015 <br>'+
-            'Time Taken to Cover Population(minutes): 114.09 <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b> 114.09 </b></font> <br>'+
              '<b>Percentage of Population Covered: 73.68%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 6.45% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 6.45% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1204,9 +1204,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 22,703<br>'+
             'Population using Landlines:4394  <br>'+
-            'Time Taken to Cover Population(minutes):11.65  <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>11.65 </b></font><br>'+
              '<b>Percentage of Population Covered: 59.80% <b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:  51.31%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 51.31%</b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1223,9 +1223,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 130788 <br>'+
             'Population using Landlines:25828  <br>'+
-            'Time Taken to Cover Population (minutes): 98.5 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b> 98.5  </b></font> <br>'+
               '<b>Percentage of Population Covered: 61.02 <b><br>'+
-              '<b>Percentage of Population Covered in 10 minutes: 8.90% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 8.90% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1249,9 +1249,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 165,816 <br>'+
             'Population using Landlines: 154208 <br>'+
-            'Time Taken to Cover Population (minutes): 86<br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>86 </b></font><br>'+
              '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 10.81%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B">10.81%</font></b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1268,9 +1268,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 60,660 <br>'+
             'Population using cellphone: 56,413 <br>'+
-            'Time Taken to Cover Population (minutes): 31.46 <br>'+
+            'Time Taken to Cover Population (minutes):<font color="#C0392B"><b> 31.46 </b></font><br>'+
               '<b>Percentage of Population Covered:93 %<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 29.55%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B">29.55%</font></b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1287,9 +1287,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 101,849 <br>'+
             'Population using callphoness: 94719 <br>'+
-            'Time Taken to Cover Population(minutes): 52.82<br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>52.82</b></font><br>'+
              '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:17.60% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B">17.60% </font><b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1306,9 +1306,10 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:211,426 <br>'+
             'Population using cellphones : 196626<br>'+
-            'Time Taken to Cover Population(minutes):109  <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>109 </font> <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>109 </font> <br>'+
              '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:8.48%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b>8.48%</font></b><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1325,9 +1326,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:65139<br>'+
             'Population using Cellphones:60579  <br>'+
-            'Time Taken to Cover Population(minutes):33.78 <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>33.78 </b></font> <br>'+
             '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 27.52% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 27.52% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1344,9 +1345,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population:60812  <br>'+
             'Population using Cellphones:56555  <br>'+
-            'Time Taken to Cover Population(minutes): 31.54 <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b> 31.54 </b></font><br>'+
              '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes:  29.48 %<b><br>'+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 29.48 %</b></font><br>'+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1363,9 +1364,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 180381  <br>'+
             'Population using cellphones: 167754 <br>'+
-            'Time Taken to Cover Population(minutes): 93.56 <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b> 93.56 </b></font> <br>'+
              '<b>Percentage of Population Covered: 93%<b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 9.94% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 9.94% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1382,9 +1383,9 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 22,703<br>'+
             'Population using cellphones:21113  <br>'+
-            'Time Taken to Cover Population(minutes):11.77 <br>'+
+            'Time Taken to Cover Population(minutes): <font color="#C0392B"><b>11.77 </b></font> <br>'+
              '<b>Percentage of Population Covered: 93% <b><br> '+
-              '<b>Percentage of Population Covered in 10 minutes: 78.97%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b>78.97%</b></font<br> '+
 			'</p>'+
             '</div>'+
             '</div>'
@@ -1401,250 +1402,293 @@ eqfeed1_callback({
             '<div id="bodyContent">'+
             'Total Population: 130788 <br>'+
             'Population using cellphone: 121632  <br>'+
-            'Time Taken to Cover Population (minutes): 67.83 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>67.83</b></font> <br>'+
               '<b>Percentage of Population Covered: 93% <b><br>'+
-              '<b>Percentage of Population Covered in 10 minutes: 13.70% <b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes: <font color="#C0392B"><b> 13.70% </b></font><br> '+
 			'</p>'+
             '</div>'+
             '</div>'
       }
         /* San Jose School Zone*/
+		/* for earthquake */
         , {
       "name": "San Jose State University",
       "type": "sanjoseschoolzone",
       "latitude": 37.3352,
       "longitude": -121.8811,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- San Jose </h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-           '<b>Total number of Students:</b> 32773' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+         
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Downtown</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">25</th>'+
+				'<th style="border:1px solid black">25,625</th>'+
+				'<th style="border:1px solid black">95110, 95113, 95112 </th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
       "name": "San Jose City College",
       "type": "sanjoseschoolzone",
       "latitude": 37.3158,
       "longitude": -121.9274,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- San Jose City College </h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 14,385' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>West</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">42</th>'+
+				'<th style="border:1px solid black">14,385</th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128, 95129, 95130, 95131, 95134</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
-        {
-      "name": "Evergeen Valley College",
-      "type": "sanjoseschoolzone",
-      "latitude": 37.3010,
-      "longitude": -121.7640,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- Evergeen Valley College </h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 10,564' +
-            '</p>'+
-            '</div>'+
-            '</div>'
-      },
+        
         {
       "name": "Silicon Valley University",
       "type": "sanjoseschoolzone",
       "latitude": 37.4003,
       "longitude": -121.8941,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- Silicon Valley University </h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 6,225' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>North</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">42</th>'+
+				'<th style="border:1px solid black">6,225</th>'+
+				'<th style="border:1px solid black">95002, 95035, 95132, 95131, 95133, 95110</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
-         {
-      "name": "National Hispanic University",
-      "type": "sanjoseschoolzone",
-      "latitude": 37.3590,
-      "longitude": -121.8161,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- National Hispanic University</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 660' +
-            '</p>'+
-            '</div>'+
-            '</div>'
-      },
+        
          {
       "name": "De Anza University",
       "type": "sanjoseschoolzone",
       "latitude": 37.3195396,
       "longitude": -122.0450548,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone- De Anza University</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 24,187' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>West</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">24</th>'+
+				'<th style="border:1px solid black"> 24,187</th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128, 95129, 95130, 95131, 95134</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
       "name": "Willow Glen School",
       "type": "sanjoseschoolzone",
       "latitude": 37.2898,
       "longitude": -121.8959,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Willow Glen School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 3611' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+         					
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>South</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">24</th>'+
+				'<th style="border:1px solid black"> 3611</th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128, 95129, 95130, 95131, 95134</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
       "name": "Pioneer High School",
       "type": "sanjoseschoolzone",
       "latitude": 37.2470,
       "longitude": -121.8824,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Pioneer High School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 1,559' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>South</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">42</th>'+
+				'<th style="border:1px solid black">1,559</th>'+
+				'<th style="border:1px solid black">95035, 95037, 95121, 95123, 95124, 95125, 95127, 95128, 95129, 95135, 95138, 95148</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
       "name": "Notre Dame High School",
       "type": "sanjoseschoolzone",
       "latitude": 37.3283,
       "longitude": -121.8826,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Notre Dame High School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 1230' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Downtown</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">4</th>'+
+				'<th style="border:1px solid black">1230</th>'+
+				'<th style="border:1px solid black">95110, 95113, 95112 </th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
-        {
-      "name": "Paul Mitchell The School",
-      "type": "sanjoseschoolzone",
-      "latitude": 37.3321211,
-      "longitude": -121.8919321,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Paul Mitchell The School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 344' +
-            '</p>'+
-            '</div>'+
-            '</div>'
-      },
+        
         {
       "name": "San Jose High School",
       "type": "sanjoseschoolzone",
       "latitude": 37.3477096,
       "longitude": -121.8741104,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-San Jose High School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 1119' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>Downtown</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">4</th>'+
+				'<th style="border:1px solid black">1119</th>'+
+				'<th style="border:1px solid black">95110, 95113, 95112 </th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       },
         {
       "name": "Presentation High School",
       "type": "sanjoseschoolzone",
       "latitude": 37.3677096,
       "longitude": -121.8741104,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Presentation High School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 800' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+       
+	   "content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>East</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">2</th>'+
+				'<th style="border:1px solid black"> 800</th>'+
+				'<th style="border:1px solid black">95116, 95148, 95131, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+			
       },
-        {
-      "name": "Reed Elementary School",
-      "type": "sanjoseschoolzone",
-      "latitude": 37.263628,
-      "longitude": -121.8965149,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Reed Elementary School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 513' +
-            '</p>'+
-            '</div>'+
-            '</div>'
-      },
+       
         {
       "name": "Herbert Hoover Middle School",
       "type": "sanjoseschoolzone",
       "latitude": 37.332074,
       "longitude": -121.9260331,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Herbert Hoover Middle School</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 1093' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+         			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>West</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">2</th>'+
+				'<th style="border:1px solid black"> 1093</th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128, 95129, 95130, 95131, 95134</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+			
       },
         
         {
@@ -1652,19 +1696,164 @@ eqfeed1_callback({
       "type": "sanjoseschoolzone",
       "latitude": 37.4776832,
       "longitude": -121.9280326	,
-          "content": '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h3 id="firstHeading" class="firstHeading">School Zone-Northwest Polytechnic University</h3>'+
-            '<div id="bodyContent">'+
-            '<b>Total number of schools:</b> 42 ' +
-             '<b>Total number of schools going students:</b> ' +
-           '<b>Total number of Students:</b> 1293' +
-            '</p>'+
-            '</div>'+
-            '</div>'
+          		
+					
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">School Zone</h3>'+
+			'<p><b>East</b><br>'+
+			'<table style="border:1px solid black; background-color: #EDBB99    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total number of schools </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total school going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">2</th>'+
+				'<th style="border:1px solid black"> 1293</th>'+
+				'<th style="border:1px solid black">95116, 95148, 95131, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+			
+			
+      }
+	  , 
+	   {
+      "name": "National Hispanic University",
+      "type": "sanjoseEnterprise",
+      "latitude": 37.3590,
+      "longitude": -121.8161,
+         
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>East</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9   ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">1,00,568</th>'+
+				'<th style="border:1px solid black">1,49,980</th>'+
+				'<th style="border:1px solid black">95116, 95148, 95131, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+	  {
+      "name": "Reed Elementary School",
+      "type": "sanjoseEnterprise",
+      "latitude": 37.2949057,
+      "longitude": -122.0222102,
+         						
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>West</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9     ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population </th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total office going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">42364</th>'+
+				'<th style="border:1px solid black">35213</th>'+
+				'<th style="border:1px solid black">95117, 95126, 95128, 95129, 95130, 95131, 95134</th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+			
+      }
+	  ,{
+      "name": "Paul Mitchell The School",
+      "type": "sanjoseEnterprise",
+      "latitude": 37.3321211,
+      "longitude": -121.8919321,
+          					
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>Downtown</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9     ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total office going population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">4568</th>'+
+				'<th style="border:1px solid black">3444</th>'+
+				'<th style="border:1px solid black">95110, 95113, 95112 </th>'+
+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
       }
         ,
+		{
+      "name": "Evergeen Valley College",
+      "type": "sanjoseEnterprise",
+      "latitude": 37.2819122,
+      "longitude": -121.8364217,
+         						
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>South</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9     ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">1,00,568</th>'+
+				'<th style="border:1px solid black">1,49,980</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
+		{
+      "name": "National Hispanic company",
+      "type": "sanjoseEnterprise",
+      "latitude": 37.3886978,
+      "longitude": -121.9493812,
+         
+			
+			"content":'<div id="content">'+
+			'<div id="siteNotice" >'+
+			'<h3 id="firstHeading" class="firstHeading">Enterprise</h3>'+
+			'<p><b>North</b><br>'+
+			'<table style="border:1px solid black; background-color: #85C1E9    ; ">'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">Total office going population</th>'+ '&nbsp;'+
+				'<th style="border:1px solid black">Total population</th>'+
+				'<th style="border:1px solid black">Zipcodes</th>'+
+			'</tr>'+ 
+			'<tr style="border:1px solid black">'+
+				'<th style="border:1px solid black">1,00,568</th>'+
+				'<th style="border:1px solid black">1,49,980</th>'+
+				'<th style="border:1px solid black">5002, 95035, 95132, 95131, 95133, 95110</th>'+
+			'</tr>'+
+			'</table>'+
+			'</div>'+
+			'</div>'
+      },
       {
         "name": "demo-eastsanjose*",
         "type": "demographics",
@@ -1839,7 +2028,231 @@ eqfeed1_callback({
 			'</table>'+
 			'</div>'+
 			'</div>'
+      },
+	  {
+        "name": "Campbell- West",
+        "type": "sanjoseAlertSCC",
+		  "latitude": 37.278441,
+        "longitude": -121.942661,
+       
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">AlertSCC - West San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 192,534<br>'+
+            'Population using Landlines: 44279 <br>'+
+			'Zipcodes: 95117, 95126, 95128, 95129, 95130, 95131, 95134 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>117.45</b></font><br>'+
+             '<b>Percentage of Population Covered: 71.80%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 38.64%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
+      },
+	  {
+        "name": "central San jose *",
+        "type": "sanjoseAlertSCC",
+		 "latitude": 37.329059,
+        "longitude": -121.903866,
+      
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">AlertSCC - Central San Jose</h3>'+
+            '<div id="bodyContent">'+
+			'Total Population: 80,981<br>'+
+            'Population using Landlines: 17,202 <br>'+
+			'Zipcodes: 95110, 95113, 95112 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>46</b></font><br>'+
+             '<b>Percentage of Population Covered: 85%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 100%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+            
+				
+      },
+	  {
+        "name": "East San jose *",
+        "type": "sanjoseAlertSCC",
+        "latitude": 37.331921,
+        "longitude": -121.828389,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">AlertSCC - East San Jose</h3>'+
+            '<div id="bodyContent">'+
+			'Total Population:409,337<br>'+
+            'Population using Landlines: 68,059 <br>'+
+			'Zipcodes: 95116, 95148, 95131, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>180.5</b></font><br>'+
+             '<b>Percentage of Population Covered: 53.16%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 33.45%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+            
+				
+      },
+	  {
+        "name": "North San jose *",
+        "type": "sanjoseAlertSCC",
+        "latitude": 37.4101122,
+        "longitude": -121.9515697,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">AlertSCC - North San Jose</h3>'+
+            '<div id="bodyContent">'+
+			'Total Population: 192,082<br>'+
+            'Population using Landlines: 35,093 <br>'+
+			'Zipcodes:  95002, 95035, 95132, 95131, 95133, 95110 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>93.08</b></font><br>'+
+             '<b>Percentage of Population Covered: 57.37%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 47.33%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+            
+				
+      },
+	  {
+        "name": "South San jose *",
+        "type": "sanjoseAlertSCC",
+        "latitude": 37.2366893,
+        "longitude": -121.8001157,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">AlertSCC - South San Jose</h3>'+
+            '<div id="bodyContent">'+
+			'Total Population: 555475<br>'+
+            'Population using Landlines: 111540 <br>'+
+			'Zipcodes: 95035, 95037, 95121, 95123, 95124, 95125, 95127, 95128, 95129, 95135, 95138, 95148<br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>295.8</b></font><br>'+
+             '<b>Percentage of Population Covered: 63%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 29%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+            
+				
+      },
+	  
+	  {
+        "name": "Campbell- West",
+        "type": "sanjoseIpaws",
+        "latitude": 37.3087468,
+        "longitude": -121.9684128,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - West San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 192,534<br>'+
+            'Population using Cellphones: 179056 <br>'+
+			'Zipcodes: 95117, 95126, 95128, 95129, 95130, 95131, 95134 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>99.8</b></font><br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 59.46%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
+      },
+	  {
+        "name": "Downtown San Jose",
+        "type": "sanjoseIpaws",
+        "latitude":37.339028,
+        "longitude": -121.905370,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - Downtown San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 80981br>'+
+            'Population using Cellphones: 75312 <br>'+
+			'Zipcodes: 95110, 95113, 95112  <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>42</b></font><br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 100%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
+      },
+	  {
+        "name": "East San Jose",
+        "type": "sanjoseIpaws",
+        "latitude": 37.327246,
+        "longitude": -121.768994,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - East San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 409337<br>'+
+            'Population using Cellphones: 380683 <br>'+
+			'Zipcodes: 95116, 95148, 95131, 95156, 95127, 95133, 95138, 95151, 95122, 95132, 95135, 95111, 95121<br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>212</b></font><br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 51%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
+      },
+	  {
+        "name": "North San Jose",
+        "type": "sanjoseIpaws",
+        "latitude": 37.4095672,
+        "longitude": -121.9308847,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - North San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 192082<br>'+
+            'Population using Cellphones: 178636 <br>'+
+			'Zipcodes: 95002, 95035, 95132, 95131, 95133, 95110<br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>99.6</b></font><br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 63.86%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
+      },
+	  {
+        "name": "South San Jose",
+        "type": "sanjoseIpaws",
+        "latitude": 37.2308123,
+        "longitude":  -121.867536,
+          "content": '<div id="content">'+
+            '<div id="siteNotice" style="background-color:black">'+
+            '</div>'+
+            '<h3 id="firstHeading" class="firstHeading">IPAWS - South San Jose</h3>'+
+            '<div id="bodyContent">'+            
+			'Total Population: 555475<br>'+
+            'Population using Cellphones: 516591 <br>'+
+			'Zipcodes: 95035, 95037, 95121, 95123, 95124, 95125, 95127, 95128, 95129, 95135, 95138, 95148 <br>'+
+            'Time Taken to Cover Population (minutes): <font color="#C0392B"><b>288.18</b></font><br>'+
+             '<b>Percentage of Population Covered: 93%<b><br> '+
+              '<b>Percentage of Population Covered in 10 minutes:<font color="#C0392B"><b> 45.13%</b></font><br> '+
+			'</p>'+
+            '</div>'+
+            '</div>'
+			
+			
       }
+	  
     ]
   }
 });
