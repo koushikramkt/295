@@ -92,9 +92,8 @@
                     <ul class="nav child_menu">
                       <li><a href="index.html">Flood</a></li>
                       <li><a href="earthquake2.html">Earthquake</a></li>
-					  <!--<li><a href="earthquake2.html">Earthquake2</a></li>-->
                       <li><a href="OilTrainDerailment.html">Oil Train Derailment</a></li>
-                        <li><a href="Biological.html">Biological Disaster</a></li>
+                      <li><a href="Biological.html">Biological Disaster</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Register <span class="fa fa-chevron-down"></span></a>
@@ -107,8 +106,6 @@
                   <li><a><i class="fa fa-table"></i> Demographic Info <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="tables.html">Demographic Information</a></li>
-<!--
--->
                     </ul>
                   </li>
               
@@ -217,15 +214,12 @@
                   <div class="col-md-6">
                     <h3>Flood Impact Zones </h3>
                   </div>
-                  <div class="col-md-6"> 
-                 
-                  </div>
                 </div>
 
                <div class="col-md-9 col-sm-9 col-xs-12">
                   <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
                   <!--change done by jeyanthh-->
-                   <div id="map" ></div>
+                  <div id="map" ></div>
                   
                 </div>
              
@@ -240,238 +234,203 @@
           <div class="row">
 
 
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
-                <div class="x_title">
-                  <h2>Population Range</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <!--<h4>App Usage across versions</h4>-->
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>2017</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>100k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
 
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>2010</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>83k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>1950</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>23k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-               
+            <div class="col-md-12 col-sm-12 col-xs-12" id = "simulation-panel">
+					
+				<div data-role="rangeslider"><label for="price-min">TimeLine of Anderson Dam Failure ( in minutes )</label> 
+				<input id="time-range-bar" type="range" name="price-min" id="price-min" value="0" min="0" max="180" onchange="simulate()">
+				</div>
+				<input id="time-range-text" type="text" value="0">minutes <p>Please select a timeline of the impact starting from minute 0 and view the impacted regions in the map above</p>
+				
+				
+				<input type = "button" onclick="simulateTimes()" id ="simulate-button" value = "Click for simulation" class="button">
+				<script type = "text/javascript">
+				function simulateTimes(){
+					setTimeout(function() {
+						document.getElementById('time-range-bar').value =0;
+						simulate();
+						setTimeout(function() {
+							document.getElementById('time-range-bar').value =15;
+							simulate();
+							setTimeout(function() {
+								document.getElementById('time-range-bar').value =30;
+									simulate();
+									setTimeout(function() {
+										document.getElementById('time-range-bar').value =50;
+										simulate();
+										setTimeout(function() {
+											document.getElementById('time-range-bar').value =80;
+											simulate();		
+											setTimeout(function() {
+												document.getElementById('time-range-bar').value =180;
+												simulate();											
+										}, 3000);			
+										}, 3000);
+									}, 3000);
+							}, 3000);
+						}, 3000);
+					}, 3000);					
+				}
+				function simulate(){
+					var timeString = document.getElementById('time-range-bar').value;
+					document.getElementById("time-range-text").value = timeString;					
+					var time = parseInt(timeString);					
+					if(time <14){		
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat:37.191620, lng:-121.734163},
+						  zoom:11
+						});						
+						var cityCircle = new google.maps.Circle({
+							strokeColor: '#AFAEEC',
+							strokeOpacity: 0.8,
+							strokeWeight: 2,
+							fillColor: 'red',
+							fillOpacity: 0.70,
+							map: map,
+							center: { lat: 37.1641289, lng: -121.6318959 },
+							radius: 800
+						 });
+					} else if(time>=10 && time < 24){
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat:37.191620, lng:-121.734163},
+						  zoom:11
+						});					
+						var cityCircle = new google.maps.Circle({
+							strokeColor: '#AFAEEC',
+							strokeOpacity: 0.8,
+							strokeWeight: 2,
+							fillColor: 'blue',
+							fillOpacity: 0.15,
+							map: map,
+							center: { lat: 37.1641289, lng: -121.6318959 },
+							radius: 2700
+						 });
+					} else if (time >=24 &&time <36) {
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat:37.191620, lng:-121.734163},
+						  zoom:11
+						});					
+						var triangleCoords = [
+							{lat:37.215198, lng:-121.719101},
+							{lat:37.206471, lng:-121.740950},
+							{lat:37.187789, lng:-121.757667},
+							{lat:37.154150, lng:-121.747806},
+							{lat:37.125800, lng:-121.711776},
+							{lat:37.109342, lng:-121.682204},
+							{lat:37.105286, lng:-121.635158},
+							{lat:37.114919, lng:-121.604642},
+							{lat:37.155212, lng:-121.583663},
+							{lat:37.194920, lng:-121.607879},
+							{lat:37.215949, lng:-121.671486}
+						];
+						bermudaTriangle = new google.maps.Polygon({
+										  paths: triangleCoords,
+										  strokeColor: '#AFAEEC',
+										  strokeOpacity: 0.8,
+										  strokeWeight: 2,
+										  fillColor: 'blue',
+										  fillOpacity: 0.35
+						});        
+						bermudaTriangle.setMap(map);
+					} else if (time>=36&&time < 60){
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat:37.191620, lng:-121.734163},
+						  zoom:11
+						});					
+						var triangleCoords = [
+						    {lat:37.231408,lng: -121.777795},
+							{lat:37.184617, lng: -121.778766},
+							{lat:37.140976, lng: -121.741867},
+							{lat:37.117706, lng: -121.717307},
+							{lat:37.092373, lng: -121.640216},
+							{lat:37.113283, lng: -121.582924},
+							{lat:37.138059, lng: -121.554763},
+							{lat:37.195709, lng: -121.619824},
+							{lat:37.230896, lng: -121.681001},
+							{lat:37.241333, lng: -121.728098}
+						];
+						
+						bermudaTriangle = new google.maps.Polygon({
+										  paths: triangleCoords,
+										  strokeColor: '#AFAEEC',
+										  strokeOpacity: 0.8,
+										  strokeWeight: 2,
+										  fillColor: 'blue',
+										  fillOpacity: 0.35
+						});      
+						bermudaTriangle.setMap(map);
+					} else if(time>=60&&time<120){
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat:37.191620, lng:-121.734163},
+						  zoom:11
+						});					
+						var triangleCoords = [
+						    {lat:37.200711,lng: -121.794571},
+							{lat:37.1008115,lng: -121.7121341},
+							{lat:37.081977,lng: -121.649798},
+							{lat:37.072683,lng: -121.611074},
+							{lat:37.092776,lng:-121.578962},
+							{lat:37.127172, lng:-121.566998},
+							{lat:37.162055,lng: -121.580851},
+							{lat:37.218736,lng: -121.656095},
+							{lat:37.2600234,lng:-121.7344146},
+							{lat:37.296602,lng: -121.774611},
+							{lat:37.302722,lng: -121.830874},
+							{lat:37.261017,lng: -121.857322}
+						];
+						bermudaTriangle = new google.maps.Polygon({
+										  paths: triangleCoords,
+										  strokeColor: '#AFAEEC',
+										  strokeOpacity: 0.8,
+										  strokeWeight: 2,
+										  fillColor: 'blue',
+										  fillOpacity: 0.35
+						});      
+						bermudaTriangle.setMap(map);
+					} else {
+						map = new google.maps.Map(document.getElementById('map'), {
+						  center: { lat: 37.253801, lng: -121.797956},
+						  zoom:10
+						});					
+						var triangleCoords = [					
+							{lat:37.490952, lng:-122.029935},
+							{lat:37.501341, lng:-121.952823},
+							{lat:37.455156, lng:-121.880075},
+							{lat:37.405476, lng:-121.872801},
+							{lat:37.361544, lng:-121.782594},
+							{lat:37.308330,lng: -121.801508},
+							{lat:37.205264, lng:-121.651648},
+							{lat:37.013815, lng:-121.509063},
+							{lat:36.987090,lng: -121.571626},
+							{lat:37.027755,lng: -121.645828},
+							{lat:37.092774, lng:-121.669107},
+							{lat:37.163535, lng:-121.749130},
+							{lat:37.253919,lng: -121.846611},
+							{lat:37.306015, lng:-121.897535},
+							{lat:37.363857,lng: -121.968827},
+							{lat:37.403164,lng: -122.000836},
+							{lat:37.422810,lng: -122.038665}  
+						];
+						bermudaTriangle = new google.maps.Polygon({
+										  paths: triangleCoords,
+										  strokeColor: '#AFAEEC',
+										  strokeOpacity: 0.8,
+										  strokeWeight: 2,
+										  fillColor: 'blue',
+										  fillOpacity: 0.35
+						});      
+						bermudaTriangle.setMap(map);
+					}
+				}
+				</script>
+            </div>     
 
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320 overflow_hidden">
-                <div class="x_title">
-                  <h2>Alerting System Availability</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <th style="width:37%;">
-                        <p>Top 5</p>
-                      </th>
-                      <th>
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                          <p class="">Alerting System</p>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                          <p class="">Availablity</p>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i> IPAWS</p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>Loud SPeakers </p>
-                            </td>
-                            <td>10%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>Alert SCC </p>
-                            </td>
-                            <td>20%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>Amber </p>
-                            </td>
-                            <td>15%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>Others </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-<div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="x_title">
-                    <h2>San Jose</h2>
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div class="col-md-12 col-sm-12 col-xs-6">
-                    <div>
-                      <p>Santa Clara</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="80"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Sunnyvale</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="60"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 col-xs-6">
-                    <div>
-                      <p>Milpitas</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="40"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <p>Palo Alto</p>
-                      <div class="">
-                        <div class="progress progress_sm" style="width: 76%;">
-                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="50"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-          </div>
+  
 
 
-          <div class="row">
-           
-
-            <div class="col-md-8 col-sm-8 col-xs-12">
-
-
-
-              <div class="row">
 
              
-
-              </div>
                 <!--modified by Jeyanthh-->
-              <div class="row">
-
-<h2>Demographic/Emergency Services Information </h2>
-  <div class="col-md-4">
-      <h3>Hospitals </h3>
-      <div id="demomap1"></div> </div>
-  <div class="col-md-4">
-      <h3 style="margin-left:120px">Communites</h3>
-              <div id="demomap2"></div> </div>    
-  <div class="col-md-4">
-      <h3 style="margin-left:300px">Food</h3>
-             <div id="demomap3"></div> </div>     
-
               </div>
             </div>
           </div>
@@ -543,123 +502,10 @@
 <script>
 
 // [START script-body]
-      var map,demomap1,demomap2,demomap3;
-
+    var map;
+	var bermudaTriangle, triangleCoords;
       function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: { lat: 37.3342, lng: -121.8903 },
-          zoom:5
-        });
-
-         demomap1 = new google.maps.Map(document.getElementById('demomap1'), {
-          zoom: 10,
-          center: {lat: 37.3342, lng: -121.8903},
-          mapTypeId: 'terrain'
-        });
-           demomap2 = new google.maps.Map(document.getElementById('demomap2'), {
-          zoom: 10,
-		  
-          center: {lat:  37.368832, lng: -122.036346},
-          mapTypeId: 'terrain'
-        });
-          demomap3 = new google.maps.Map(document.getElementById('demomap3'), {
-          zoom: 10,
-          center: {lat:  37.368832, lng: -122.036346},
-          mapTypeId: 'terrain'
-        });  
-          
-          
-          
-        // Get the earthquake data (JSONP format)
-        // This feed is a copy from the USGS feed, you can find the originals here:
-        //   http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-      var script = document.createElement('script');
-					script.setAttribute(
-						'src',
-						'https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json');
-       document.getElementsByTagName('head')[0].appendChild(script);
-
-        	/*var script = document.createElement('script');
-			script.src = '\MyCoLocations.js';
-			document.getElementsByTagName('head')[0].appendChild(script);*/
-          
-        // Add a basic style.
-        map.data.setStyle(function(feature) {
-          var mag = Math.exp(parseFloat(feature.getProperty('mag'))) * 0.1;
-          return /** @type {google.maps.Data.StyleOptions} */({
-            icon: {
-              path: google.maps.SymbolPath.CIRCLE,
-              scale: mag,
-              fillColor: '#f00',
-              fillOpacity: 0.35,
-              strokeWeight: 0
-            }
-          });
-        });
-	
-          mapPlaces();
-          
-	
-      }
-
-      // Defines the callback function referenced in the jsonp file.
-     window.eqfeed_callback = function(results){
-         
-							map.data.addGeoJson(results);
-       
-     }
-    function mapPlaces(){
-          var script = document.createElement('script');
-			script.src = '\MyCoLocations.js';
-			document.getElementsByTagName('head')[0].appendChild(script);
-       
-          }
-    
-    
-    
-    function eqfeed1_callback(results){
-    
-
-   			 
-				for (var i = 0; i < results.locations.location.length; i++) {
-				  var latitude = results.locations.location[i].latitude;
-				  var longitude = results.locations.location[i].longitude;
-				  var LatandLong = new google.maps.LatLng(latitude,longitude);
-					           
-				  
-				  
-				   
-						
-						if(results.locations.location[i].type=="Hospital"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap1,
-                                /*label: results.locations.location[i].name*/
-								icon:"/images/hospital.png",
-								
-							});
-						}
-						
-						if(results.locations.location[i].type=="Communities"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap2,
-                                /*label: results.locations.location[i].name*/
-						icon:"/images/communities.png",
-							});
-						}
-						if(results.locations.location[i].type=="Food"){
-						var MarkerPin = new google.maps.Marker({
-								position: LatandLong,
-								map: demomap3,
-                                /*label: results.locations.location[i].name*/
-							icon:"/images/food.png",
-							});
-						}
-         
-    }
-					
-	
+       simulate();	
 			
     }
 // [END script-body]
