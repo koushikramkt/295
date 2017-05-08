@@ -9,7 +9,7 @@
 
     <title>San Jose Disaster Management Center </title>
 
-  
+
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -97,15 +97,15 @@
                                 <li><a href="disasterrecovery.html"> Disaster Recovery</a></li>
                     </ul>
                   </li>
-                  
-              
-                
+
+
+
                 </ul>
               </div>
-            
+
 
             </div>
-            
+
           </div>
         </div>
 
@@ -142,7 +142,7 @@
                     <span class="badge bg-green">6</span>
                   </a>
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                 
+
                     <li>
                       <div class="text-center">
                         <a>
@@ -167,7 +167,7 @@
               <span class="count_top"><i class="fa fa-user"></i> Total population</span>
               <div class="count">945,942 </div>
             </div>
-          
+
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
               <div class="count green">475,668</div>
@@ -184,7 +184,7 @@
               <span class="count_top"><i class="fa fa-user"></i>Land Area(in Sq. Miles)</span>
               <div class="count">180 </div>
             </div>
-          
+
              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i>Water Area(in Sq. Miles)</span>
               <div class="count">3.4 </div>
@@ -201,14 +201,28 @@
                     <h3>Flood Impact Zones </h3>
                   </div>
                 </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h4><b> Demographic Information</b></h4>
+                       <input type="checkbox" name="dem" value="demo" onclick="displaydemogprahics()">  Demographics<br>
 
-               <div class="col-md-9 col-sm-9 col-xs-12">
-                  <!--<div id="chart_plot_01" class="demo-placeholder"></div>-->
-                  <!--change done by jeyanthh-->
-                  <div id="map" ></div>
-                  
+                        <input type="checkbox" name="dem" value="demo" onclick="displayenterprise()">  Enterprise
+                        <br>
+                        <input type="checkbox" name="dem" value="demo" onclick="displayschools()">  Schools <br><br><br>
+
+                   <h4><b> Alerting System Information</b></h4>
+                       <input type="checkbox" name="dem" value="demo" onclick="displayipaws()">  IPAWS<br>
+
+                        <input type="checkbox" name="dem" value="demo" onclick="displayalertscc()">  AlertSCC
+                        <br>
+                        <input type="checkbox" name="dem" value="demo" onclick="displayspeakers()">  Loud Speakers <br><br>
+
+                        <button type="button" class="btn btn-primary" onclick=resetImpact()>Reset Map</button>
+
                 </div>
-             
+               <div class="col-md-10 col-sm-10 col-xs-10" >
+                  <div id="map"></div>
+                </div>
+
 
                 <!--<div class="clearfix"></div>-->
               </div>
@@ -222,200 +236,203 @@
 
 
             <div class="col-md-12 col-sm-12 col-xs-12" id = "simulation-panel">
-					
-				<div data-role="rangeslider"><label for="price-min">TimeLine of Anderson Dam Failure ( in minutes )</label> 
-				<input id="time-range-bar" type="range" name="price-min" id="price-min" value="0" min="0" max="180" onchange="simulate()">
-				</div>
-				<input id="time-range-text" type="text" value="0">minutes <p>Please select a timeline of the impact starting from minute 0 and view the impacted regions in the map above</p>
-				
-				
-				<input type = "button" onclick="simulateTimes()" id ="simulate-button" value = "Click for simulation" class="button">
-				<script type = "text/javascript">
-				function simulateTimes(){
-					setTimeout(function() {
-						document.getElementById('time-range-bar').value =0;
-						simulate();
-						setTimeout(function() {
-							document.getElementById('time-range-bar').value =15;
-							simulate();
-							setTimeout(function() {
-								document.getElementById('time-range-bar').value =30;
-									simulate();
-									setTimeout(function() {
-										document.getElementById('time-range-bar').value =50;
-										simulate();
-										setTimeout(function() {
-											document.getElementById('time-range-bar').value =80;
-											simulate();		
-											setTimeout(function() {
-												document.getElementById('time-range-bar').value =180;
-												simulate();											
-										}, 3000);			
-										}, 3000);
-									}, 3000);
-							}, 3000);
-						}, 3000);
-					}, 3000);					
-				}
-				function simulate(){
-					var timeString = document.getElementById('time-range-bar').value;
-					document.getElementById("time-range-text").value = timeString;					
-					var time = parseInt(timeString);					
-					if(time <14){		
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat:37.191620, lng:-121.734163},
-						  zoom:11
-						});						
-						var cityCircle = new google.maps.Circle({
-							strokeColor: '#AFAEEC',
-							strokeOpacity: 0.8,
-							strokeWeight: 2,
-							fillColor: 'red',
-							fillOpacity: 0.70,
-							map: map,
-							center: { lat: 37.1641289, lng: -121.6318959 },
-							radius: 800
-						 });
-					} else if(time>=10 && time < 24){
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat:37.191620, lng:-121.734163},
-						  zoom:11
-						});					
-						var cityCircle = new google.maps.Circle({
-							strokeColor: '#AFAEEC',
-							strokeOpacity: 0.8,
-							strokeWeight: 2,
-							fillColor: 'blue',
-							fillOpacity: 0.15,
-							map: map,
-							center: { lat: 37.1641289, lng: -121.6318959 },
-							radius: 2700
-						 });
-					} else if (time >=24 &&time <36) {
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat:37.191620, lng:-121.734163},
-						  zoom:11
-						});					
-						var triangleCoords = [
-							{lat:37.215198, lng:-121.719101},
-							{lat:37.206471, lng:-121.740950},
-							{lat:37.187789, lng:-121.757667},
-							{lat:37.154150, lng:-121.747806},
-							{lat:37.125800, lng:-121.711776},
-							{lat:37.109342, lng:-121.682204},
-							{lat:37.105286, lng:-121.635158},
-							{lat:37.114919, lng:-121.604642},
-							{lat:37.155212, lng:-121.583663},
-							{lat:37.194920, lng:-121.607879},
-							{lat:37.215949, lng:-121.671486}
-						];
-						bermudaTriangle = new google.maps.Polygon({
-										  paths: triangleCoords,
-										  strokeColor: '#AFAEEC',
-										  strokeOpacity: 0.8,
-										  strokeWeight: 2,
-										  fillColor: 'blue',
-										  fillOpacity: 0.35
-						});        
-						bermudaTriangle.setMap(map);
-					} else if (time>=36&&time < 60){
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat:37.191620, lng:-121.734163},
-						  zoom:11
-						});					
-						var triangleCoords = [
-						    {lat:37.231408,lng: -121.777795},
-							{lat:37.184617, lng: -121.778766},
-							{lat:37.140976, lng: -121.741867},
-							{lat:37.117706, lng: -121.717307},
-							{lat:37.092373, lng: -121.640216},
-							{lat:37.113283, lng: -121.582924},
-							{lat:37.138059, lng: -121.554763},
-							{lat:37.195709, lng: -121.619824},
-							{lat:37.230896, lng: -121.681001},
-							{lat:37.241333, lng: -121.728098}
-						];
-						
-						bermudaTriangle = new google.maps.Polygon({
-										  paths: triangleCoords,
-										  strokeColor: '#AFAEEC',
-										  strokeOpacity: 0.8,
-										  strokeWeight: 2,
-										  fillColor: 'blue',
-										  fillOpacity: 0.35
-						});      
-						bermudaTriangle.setMap(map);
-					} else if(time>=60&&time<120){
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat:37.191620, lng:-121.734163},
-						  zoom:11
-						});					
-						var triangleCoords = [
-						    {lat:37.200711,lng: -121.794571},
-							{lat:37.1008115,lng: -121.7121341},
-							{lat:37.081977,lng: -121.649798},
-							{lat:37.072683,lng: -121.611074},
-							{lat:37.092776,lng:-121.578962},
-							{lat:37.127172, lng:-121.566998},
-							{lat:37.162055,lng: -121.580851},
-							{lat:37.218736,lng: -121.656095},
-							{lat:37.2600234,lng:-121.7344146},
-							{lat:37.296602,lng: -121.774611},
-							{lat:37.302722,lng: -121.830874},
-							{lat:37.261017,lng: -121.857322}
-						];
-						bermudaTriangle = new google.maps.Polygon({
-										  paths: triangleCoords,
-										  strokeColor: '#AFAEEC',
-										  strokeOpacity: 0.8,
-										  strokeWeight: 2,
-										  fillColor: 'blue',
-										  fillOpacity: 0.35
-						});      
-						bermudaTriangle.setMap(map);
-					} else {
-						map = new google.maps.Map(document.getElementById('map'), {
-						  center: { lat: 37.253801, lng: -121.797956},
-						  zoom:10
-						});					
-						var triangleCoords = [					
-							{lat:37.490952, lng:-122.029935},
-							{lat:37.501341, lng:-121.952823},
-							{lat:37.455156, lng:-121.880075},
-							{lat:37.405476, lng:-121.872801},
-							{lat:37.361544, lng:-121.782594},
-							{lat:37.308330,lng: -121.801508},
-							{lat:37.205264, lng:-121.651648},
-							{lat:37.013815, lng:-121.509063},
-							{lat:36.987090,lng: -121.571626},
-							{lat:37.027755,lng: -121.645828},
-							{lat:37.092774, lng:-121.669107},
-							{lat:37.163535, lng:-121.749130},
-							{lat:37.253919,lng: -121.846611},
-							{lat:37.306015, lng:-121.897535},
-							{lat:37.363857,lng: -121.968827},
-							{lat:37.403164,lng: -122.000836},
-							{lat:37.422810,lng: -122.038665}  
-						];
-						bermudaTriangle = new google.maps.Polygon({
-										  paths: triangleCoords,
-										  strokeColor: '#AFAEEC',
-										  strokeOpacity: 0.8,
-										  strokeWeight: 2,
-										  fillColor: 'blue',
-										  fillOpacity: 0.35
-						});      
-						bermudaTriangle.setMap(map);
-					}
-				}
-				</script>
-            </div>     
 
-  
+                <div data-role="rangeslider"><label for="price-min">TimeLine of Anderson Dam Failure ( in minutes )</label>
+                <input id="time-range-bar" type="range" name="price-min" id="price-min" value="0" min="0" max="180" onchange="simulate()">
+                </div>
+                <input id="time-range-text" type="text" value="0">minutes <p>Please select a timeline of the impact starting from minute 0 and view the impacted regions in the map above</p>
 
 
+                <input type = "button" onclick="simulateTimes()" id ="simulate-button" value = "Click for simulation" class="button">
+                <script type = "text/javascript">
+                function simulateTimes(){
+                    setTimeout(function() {
+                        document.getElementById('time-range-bar').value =0;
+                        simulate();
+                        setTimeout(function() {
+                            document.getElementById('time-range-bar').value =15;
+                            simulate();
+                            setTimeout(function() {
+                                document.getElementById('time-range-bar').value =30;
+                                    simulate();
+                                    setTimeout(function() {
+                                        document.getElementById('time-range-bar').value =50;
+                                        simulate();
+                                        setTimeout(function() {
+                                            document.getElementById('time-range-bar').value =80;
+                                            simulate();
+                                            setTimeout(function() {
+                                                document.getElementById('time-range-bar').value =180;
+                                                simulate();
+                                        }, 3000);
+                                        }, 3000);
+                                    }, 3000);
+                            }, 3000);
+                        }, 3000);
+                    }, 3000);
+                }
+                function simulate(){
 
-             
+
+                    var timeString = document.getElementById('time-range-bar').value;
+                    document.getElementById("time-range-text").value = timeString;
+                    var time = parseInt(timeString);
+                    if(time <14){
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat:37.191620, lng:-121.734163},
+                          zoom:11
+                        });
+                        var cityCircle = new google.maps.Circle({
+                            strokeColor: '#AFAEEC',
+                            strokeOpacity: 0.8,
+                            strokeWeight: 2,
+                            fillColor: 'red',
+                            fillOpacity: 0.70,
+                            map: map,
+                            center: { lat: 37.1641289, lng: -121.6318959 },
+                            radius: 800
+                         });
+
+                    } else if(time>=10 && time < 24){
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat:37.191620, lng:-121.734163},
+                          zoom:11
+                        });
+                        var cityCircle = new google.maps.Circle({
+                            strokeColor: '#AFAEEC',
+                            strokeOpacity: 0.8,
+                            strokeWeight: 2,
+                            fillColor: 'blue',
+                            fillOpacity: 0.15,
+                            map: map,
+                            center: { lat: 37.1641289, lng: -121.6318959 },
+                            radius: 2700
+                         });
+                    } else if (time >=24 &&time <36) {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat:37.191620, lng:-121.734163},
+                          zoom:11
+                        });
+                        var triangleCoords = [
+                            {lat:37.215198, lng:-121.719101},
+                            {lat:37.206471, lng:-121.740950},
+                            {lat:37.187789, lng:-121.757667},
+                            {lat:37.154150, lng:-121.747806},
+                            {lat:37.125800, lng:-121.711776},
+                            {lat:37.109342, lng:-121.682204},
+                            {lat:37.105286, lng:-121.635158},
+                            {lat:37.114919, lng:-121.604642},
+                            {lat:37.155212, lng:-121.583663},
+                            {lat:37.194920, lng:-121.607879},
+                            {lat:37.215949, lng:-121.671486}
+                        ];
+                        bermudaTriangle = new google.maps.Polygon({
+                                          paths: triangleCoords,
+                                          strokeColor: '#AFAEEC',
+                                          strokeOpacity: 0.8,
+                                          strokeWeight: 2,
+                                          fillColor: 'blue',
+                                          fillOpacity: 0.35
+                        });
+                        bermudaTriangle.setMap(map);
+                    } else if (time>=36&&time < 60){
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat:37.191620, lng:-121.734163},
+                          zoom:11
+                        });
+                        var triangleCoords = [
+                            {lat:37.231408,lng: -121.777795},
+                            {lat:37.184617, lng: -121.778766},
+                            {lat:37.140976, lng: -121.741867},
+                            {lat:37.117706, lng: -121.717307},
+                            {lat:37.092373, lng: -121.640216},
+                            {lat:37.113283, lng: -121.582924},
+                            {lat:37.138059, lng: -121.554763},
+                            {lat:37.195709, lng: -121.619824},
+                            {lat:37.230896, lng: -121.681001},
+                            {lat:37.241333, lng: -121.728098}
+                        ];
+
+                        bermudaTriangle = new google.maps.Polygon({
+                                          paths: triangleCoords,
+                                          strokeColor: '#AFAEEC',
+                                          strokeOpacity: 0.8,
+                                          strokeWeight: 2,
+                                          fillColor: 'blue',
+                                          fillOpacity: 0.35
+                        });
+                        bermudaTriangle.setMap(map);
+                    } else if(time>=60&&time<120){
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat:37.191620, lng:-121.734163},
+                          zoom:11
+                        });
+                        var triangleCoords = [
+                            {lat:37.200711,lng: -121.794571},
+                            {lat:37.1008115,lng: -121.7121341},
+                            {lat:37.081977,lng: -121.649798},
+                            {lat:37.072683,lng: -121.611074},
+                            {lat:37.092776,lng:-121.578962},
+                            {lat:37.127172, lng:-121.566998},
+                            {lat:37.162055,lng: -121.580851},
+                            {lat:37.218736,lng: -121.656095},
+                            {lat:37.2600234,lng:-121.7344146},
+                            {lat:37.296602,lng: -121.774611},
+                            {lat:37.302722,lng: -121.830874},
+                            {lat:37.261017,lng: -121.857322}
+                        ];
+                        bermudaTriangle = new google.maps.Polygon({
+                                          paths: triangleCoords,
+                                          strokeColor: '#AFAEEC',
+                                          strokeOpacity: 0.8,
+                                          strokeWeight: 2,
+                                          fillColor: 'blue',
+                                          fillOpacity: 0.35
+                        });
+                        bermudaTriangle.setMap(map);
+                    } else {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: { lat: 37.253801, lng: -121.797956},
+                          zoom:10
+                        });
+                        var triangleCoords = [
+                            {lat:37.490952, lng:-122.029935},
+                            {lat:37.501341, lng:-121.952823},
+                            {lat:37.455156, lng:-121.880075},
+                            {lat:37.405476, lng:-121.872801},
+                            {lat:37.361544, lng:-121.782594},
+                            {lat:37.308330,lng: -121.801508},
+                            {lat:37.205264, lng:-121.651648},
+                            {lat:37.013815, lng:-121.509063},
+                            {lat:36.987090,lng: -121.571626},
+                            {lat:37.027755,lng: -121.645828},
+                            {lat:37.092774, lng:-121.669107},
+                            {lat:37.163535, lng:-121.749130},
+                            {lat:37.253919,lng: -121.846611},
+                            {lat:37.306015, lng:-121.897535},
+                            {lat:37.363857,lng: -121.968827},
+                            {lat:37.403164,lng: -122.000836},
+                            {lat:37.422810,lng: -122.038665}
+                        ];
+                        bermudaTriangle = new google.maps.Polygon({
+                                          paths: triangleCoords,
+                                          strokeColor: '#AFAEEC',
+                                          strokeOpacity: 0.8,
+                                          strokeWeight: 2,
+                                          fillColor: 'blue',
+                                          fillOpacity: 0.35
+                        });
+                        bermudaTriangle.setMap(map);
+                    }
+                }
+                </script>
+            </div>
+
+
+
+
+
+
                 <!--modified by Jeyanthh-->
               </div>
             </div>
@@ -482,18 +499,218 @@
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
       <script src="https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json"></script>
-		
-   
+
+
       <script src="require.js"></script>
 <script>
 
 // [START script-body]
-    var map;
-	var bermudaTriangle, triangleCoords;
+     var map;
+                var demographics =[]; var demographicscontentsdata =[];
+                var enterprisecontents = [];  var enterprisecontentsdata = [];
+                var schoolzone = [];var schoolzonedata = [];
+                var alertscc =[];   var displayalertsccdata =[];
+                    var ipaws =[];   var displayipawsdata =[];
+                      var speakers =[];   var displayspeakersdata =[];
+    var bermudaTriangle, triangleCoords;
       function initMap() {
-       simulate();	
-			
+       simulate();
+
+       var script = document.createElement('script');
+    script.src = '\MyCoLocations.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
     }
+
+
+                            window.eqfeed1_callback = function(results) {
+
+                          /*map.data.addGeoJson(results);*/
+
+
+                for (var i = 0; i < results.locations.location.length; i++) {
+                  var latitude = results.locations.location[i].latitude;
+                  var longitude = results.locations.location[i].longitude;
+                   LatandLong = new google.maps.LatLng(latitude,longitude);
+
+
+
+                      if(results.locations.location[i].type=="sanjoseschoolzone"){
+                             var contents = results.locations.location[i].content;
+
+                               console.log("inside1");
+                    schoolzone.push(LatandLong);
+                        schoolzonedata.push(contents);
+
+
+                        }
+                        if(results.locations.location[i].type=="sanjoseEnterprise"){
+                             var contents = results.locations.location[i].content;
+
+                               console.log("inside1");
+                    enterprisecontents.push(LatandLong);
+                        enterprisecontentsdata.push(contents);
+
+
+                        }
+
+                      if(results.locations.location[i].type=="demographics"){
+                             var contents = results.locations.location[i].content;
+                console.log("inside2");
+
+                    demographics.push(LatandLong);
+                        demographicscontentsdata.push(contents);
+
+
+                        }
+                        if(results.locations.location[i].type=="sanjoseIpaws"){
+                             var contents = results.locations.location[i].content;
+                console.log("inside2");
+
+                    ipaws.push(LatandLong);
+                        displayipawsdata.push(contents);
+
+
+                        }
+                        if(results.locations.location[i].type=="sanjoseAlertSCC"){
+                             var contents = results.locations.location[i].content;
+                console.log("inside2");
+
+                        alertscc.push(LatandLong);
+                        displayalertsccdata.push(contents);
+
+
+                        }
+                        if(results.locations.location[i].type=="sanjoseSpeakers"){
+                             var contents = results.locations.location[i].content;
+                console.log("inside2");
+
+                    speakers.push(LatandLong);
+                        displayspeakersdata.push(contents);
+
+
+                        }
+                }
+            }
+
+                         function displaydemogprahics(){
+
+                     infowindow = new google.maps.InfoWindow();
+     for(var i=0; i<demographics.length; i++){
+             var marker = new google.maps.Marker({
+                                position: demographics[i],
+                                map: map,
+                                icon:"/images/home.png"
+                            });
+
+
+                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                return function () {
+                    infowindow.setContent(demographicscontentsdata[i]);
+                    infowindow.open(map, this);
+                }
+            })(marker, i));
+     }
+}
+                         function displayschools(){
+
+                    infowindow = new google.maps.InfoWindow();
+                     for(var i=0; i<schoolzone.length; i++){
+                            var marker = new google.maps.Marker({
+                                                position: schoolzone[i],
+                                                map: map,
+                                                icon:"/images/school.jpg"
+                                            });
+
+
+                                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(schoolzonedata[i]);
+                                    infowindow.open(map, this);
+                                }
+                            })(marker, i));
+                     }
+
+                }
+                 function displayenterprise(){
+
+                    infowindow = new google.maps.InfoWindow();
+                     for(var i=0; i<enterprisecontents.length; i++){
+                            var marker = new google.maps.Marker({
+                                                position: enterprisecontents[i],
+                                                map: map,
+                                                icon:"/images/enterprise.jpg"
+                                            });
+
+
+                                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(enterprisecontentsdata[i]);
+                                    infowindow.open(map, this);
+                                }
+                            })(marker, i));
+                     }
+
+                }
+                function displayipaws(){
+
+                    infowindow = new google.maps.InfoWindow();
+                     for(var i=0; i<ipaws.length; i++){
+                            var marker = new google.maps.Marker({
+                                                position: ipaws[i],
+                                                map: map,
+                                                icon:"/images/call.jpg"
+                                            });
+
+
+                                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(displayipawsdata[i]);
+                                    infowindow.open(map, this);
+                                }
+                            })(marker, i));
+                     }
+
+                }
+                function displayalertscc(){
+
+                    infowindow = new google.maps.InfoWindow();
+                     for(var i=0; i<alertscc.length; i++){
+                            var marker = new google.maps.Marker({
+                                                position: alertscc[i],
+                                                map: map,
+                                                icon:"/images/phone.png"
+                                            });
+
+
+                                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(displayalertsccdata[i]);
+                                    infowindow.open(map, this);
+                                }
+                            })(marker, i));
+                     }
+
+                }
+                function displayspeakers(){
+
+                    infowindow = new google.maps.InfoWindow();
+                     for(var i=0; i<speakers.length; i++){
+                            var marker = new google.maps.Marker({
+                                                position: speakers[i],
+                                                map: map,
+                                                icon:"/images/loudspeakers.jpg"
+                                            });
+
+
+                                     google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                                return function () {
+                                    infowindow.setContent(displayspeakersdata[i]);
+                                    infowindow.open(map, this);
+                                }
+                            })(marker, i));
+                     }
+
+                }
 // [END script-body]
 
     </script>
